@@ -3,6 +3,9 @@
 ## Running
 
 ```shell
+# Disable telemetry
+npm run disable-telemetry
+
 # Starts the development server
 npm run dev
 
