@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  background-image: url(/assets/images/bar-large.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 48px;
+}
