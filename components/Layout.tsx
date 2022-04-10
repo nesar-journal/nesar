@@ -23,7 +23,7 @@ const Layout = (props: LayoutProps) => {
           largeCover={largeCover}
         />
 
-        <main>
+        <main className={styles.main}>
           {children}
         </main>
 

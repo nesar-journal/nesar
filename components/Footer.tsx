@@ -9,20 +9,24 @@ const Home: NextPage = () => {
       <div className={styles.divider}></div>
 
       <footer className={styles.footer}>
-        <Image
-          alt="NESAR Logo"
-          src="/assets/images/logo.png"
-          width={240}
-          height={53}
-          quality={90}
-        />
-        <Image
-          alt="University of Chicago Library Logo"
-          src="/assets/images/uchicago-library.svg"
-          width={155}
-          height={43}
-          unoptimized={true}
-        />
+        <div className={styles.item}>
+          <Image
+            alt="NESAR Logo"
+            src="/assets/images/logo-wordmark.png"
+            width={240}
+            height={53}
+            quality={90}
+          />
+        </div>
+        <div className={styles.item}>
+          <Image
+            alt="University of Chicago Library Logo"
+            src="/assets/images/uchicago-library.svg"
+            width={155}
+            height={43}
+            unoptimized={true}
+          />
+        </div>
       </footer>
     </>
   );

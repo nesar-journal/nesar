@@ -1,5 +1,6 @@
 html {
-  --max-width: 1000px;
+  --max-width: 1200px;
+  --max-width-content: 900px;
 }
 
 html,

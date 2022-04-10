@@ -9,3 +9,7 @@
   background-position: center;
   height: 48px;
 }
+
+.item {
+  padding: 0 20px 10px 20px;
+}
