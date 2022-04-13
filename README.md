@@ -25,6 +25,8 @@ open http://localhost:3000
 ```shell
 # Deploy app to Vercel
 git push origin master
+
+# To disable telemetry in production, set the envvar `NEXT_TELEMETRY_DISABLED` to `1`.
 ```
 
 ## Conventions
