@@ -9,7 +9,9 @@ import type {
 } from 'next';
 import Head from 'next/head';
 
-import { DATA } from '../../utils';
+import { getData } from '../../utils';
+
+const DATA = getData();
 
 interface IssueParams extends ParsedUrlQuery {
   identifier: string;

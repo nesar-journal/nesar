@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run compile-data ; next build",
-    "compile-data": "npx ts-node --project ./tsconfig.node.json ./compile-data.ts",
+    "compile-data": "npx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
     "dev": "npm run compile-data ; next dev",
     "disable-telemetry": "next telemetry disable",
     "lint": "next lint",

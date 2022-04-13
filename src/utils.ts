@@ -14,6 +14,7 @@ export function readFile (filePath: string) {
 }
 
 export function readJSON (filePath: string) {
+  console.log(filePath);
   try {
     const data = readFile(filePath);
 
@@ -106,6 +107,8 @@ export type Data = {
   issues   : IndexedIssuesData;
 };
 
-export const DATA_PATH = path.resolve('./data.json');
+export const DATA_PATH = path.resolve(process.cwd(), 'data.json');
 
-export const DATA: Data = readJSON(DATA_PATH);
+export function getData (): Data {
+  return readJSON(DATA_PATH);
+}

@@ -15,7 +15,7 @@ import {
 } from './utils';
 
 function getResourceIds (resource: string): string[] {
-  const resourcePath = path.join(process.cwd(), 'public', resource);
+  const resourcePath = path.resolve(__dirname, '..', 'public', resource);
 
   const paths = fs
     .readdirSync(resourcePath, { withFileTypes: true })
@@ -40,7 +40,7 @@ function compileResourceData (folderName: string) {
   data.ids = ids;
 
   ids.forEach((id) => {
-    const metadataPath = path.join(process.cwd(), 'public', folderName, id, 'metadata.yml');
+    const metadataPath = path.resolve(__dirname, '..', 'public', folderName, id, 'metadata.yml');
 
     if (fs.existsSync(metadataPath)) {
       const rawData = readFile(metadataPath);
@@ -58,7 +58,7 @@ function compileResourceData (folderName: string) {
           };
 
           if (type == 'article') {
-            const contentPath = path.join(process.cwd(), 'public', folderName, id, content);
+            const contentPath = path.resolve(__dirname, '..', 'public', folderName, id, content);
             const contentData = readFile(contentPath);
 
             if (contentData) {
