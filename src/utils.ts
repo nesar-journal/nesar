@@ -44,8 +44,12 @@ type IssueIdentifier   = Identifier;
 type ArticleIdentifier = Identifier;
 
 enum ResourceType {
-  Article = 'article',
-  Issue   = 'issue',
+  Article     = 'article',
+  Brief       = 'brief',
+  Editorial   = 'editorial',
+  Issue       = 'issue',
+  Review      = 'review',
+  Translation = 'translation',
 }
 
 type ResourceData = {
@@ -83,6 +87,8 @@ export type ArticleData = ResourceData & {
 
 export type IssueData = ResourceData & {
   issue: number;
+
+  editors: string[];
 
   articles: ArticleIdentifier[];
 }
