@@ -1,5 +1,4 @@
 import { ParsedUrlQuery } from 'querystring';
-import path from 'path';
 
 import type {
   GetStaticPaths,
@@ -7,9 +6,9 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import Image from 'next/image';
 
 import Layout from '../../components/Layout';
+import ResourceCard from '../../components/ResourceCard';
 import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
@@ -51,19 +50,17 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           title={data.title}
         />
 
-        <div>{data.title}</div>
-        <div>{data.abstract}</div>
-        <div>{data.doi}</div>
-        <div>{data.tags.join(', ')}</div>
-        <Image
-          alt="Cover"
-          src={`/articles/${data.identifier}/${data.paths.cover}`}
-          layout="fixed"
-          width={264}
-          height={368}
-          quality={90}
+        <ResourceCard
+          abstract={data.abstract}
+          authors={data.authors}
+          coverUrl={`/articles/${data.identifier}/${data.paths.cover}`}
+          doi={data.doi}
+          pdfUrl={`/articles/${data.identifier}/${data.paths.pdf}`}
+          publicationDate={data.dates.publication}
+          tags={data.tags}
+          title={data.title}
+          url={`/articles/${data.identifier}`}
         />
-        <div>{`/articles/${data.identifier}.pdf`}</div>
 
         <div
           dangerouslySetInnerHTML={{ __html: data.content }}

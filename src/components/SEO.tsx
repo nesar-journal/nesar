@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import Heading from '../components/Heading';
+
 type SEOProps = {
   cover?: string;
   coverAltText?: string;
@@ -62,6 +64,8 @@ const SEO = (props: SEOProps) => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Heading level={1} hidden>{title || ''}</Heading>
     </>
   );
 };

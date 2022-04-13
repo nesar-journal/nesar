@@ -5,17 +5,46 @@
 html {
   --max-width: 1200px;
   --max-width-content: 900px;
+  --brand-dark: #19191C;
+  --brand: #F6820B;
+
+  font-family: Palatino;
+  font-size: 16px;
+
+  background: white;
+  color: var(--brand-dark);
+}
+
+@media (max-width: 900px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 12px; }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-
-  font-family: Palatino;
-  font-size: 16px;
 }
 
-a {
-  color: inherit;
+a,
+a:active,
+a:hover,
+a:visited {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input:focus {
+  outline: 2px solid var(--brand);
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
 }

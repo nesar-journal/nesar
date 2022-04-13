@@ -1,0 +1,91 @@
+.resourceCard {
+  margin-bottom: 64px;
+}
+
+.horizontal {
+
+}
+
+.coverContainer {
+  position: relative;
+
+  width: 360px;
+  /* height: 368px; */
+
+  margin-bottom: 16px;
+}
+
+.coverImageContainer {
+  width: 264px;
+  height: 368px;
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.pdf,
+.publishedDate {
+  position: absolute;
+
+  padding: 10px 20px;
+
+  background-color: white;
+
+  font-family: Courier New;
+}
+
+.pdf {
+  top: 16px;
+  left: 168px;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.publishedDate {
+  bottom: 16px;
+  left: 96px;
+
+  border-radius: 4px;
+
+  font-size: 0.8125em;
+}
+
+.authors,
+.doi {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: bold;
+
+  padding-bottom: 8px;
+
+  color: #494949;
+}
+
+.title {
+  font-size: 1.5em;
+  line-height: 2;
+}
+
+.abstract {
+  color: #606264;
+  font-style: italic;
+  line-height: 2;
+}
+
+.tags {
+  font-family: Courier New;
+  font-weight: bold;
+  font-size: 0.8125em;
+  line-height: 1.125;
+
+  display: inline-block;
+
+  margin-top: 24px;
+}
+
+.tag {
+  margin-right: 8px;
+}

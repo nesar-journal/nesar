@@ -2,8 +2,11 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
+import Link from 'next/link';
 
+import Heading from '../../components/Heading';
 import Layout from '../../components/Layout';
+import ResourceCard from '../../components/ResourceCard';
 import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
@@ -30,15 +33,35 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
           title="Articles"
         />
 
-        <ul>
-          {
-            articleIds.map((id) => {
-              return (
-                <li key={id}>{articles[id].title}</li>
-              );
-            })
-          }
-        </ul>
+        <Heading
+          level={2}
+        >
+          All Articles
+        </Heading>
+
+        {
+          articleIds.map((id) => {
+            const articleData = articles[id];
+
+            return (
+              <div key={id}>
+                <Link href={{ pathname: `/articles/${id}` }}>
+                  {articleData.title}
+                </Link>
+
+                <ResourceCard
+                  abstract={articleData.abstract}
+                  coverUrl={`/articles/${id}/${articleData.paths.cover}`}
+                  pdfUrl={`/articles/${id}/${articleData.paths.pdf}`}
+                  publicationDate={articleData.dates.publication}
+                  tags={articleData.tags}
+                  title={articleData.title}
+                  url={`/articles/${id}`}
+                />
+              </div>
+            );
+          })
+        }
       </Layout>
     </>
   );

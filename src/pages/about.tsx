@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -30,6 +31,8 @@ const Home: NextPage = () => {
         <p>
           This is a test of inline <span className="devanagari">देवनागरी</span> and its romanization to <span className="iast">devanāgarī</span>.
         </p>
+
+        <p>And here is an <Link href={{ pathname: `#` }}>inline link</Link>.</p>
       </Layout>
     </>
   );

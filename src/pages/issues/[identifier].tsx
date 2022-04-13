@@ -1,5 +1,4 @@
 import { ParsedUrlQuery } from 'querystring';
-import path from 'path';
 
 import type {
   GetStaticPaths,
@@ -7,10 +6,9 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
 
 import Layout from '../../components/Layout';
+import ResourceCard from '../../components/ResourceCard';
 import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
@@ -47,8 +45,6 @@ const Issue: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articlesData,
   data,
 }) => {
-  const coverExtension = path.extname(data.paths.cover);
-
   return (
     <>
       <Layout>
@@ -56,37 +52,38 @@ const Issue: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           title={data.title}
         />
 
-        <div>{data.title}</div>
-        <div>{data.abstract}</div>
-        <div>{data.doi}</div>
-        <div>{data.tags.join(', ')}</div>
-
-        <Image
-          alt="Cover"
-          src={`/issues/${data.identifier}/${data.paths.cover}`}
-          layout="fixed"
-          width={264}
-          height={368}
-          quality={90}
+        <ResourceCard
+          abstract={data.abstract}
+          coverUrl={`/issues/${data.identifier}/${data.paths.cover}`}
+          doi={data.doi}
+          pdfUrl={`/issues/${data.identifier}/${data.paths.pdf}`}
+          publicationDate={data.dates.publication}
+          tags={data.tags}
+          title={data.title}
+          url={`/issues/${data.identifier}`}
         />
-
-        <div>{`/issues/${data.identifier}.pdf`}</div>
 
         <h2>Articles</h2>
 
-        <ul>
-          {
-            data.articles.map((articleId) => {
-              return (
-                <li key={articleId}>
-                  <Link href={{ pathname: `/articles/${articleId}` }}>
-                    {articlesData[articleId].title}
-                  </Link>
-                </li>
-              );
-            })
-          }
-        </ul>
+        {
+          data.articles.map((articleId) => {
+            const articleData = articlesData[articleId];
+
+            return (
+              <ResourceCard
+                abstract={articleData.abstract}
+                coverUrl={`/articles/${articleId}/${articleData.paths.cover}`}
+                doi={articleData.doi}
+                key={articleId}
+                pdfUrl={`/articles/${articleId}/${articleData.paths.pdf}`}
+                publicationDate={articleData.dates.publication}
+                tags={articleData.tags}
+                title={articleData.title}
+                url={`/articles/${articleId}`}
+              />
+            );
+          })
+        }
       </Layout>
     </>
   );

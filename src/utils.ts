@@ -14,7 +14,6 @@ export function readFile (filePath: string) {
 }
 
 export function readJSON (filePath: string) {
-  console.log(filePath);
   try {
     const data = readFile(filePath);
 
@@ -60,6 +59,10 @@ type ResourceData = {
 
   abstract: string;
 
+  dates: {
+    publication: string;
+  }
+
   paths: {
     cover: string;
     pdf: string;
@@ -69,7 +72,7 @@ type ResourceData = {
 }
 
 export type ArticleData = ResourceData & {
-  author: string;
+  authors: string[];
 
   paths: {
     content: string;

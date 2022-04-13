@@ -4,7 +4,9 @@ import type {
 } from 'next';
 import Link from 'next/link';
 
+import Heading from '../../components/Heading';
 import Layout from '../../components/Layout';
+import ResourceCard from '../../components/ResourceCard';
 import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
@@ -31,19 +33,31 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           title="Issues"
         />
 
-        <ul>
-          {
-            issueIds.map((id) => {
-              return (
-                <li key={id}>
-                  <Link href={{ pathname: `/issues/${id}` }}>
-                    {issues[id].title}
-                  </Link>
-                </li>
-              );
-            })
-          }
-        </ul>
+        <Heading
+          level={2}
+        >
+          All Issues
+        </Heading>
+
+        {
+          issueIds.map((id) => {
+            const issueData = issues[id];
+
+            return (
+              <div key={id}>
+                <ResourceCard
+                  abstract={issueData.abstract}
+                  coverUrl={`/issues/${id}/${issueData.paths.cover}`}
+                  pdfUrl={`/issues/${id}/${issueData.paths.pdf}`}
+                  publicationDate={issueData.dates.publication}
+                  tags={issueData.tags}
+                  title={issueData.title}
+                  url={`/issues/${id}`}
+                />
+              </div>
+            );
+          })
+        }
       </Layout>
     </>
   );

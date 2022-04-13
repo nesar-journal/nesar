@@ -26,10 +26,15 @@ git push origin master
 
 ## To Do
 
-* [ ] update SEO
+* [ ] update SEO values
 * [ ] set up Vercel
 * [ ] wire up Domain
 
 * [ ] set up tests for text/font styles
 
-* [ ] wire up search functionality via inverted index
+* [ ] add Information box
+* [ ] add Tag resource
+* [ ] add Author resource
+* [ ] add mobile styles
+* [ ] wire up search functionality via inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
+* [ ] dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
