@@ -9,27 +9,27 @@ import { DATA } from '../../utils';
 export const getStaticProps = async () => {
   return {
     props: {
-      issueIds: DATA.issues.ids,
-      issues: DATA.issues.data,
+      articleIds: DATA.articles.ids,
+      articles: DATA.articles.data,
     },
   };
 };
 
-const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-  issueIds,
-  issues,
+const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  articleIds,
+  articles,
 }) => {
   return (
     <>
       <Head>
-        <title>Issues | NESAR</title>
+        <title>Articles | NESAR</title>
       </Head>
 
       <ul>
         {
-          issueIds.map((id) => {
+          articleIds.map((id) => {
             return (
-              <li key={id}>{issues[id].title}</li>
+              <li key={id}>{articles[id].title}</li>
             );
           })
         }
@@ -38,4 +38,4 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   );
 }
 
-export default IssuesIndex;
+export default ArticlesIndex;

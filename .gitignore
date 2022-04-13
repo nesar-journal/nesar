@@ -35,3 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 
 /resources
+
+# generated data dump
+data.json

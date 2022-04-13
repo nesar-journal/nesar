@@ -1,32 +1,25 @@
 import { ParsedUrlQuery } from 'querystring';
 import path from 'path';
 
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+import type {
+  GetStaticPaths,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+  NextPage,
+} from 'next';
 import Head from 'next/head';
 
-import issues from '../../utils/issues';
+import { DATA } from '../../utils';
 
 interface IssueParams extends ParsedUrlQuery {
-  slug: string;
+  identifier: string;
 }
 
-export type IssueProps = {
-  abstract: string;
-  doi: string;
-  identifier: string;
-  issue: number;
-  paths: {
-    cover: string;
-    pdf: string;
-  }
-  tags: string[];
-  title: string;
-  type: string;
-};
-
 export const getStaticPaths: GetStaticPaths<IssueParams> = async () => {
+  const issues = DATA.issues.ids;
+
   const paths = issues
-    .map((slug) => ({ params: { slug } }))
+    .map((identifier) => ({ params: { identifier } }))
   ;
 
   return {
@@ -35,20 +28,17 @@ export const getStaticPaths: GetStaticPaths<IssueParams> = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params as IssueParams;
-
-  const data = (await import(`../../data/issues/${slug}/metadata.yml`)).default as IssueProps;
-
+export const getStaticProps = async ({ params }: GetStaticPropsContext<IssueParams>) => {
   return {
     props: {
-      data,
+      data: DATA.issues.data[params?.identifier || ''],
     }
   };
 };
 
-const Issue = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const data = props.data as IssueProps;
+const Issue: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  data,
+}) => {
   const coverExtension = path.extname(data.paths.cover);
 
   return (

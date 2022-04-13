@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "copy-files": "npx ts-node --project ./tsconfig.node.json ./copy-files.ts",
-    "dev": "next dev",
+    "build": "npm run compile-data ; next build",
+    "compile-data": "npx ts-node --project ./tsconfig.node.json ./compile-data.ts",
+    "dev": "npm run compile-data ; next dev",
     "disable-telemetry": "next telemetry disable",
     "lint": "next lint",
-    "prebuild": "npm run copy-files",
     "start": "next start"
   },
   "dependencies": {
