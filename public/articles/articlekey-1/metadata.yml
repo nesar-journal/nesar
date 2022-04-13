@@ -1,0 +1,24 @@
+type: article
+
+identifier: articlekey-1
+
+doi: <DOI>
+
+title: Article Title 1
+
+authors:
+  - Article Author 1
+
+abstract: Article Abstract 1
+
+dates:
+  publication: January 1, 2022
+
+paths:
+  cover: imagename1.png
+  pdf: contents1.pdf
+  content: contents1.html
+
+tags:
+  - tag1
+  - tag2

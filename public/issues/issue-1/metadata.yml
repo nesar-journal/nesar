@@ -1,0 +1,24 @@
+type: issue
+
+identifier: issue-1
+issue: 1
+
+doi: <DOI>
+
+title: Issue 1
+
+abstract: Issue Abstract
+
+dates:
+  publication: January 1, 2022
+
+paths:
+  cover: imagename2.png
+  pdf: contents1.pdf
+
+tags:
+  - tag5
+
+articles:
+  - articlekey-1
+  - articlekey-2
