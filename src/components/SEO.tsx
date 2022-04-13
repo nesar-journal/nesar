@@ -9,7 +9,7 @@ const SEO = (props: SEOProps) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title} | NESAR</title>
         <meta name="description" content="UPDATE_THIS_DESCRIPTION" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <Layout largeCover>
         <SEO
-          title="NESAR HI"
+          title="Home"
         />
       </Layout>
     </>

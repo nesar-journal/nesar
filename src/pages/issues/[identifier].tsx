@@ -7,7 +7,11 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
 
@@ -34,27 +38,56 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<IssuePara
   return {
     props: {
       data: DATA.issues.data[params?.identifier || ''],
+      articlesData: DATA.articles.data,
     }
   };
 };
 
 const Issue: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  articlesData,
   data,
 }) => {
   const coverExtension = path.extname(data.paths.cover);
 
   return (
     <>
-      <Head>
-        <title>{data.title} | NESAR</title>
-      </Head>
+      <Layout>
+        <SEO
+          title={data.title}
+        />
 
-      <div>{data.title}</div>
-      <div>{data.abstract}</div>
-      <div>{data.doi}</div>
-      <div>{data.tags.join(', ')}</div>
-      <div>{`/issues/${data.identifier}${coverExtension}`}</div>
-      <div>{`/issues/${data.identifier}.pdf`}</div>
+        <div>{data.title}</div>
+        <div>{data.abstract}</div>
+        <div>{data.doi}</div>
+        <div>{data.tags.join(', ')}</div>
+
+        <Image
+          alt="Cover"
+          src={`/issues/${data.identifier}/${data.paths.cover}`}
+          layout="fixed"
+          width={264}
+          height={368}
+          quality={90}
+        />
+
+        <div>{`/issues/${data.identifier}.pdf`}</div>
+
+        <h2>Articles</h2>
+
+        <ul>
+          {
+            data.articles.map((articleId) => {
+              return (
+                <li key={articleId}>
+                  <Link href={{ pathname: `/articles/${articleId}` }}>
+                    {articlesData[articleId].title}
+                  </Link>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </Layout>
     </>
   );
 };

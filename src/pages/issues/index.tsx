@@ -2,7 +2,9 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import Head from 'next/head';
+
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
 
@@ -23,19 +25,21 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <Head>
-        <title>Issues | NESAR</title>
-      </Head>
+      <Layout>
+        <SEO
+          title="Issues"
+        />
 
-      <ul>
-        {
-          issueIds.map((id) => {
-            return (
-              <li key={id}>{issues[id].title}</li>
-            );
-          })
-        }
-      </ul>
+        <ul>
+          {
+            issueIds.map((id) => {
+              return (
+                <li key={id}>{issues[id].title}</li>
+              );
+            })
+          }
+        </ul>
+      </Layout>
     </>
   );
 }
