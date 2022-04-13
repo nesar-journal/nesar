@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import styles from './Navbar.module.css';
 
 type NavbarProps = {}
@@ -16,8 +18,21 @@ const Navbar = (props: NavbarProps) => {
 
         <div className={styles.menu}>
           <ul className={styles.menuList}>
-            <li>Home</li>
-            <li>Archives</li>
+            <li>
+              <Link href={{ pathname: `/` }}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href={{ pathname: `/issues` }}>
+                Issues
+              </Link>
+            </li>
+            <li>
+              <Link href={{ pathname: `/about` }}>
+                About
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

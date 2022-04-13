@@ -31,7 +31,17 @@
   background-color: white;
   text-transform: uppercase;
   font-size: 16px;
+  font-weight: bold;
 }
+
+.menuList li a {
+  text-decoration: none;
+}
+
+.menuList li a:hover {
+  text-decoration: underline;
+}
+
 
 .input {
   height: 32px;

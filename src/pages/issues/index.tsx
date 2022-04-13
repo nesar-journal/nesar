@@ -2,6 +2,7 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
+import Link from 'next/link';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -34,7 +35,11 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           {
             issueIds.map((id) => {
               return (
-                <li key={id}>{issues[id].title}</li>
+                <li key={id}>
+                  <Link href={{ pathname: `/issues/${id}` }}>
+                    {issues[id].title}
+                  </Link>
+                </li>
               );
             })
           }

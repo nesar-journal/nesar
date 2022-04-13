@@ -26,5 +26,10 @@ git push origin master
 
 ## To Do
 
+* [ ] update SEO
 * [ ] set up Vercel
 * [ ] wire up Domain
+
+* [ ] set up tests for text/font styles
+
+* [ ] wire up search functionality via inverted index

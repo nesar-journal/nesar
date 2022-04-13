@@ -1,0 +1,16 @@
+.devanagari {
+  font-family: 'ITF Devanagari', Siddhanta;
+}
+
+.iast {
+  font-family: GentiumAlt;
+  font-style: italic;
+}
+
+div.devanagari {
+  font-size: 140%;
+}
+
+div.iast {
+  font-size: 120%;
+}
