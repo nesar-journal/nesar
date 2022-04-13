@@ -49,7 +49,6 @@ Within each entry folder, the only file that MUST be named specifically is `meta
 
 * [ ] update SEO values
 * [ ] wire up domain
-
 * [ ] embed fonts:
   * [ ] IndUni Palatino font
   * [ ] IndUni Courier New
@@ -59,15 +58,12 @@ Within each entry folder, the only file that MUST be named specifically is `meta
   * use lang attribute: <span data-language="sa" data-script="Deva">
     * san, kan, tam, eng, pra
     * Deva, Knda, Latn, Taml
-
 * [ ] add Information box (tabs), link through to Submit page
 * [ ] build out Submit page
-
 * [ ] add Tag resource
 * [ ] add Author resource
-
 * [ ] wire up search functionality via inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
-* [ ]
 * [ ] dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
-
 * [ ] add mobile styles
+* [ ] set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
+* [ ] add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
