@@ -49,17 +49,13 @@ Within each entry folder, the only file that MUST be named specifically is `meta
 
 ## To Do
 
-* [ ] update SEO values
+* [ ] update SEO values in `src/components/SEO.tsx`
 * [ ] wire up domain
 * [ ] embed fonts:
   * [ ] IndUni Palatino font
   * [ ] IndUni Courier New
   * [ ] Devanagari: https://adishila.com/fonts/
   * [ ] Kannada: Noto Serif Kannada
-* [ ] set up tests for text/font styles
-  * use lang attribute: <span data-language="sa" data-script="Deva">
-    * san, kan, tam, eng, pra
-    * Deva, Knda, Latn, Taml
 * [ ] add Information box (tabs), link through to Submit page
 * [ ] build out Submit page
 * [ ] add Tag resource
@@ -69,3 +65,4 @@ Within each entry folder, the only file that MUST be named specifically is `meta
 * [ ] add mobile styles
 * [ ] set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
 * [ ] add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
+* [ ] swap in actual slugify package for `<Heading>`

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
+import Heading from '../components/Heading';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -12,27 +13,25 @@ const AboutPage: NextPage = () => {
           title="About"
         />
 
-        <h3>Standalone Devanagari</h3>
+        <Heading
+          level={2}
+        >
+          About
+        </Heading>
 
-        <div className="devanagari">
-          सर्वे मानवाः जन्मना स्वतन्त्राः वैयक्तिकगौरवेण अधिकारेण च तुल्याः एव, सर्वेषां विवेकः आत्मसाक्षी च वर्तते, सर्वे परस्परं भ्रातृभावेन व्यवहरेयुः.
-        </div>
-
-        <hr />
-
-        <h3>Standalone IAST</h3>
-
-        <div className="iast">
-          sarve mānavāḥ janmanā svatantrāḥ vaiyaktikagauraveṇa adhikāreṇa ca tulyāḥ eva, sarveṣāṃ vivekaḥ ātmasākṣī ca vartate, sarve parasparaṃ bhrātṛbhāvena vyavahareyuḥ.
-        </div>
-
-        <hr />
+        <p>This journal is the product of ... .</p>
 
         <p>
-          This is a test of inline <span className="devanagari">देवनागरी</span> and its romanization to <span className="iast">devanāgarī</span>.
+          To see credits attributed for this site, please
+          visit the <Link href={{ pathname: 'credits' }}>credits
+          page</Link>.
         </p>
 
-        <p>And here is an <Link href={{ pathname: `#` }}>inline link</Link>.</p>
+        <p>
+          To ensure that your system is rendering the scripts
+          correctly, please visit the <Link href={{ pathname: 'credits', hash: 'font-test' }} scroll>font
+          test section</Link> of the credits page.
+        </p>
       </Layout>
     </>
   );

@@ -11,6 +11,11 @@ type HeadingProps = {
   ornament?: number;
 };
 
+// TODO: replace with actual module
+function slugify (text: string) {
+  return text.toLowerCase().replaceAll(' ', '-');
+}
+
 const Heading = (props: HeadingProps) => {
   const {
     children,
@@ -38,6 +43,7 @@ const Heading = (props: HeadingProps) => {
       className: classnames({
         hidden: hidden,
       }),
+      id: slugify(children),
     };
   }
 
