@@ -49,8 +49,15 @@ Within each entry folder, the only file that MUST be named specifically is `meta
 
 ## To Do
 
-* [ ] update SEO values in `src/components/SEO.tsx`
+### Ravi + Andrew
+
 * [ ] wire up domain
+* [ ] add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
+* [ ] set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
+* [ ] update SEO values in `src/components/SEO.tsx`
+
+### Ravi
+
 * [ ] embed fonts:
   * [ ] IndUni Palatino font
   * [ ] IndUni Courier New
@@ -63,6 +70,5 @@ Within each entry folder, the only file that MUST be named specifically is `meta
 * [ ] wire up search functionality via inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
 * [ ] dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
 * [ ] add mobile styles
-* [ ] set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
-* [ ] add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
 * [ ] swap in actual slugify package for `<Heading>`
+* [ ] update security policy
