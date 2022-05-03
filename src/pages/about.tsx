@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-const Home: NextPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <>
       <Layout>
@@ -38,4 +38,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default AboutPage;

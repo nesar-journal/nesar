@@ -40,7 +40,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<ArticlePa
   };
 };
 
-const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   data,
 }) => {
   return (
@@ -70,4 +70,4 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   );
 };
 
-export default Article;
+export default ArticlePage;

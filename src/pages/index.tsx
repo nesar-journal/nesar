@@ -4,7 +4,7 @@ import Heading from '../components/Heading';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <>
       <Layout largeCover>
@@ -31,4 +31,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default HomePage;

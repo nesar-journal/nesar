@@ -41,7 +41,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<IssuePara
   };
 };
 
-const Issue: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articlesData,
   data,
 }) => {
@@ -89,4 +89,4 @@ const Issue: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   );
 };
 
-export default Issue;
+export default IssuePage;
