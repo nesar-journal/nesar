@@ -1,10 +1,11 @@
+// TODO: should actually fill this in
 const ContentSecurityPolicy = [
-  `default-src 'self';`,
-  `script-src 'self';`,
   // `child-src example.com;`,
+  // `default-src 'self';`,
+  // `font-src 'self';`,
+  // `script-src 'self';`,
   // `style-src 'self' example.com;`,
-  `font-src 'self';`,
-].join('\n').replace(/\s{2,}/g, ' ').trim();
+].join(' ').replace(/\s{2,}/g, ' ').trim();
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const globalHeaders = [
@@ -32,10 +33,10 @@ const globalHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
+  // {
+  //   key: 'X-Content-Type-Options',
+  //   value: 'nosniff'
+  // },
   {
     key: 'Content-Security-Policy',
     value: ContentSecurityPolicy,
