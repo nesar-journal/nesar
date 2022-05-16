@@ -35,6 +35,7 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
         <Heading
           level={2}
+          titleEnd={2}
         >
           All Issues
         </Heading>

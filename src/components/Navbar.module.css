@@ -1,5 +1,5 @@
 .search {
-  background-image: url(/assets/images/bar-large.png);
+  background-image: url(/assets/images/divider-large.png);
   background-repeat: repeat-x;
   background-position: center;
   height: 48px;
@@ -9,7 +9,7 @@
 }
 
 .menu {
-  background-image: url(/assets/images/bar-small-gray.png);
+  background-image: url(/assets/images/divider-small-gray.png);
   background-repeat: repeat-x;
   background-position: center;
   height: 32px;

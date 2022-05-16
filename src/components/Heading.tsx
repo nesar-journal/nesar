@@ -2,13 +2,15 @@ import Link from 'next/link';
 
 import classnames from 'classnames';
 
+import styles from './Heading.module.css';
+
 type HeadingProps = {
   children: string;
   hidden?: boolean;
   level: number;
   link?: string;
   linkText?: string;
-  ornament?: number;
+  titleEnd?: number;
 };
 
 // TODO: replace with actual module
@@ -23,7 +25,7 @@ const Heading = (props: HeadingProps) => {
     level,
     link,
     linkText,
-    ornament,
+    titleEnd,
   } = props;
 
   function renderLink () {
@@ -40,8 +42,10 @@ const Heading = (props: HeadingProps) => {
 
   function getProps () {
     return {
-      className: classnames({
+      className: classnames(styles.heading, {
         hidden: hidden,
+        [styles.titleEndOne]: titleEnd === 1,
+        [styles.titleEndTwo]: titleEnd === 2,
       }),
       id: slugify(children),
     };

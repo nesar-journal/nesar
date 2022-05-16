@@ -4,7 +4,7 @@
 }
 
 .divider {
-  background-image: url(/assets/images/bar-large.png);
+  background-image: url(/assets/images/divider-large.png);
   background-repeat: repeat-x;
   background-position: center;
   height: 48px;

@@ -14,14 +14,14 @@ const HomePage: NextPage = () => {
 
         <Heading
           level={2}
-          ornament={1}
+          titleEnd={1}
         >
           Latest Issue
         </Heading>
 
         <Heading
           level={2}
-          ornament={2}
+          titleEnd={2}
           link="/issues"
           linkText="View All Issues"
         >Previous Issues</Heading>

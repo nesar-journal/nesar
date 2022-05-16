@@ -13,6 +13,8 @@ import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
 
+import styles from './[identifier].module.css';
+
 const DATA = getData();
 
 interface ArticleParams extends ParsedUrlQuery {
@@ -50,6 +52,11 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           title={data.title}
         />
 
+        <div className={styles.titleEnd}>
+          {data.authors}
+          {data.title}
+        </div>
+
         <ResourceCard
           abstract={data.abstract}
           authors={data.authors}
@@ -60,6 +67,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           tags={data.tags}
           title={data.title}
           url={`/articles/${data.identifier}`}
+          showTitleEnd
         />
 
         <div

@@ -1,0 +1,24 @@
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.titleEndOne::before,
+.titleEndTwo::before {
+  content: '';
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
+  background-position: center;;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.titleEndOne::before {
+  background-image: url('/assets/images/title-end-1.png');
+}
+
+.titleEndTwo::before {
+  background-image: url('/assets/images/title-end-2.png');
+}

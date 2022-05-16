@@ -35,6 +35,7 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
 
         <Heading
           level={2}
+          titleEnd={2}
         >
           All Articles
         </Heading>

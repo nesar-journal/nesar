@@ -14,6 +14,13 @@ const CreditsPage: NextPage = () => {
         />
 
         <Heading
+          level={2}
+          titleEnd={2}
+        >
+          Credits
+        </Heading>
+
+        <Heading
           level={3}
         >
           Image Credits

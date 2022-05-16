@@ -1,0 +1,11 @@
+.titleEnd::before {
+  content: '';
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+  background-position: center;;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/assets/images/animal-pillar.png');
+}

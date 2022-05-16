@@ -15,6 +15,7 @@ const AboutPage: NextPage = () => {
 
         <Heading
           level={2}
+          titleEnd={1}
         >
           About
         </Heading>
