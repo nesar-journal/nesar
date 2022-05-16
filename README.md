@@ -47,6 +47,15 @@ There is still discussion about `/volumes`.
 
 Within each entry folder, the only file that MUST be named specifically is `metadata.yml`.
 
+## OTF to WOFF2
+
+```
+brew install woff2
+
+# woff2_compress myfont.ttf
+# woff2_decompress myfont.woff2
+```
+
 ## To Do
 
 ### Ravi + Andrew
@@ -58,11 +67,6 @@ Within each entry folder, the only file that MUST be named specifically is `meta
 
 ### Ravi
 
-* [ ] embed fonts:
-  * [ ] IndUni Palatino font
-  * [ ] IndUni Courier New
-  * [ ] Devanagari: https://adishila.com/fonts/
-  * [ ] Kannada: Noto Serif Kannada
 * [ ] add Information box (tabs), link through to Submit page
 * [ ] build out Submit page
 * [ ] add Tag resource

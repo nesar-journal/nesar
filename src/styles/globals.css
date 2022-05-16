@@ -3,12 +3,7 @@
 }
 
 html {
-  --max-width: 1200px;
-  --max-width-content: 900px;
-  --brand-dark: #19191C;
-  --brand: #F6820B;
-
-  font-family: Palatino;
+  font-family: var(--font-main);
   font-size: 16px;
 
   background: white;

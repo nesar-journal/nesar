@@ -58,7 +58,7 @@
 }
 
 .input::placeholder {
-  font-family: Palatino;
+  font-family: var(--font-main);
   color: black;
 }
 

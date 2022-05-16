@@ -21,6 +21,8 @@ const CreditsPage: NextPage = () => {
 
         The image used in the header banner is ... .
 
+        <hr />
+
         <Heading
           level={3}
         >
@@ -30,11 +32,12 @@ const CreditsPage: NextPage = () => {
         <p>This site uses the following fonts:</p>
 
         <ul>
-          <li><Link href={{ pathname: 'https://adishila.com/fonts/' }}>Adishila</Link></li>
-          <li><Link href={{ pathname: '#' }}>IndUni Courier New</Link></li>
-          <li><Link href={{ pathname: '#' }}>IndUni Palatino</Link></li>
-          <li><Link href={{ pathname: '#' }}>Noto Serif Kannada</Link></li>
+          <li><Link href={{ pathname: 'https://adishila.com/fonts/' }}>Adishila</Link> (by Krishna Prasad G / Sri Suvidyendra Tirtha Swamiji under a custom license)</li>
+          <li><Link href={{ pathname: 'https://bombay.indology.info/software/fonts/induni/index.html' }}>IndUni-C / IndUni-P</Link> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
+          <li><Link href={{ pathname: 'https://fonts.google.com/noto/specimen/Noto+Serif+Kannada' }}>Noto Serif Kannada</Link> (by Google under the Open Font License)</li>
         </ul>
+
+        <hr />
 
         <Heading
           level={4}
@@ -63,6 +66,8 @@ const CreditsPage: NextPage = () => {
           This is an example of some inline <span data-language="san" data-script="Deva">आत्मसाक्षीव्यवहरेयुः</span> so we can see how it looks.
         </p>
 
+        <hr />
+
         <Heading
           level={5}
         >
@@ -70,7 +75,7 @@ const CreditsPage: NextPage = () => {
         </Heading>
 
         <div data-language="kan" data-script="Knda">
-          KANNADA
+          ಕವಿರಾಜಮಾರ್ಗದ ಪ್ರತಿ ಪರಿಚ್ಛೇದದ ಕೊನೆಯಲ್ಲಿ 'ನೃಪತುಂಗ ದೇವಾನುಮತಪ್ಪ ಕವಿರಾಜಮಾರ್ಗದೊಳ್' ಎಂದು ಹೇಳುವುದರಿಂದ ಇದು ರಾಷ್ಟ್ರಕೂಟದೊರೆ ಅಮೋಘವರ್ಷ ನೃಪತುಂಗನ (ಕ್ರಿ.ಶ ೮೧೪-೮೭೭)ಕಾಲದಲ್ಲಿ ಹುಟ್ಟಿದುದದೆಂದು ನಿರ್ಧರಿಸಲಾಗಿದೆ. ಕವಿರಾಜಮಾರ್ಗ ಕೃತಿಯಲ್ಲಿ ಮೂರು ಪರಿಚ್ಛೇದಗಳಿವೆ. ಮೊದಲ ಪರಿಚ್ಛೇದದಲ್ಲಿ ಮಂಗಳಾಚರಣೆ, ಪೂರ್ವಕವಿಸ್ತುತಿ ಮೊದಲಾದ ಪೀಠಿಕಾಭಾಗದ ಪದ್ಯಗಳಾದ ಮೇಲೆ ನೃಪತುಂಗ ಕಾವ್ಯಾಭ್ಯಾಸದ ಅವಶ್ಯಕತೆ, ಕವಿತ್ವರಚನಾಶಕ್ತಿಯಿಂದ ಉಂಟಾಗುವ ಮಾರ್ಗ ಮೊದಲಾದ ವಿಷಯಗಳ ಬಗ್ಗೆ ತಿಳಿಸಿದ್ದಾನೆ.
         </div>
 
         <Heading
@@ -80,28 +85,10 @@ const CreditsPage: NextPage = () => {
         </Heading>
 
         <p>
-          This is an example of some inline <span data-language="kan" data-script="Knda">KANNADA</span> so we can see how it looks.
+          This is an example of some inline <span data-language="kan" data-script="Knda">ಕವಿರಾಜಮಾರ್ಗದ</span> so we can see how it looks.
         </p>
 
-        <Heading
-          level={5}
-        >
-          Block Tamil
-        </Heading>
-
-        <div data-language="tam" data-script="Taml">
-          TAMIL
-        </div>
-
-        <Heading
-          level={5}
-        >
-          Inline Tamil
-        </Heading>
-
-        <p>
-          This is an example of some inline <span data-language="tam" data-script="Taml">TAMIL</span> so we can see how it looks.
-        </p>
+        <hr />
 
         <Heading
           level={5}

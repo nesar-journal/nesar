@@ -31,7 +31,7 @@
 
   background-color: white;
 
-  font-family: Courier New;
+  font-family: var(--font-monospace);
 }
 
 .pdf {
@@ -76,8 +76,7 @@
 }
 
 .tags {
-  font-family: Courier New;
-  font-weight: bold;
+  font-family: var(--font-monospace);
   font-size: 0.8125em;
   line-height: 1.125;
 
