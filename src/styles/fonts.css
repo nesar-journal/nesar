@@ -181,15 +181,32 @@
 
 /* ================================================== */
 
-[data-script="Deva"] {
-  font-family: var(--font-devanagari);
-}
-
 [data-script="Latn"] {
   font-family: var(--font-main);
   font-style: italic;
 }
 
+[data-script="Deva"] {
+  font-family: var(--font-devanagari);
+}
+
 [data-script="Knda"] {
   font-family: var(--font-kannada);
+}
+
+div[data-script="Deva"],
+div[data-script="Knda"],
+p[data-script="Deva"],
+p[data-script="Knda"] {
+  font-size: 135%;
+}
+
+div[data-script="Knda"],
+p[data-script="Knda"] {
+  line-height: 1.5;
+}
+
+div[data-script="Latn"],
+p[data-script="Latn"] {
+  font-size: 115%;
 }
