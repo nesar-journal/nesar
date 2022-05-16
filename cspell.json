@@ -1,0 +1,17 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+      "semibold",
+
+      // Names
+      "adishila",
+      "siddhanta",
+      "induni",
+      "nesar"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
