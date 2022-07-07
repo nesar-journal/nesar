@@ -48,7 +48,7 @@ function compileResourceData (folderName: string) {
       if (rawData) {
         const parsedData = yaml.parse(rawData);
 
-        const { paths, type } = parsedData;
+        const { paths } = parsedData;
 
         if (paths) {
           const { content } = paths;
@@ -57,7 +57,7 @@ function compileResourceData (folderName: string) {
             ...parsedData,
           };
 
-          if (type == 'article') {
+          if (folderName.includes('article')) {
             const contentPath = path.resolve(__dirname, '..', 'public', folderName, id, content);
             const contentData = readFile(contentPath);
 

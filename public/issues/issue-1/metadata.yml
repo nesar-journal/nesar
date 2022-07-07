@@ -7,6 +7,10 @@ doi: <DOI>
 
 title: Issue 1
 
+editors:
+  - Editor 1
+  - Editor 2
+
 abstract: Issue Abstract
 
 dates:
