@@ -1,0 +1,27 @@
+type: article
+
+identifier: ollett-images_of_language_mixture
+
+doi: <DOI>
+
+title: Images of Language Mixture in Early Kannada Literature
+
+authors:
+  - Andrew Ollett
+
+abstract: This is an abstract for the test article. It uses titles (<title xml:lang="kan-Latn">Kavirājamārgaṁ</title>) and foreign-language text (<foreign xml:lang="kan-Latn">samasaṁskr̥taṅgaḷ</foreign>).
+
+dates:
+  publication: July 7, 2022
+
+paths:
+  cover: ollett-images_of_language_mixture.jpg
+  pdf: ollett-images_of_language_mixture.pdf
+  content: ollett-images_of_language_mixture.html
+
+tags:
+  - Maṇipravāḷam
+  - Language mixture
+  - Kannada
+  - Nāgavarman
+  - Kavirājamārgaṁ
