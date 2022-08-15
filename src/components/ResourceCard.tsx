@@ -58,7 +58,10 @@ const ResourceCard = (props: ResourceCardProps) => {
             {title}
           </a>
         </Link>
-        <div className={styles.abstract}>{abstract}</div>
+        <div
+          className={styles.abstract}
+          dangerouslySetInnerHTML={{ __html: abstract }}
+        />
         <div className={styles.tags}>
         {tags.map((tag) => {
             return (
