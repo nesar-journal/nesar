@@ -76,3 +76,11 @@ brew install woff2
 * [ ] add mobile styles
 * [ ] swap in actual slugify package for `<Heading>`
 * [ ] update security policy
+* [ ] add transliteration toggle
+* [ ] add author data
+  * [ ] name
+  * [ ] email
+  * [ ] institutional affiliation
+  * [ ] VIAF number
+* [ ] merge credits into about page
+* [ ] add author section to about page
