@@ -2,8 +2,9 @@ html {
   --max-width         : 1200px;
   --max-width-content : 900px;
 
-  --brand-dark : #19191C;
-  --brand      : #F6820B;
+  --brand-light : #FFFFFF;
+  --brand-dark  : #19191C;
+  --brand       : #F6820B;
 
   --font-main       : 'IndUni-P', 'Palatino';
   --font-monospace  : 'IndUni-C', 'Courier';

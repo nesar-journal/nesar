@@ -15,6 +15,12 @@
   height: 32px;
 }
 
+@media (max-width: 500px) {
+  .menu {
+    display: none;
+  }
+}
+
 .menuList {
   display: flex;
   list-style: none;

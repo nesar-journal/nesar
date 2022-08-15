@@ -26,7 +26,7 @@ const CreditsPage: NextPage = () => {
           Image Credits
         </Heading>
 
-        The image used in the header banner is ... .
+        The image used in the header banner was taken by <a href="https://instagram.com/_spartan_photography">Spartan Xozz</a>, downloaded from <a href="https://unsplash.com/photos/omx4dN1BfQ4">Unsplash</a>, and used under the <a href="https://unsplash.com/license">Unsplash License</a>.
 
         <hr />
 

@@ -6,7 +6,7 @@ html {
   font-family: var(--font-main);
   font-size: 16px;
 
-  background: white;
+  background-color: var(--brand-light);
   color: var(--brand-dark);
 }
 

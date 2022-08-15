@@ -4,7 +4,36 @@ import styles from './Navbar.module.css';
 
 type NavbarProps = {}
 
+export const menuItems = [
+  {
+    link: '/',
+    text: 'Home',
+  },
+  {
+    link: '/issues',
+    text: 'Issues',
+  },
+  {
+    link: '/about',
+    text: 'About',
+  },
+];
+
 const Navbar = (props: NavbarProps) => {
+  function renderLinks () {
+    return menuItems.map((item) => {
+      const { link, text } = item;
+
+      return (
+        <li key={`navbar-${text}`}>
+          <Link href={{ pathname: link }}>
+            {text}
+          </Link>
+        </li>
+      );
+    });
+  }
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -18,21 +47,7 @@ const Navbar = (props: NavbarProps) => {
 
         <div className={styles.menu}>
           <ul className={styles.menuList}>
-            <li>
-              <Link href={{ pathname: `/` }}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href={{ pathname: `/issues` }}>
-                Issues
-              </Link>
-            </li>
-            <li>
-              <Link href={{ pathname: `/about` }}>
-                About
-              </Link>
-            </li>
+            {renderLinks()}
           </ul>
         </div>
       </nav>
