@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-main);
+  font-size: 16px;
+
+  background-color: var(--brand-light);
+  color: var(--brand-dark);
+}
+
+@media (max-width: 900px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 12px; }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input:focus {
+  outline: 2px solid var(--brand);
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+// -- Article styles 
+// ----- Not contained in [identifier].module.css
+// ----- because Next.js cannot deal with nested classes
+// ----- in module SASS that have not been defined in
+// ----- [identifier].tsx (which is necessarily the case
+// ----- because the HTML data is imported).
+
+.articleBody {
+    line-height:135%;
+    blockquote {
+	margin:0;
+	margin:0 2rem;
+	background:rgba(0,0,0,.035);
+	padding: 1rem 1rem 0 1rem;
+	p {
+	    margin:0;
+	    + p {
+		margin-top:0.5rem;
+	    }
+	}
+	+ blockquote {
+	    padding-bottom:1rem;
+	}
+    }
+    .lg {
+	line-height:150%;
+	+ p {
+	    margin-top:0.5rem;
+	}
+	.l {
+	    display:block;
+	}
+    }
+    .apparatus {
+	list-style-type: none;
+	padding-left:1rem;
+	margin: 0.45rem 0 0 0;
+	li {
+	    font-size:90%;
+	    margin:0;
+	    line-height:125%;
+	}
+	li > span {
+	    &:not(:last-child):after {
+		content:"; ";
+	    }
+	    &:last-of-type:after {
+		content:".";
+	    }
+	    .source, .wit {
+		font-style:normal;
+		&.wit {
+		    font-weight:bold;
+		}
+		&:last-of-type:after {
+		    content:" ";
+		}
+	    }
+	}
+    }
+    .bibliography ul {
+	list-style-type: none;
+	padding-left: 2rem;
+	text-indent:-2rem;
+	li {
+	    margin-bottom: 0.5rem;
+	    &.text-group {
+		h3 {
+		    margin: 0 0 0.25rem 0;
+		}
+		margin-bottom: 0;
+	    }
+	}
+    }
+}

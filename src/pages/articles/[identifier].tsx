@@ -70,7 +70,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           showTitleEnd
         />
 
-        <div className={styles.articleBody}
+        <div className='articleBody'
           dangerouslySetInnerHTML={{ __html: data.content }}
         />
       </Layout>
