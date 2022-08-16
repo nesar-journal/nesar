@@ -9,7 +9,7 @@ title: Images of Language Mixture in Early Kannada Literature
 authors:
   - Andrew Ollett
 
-abstract: This is an abstract for the test article. It uses titles (<title xml:lang="kan-Latn">Kavirājamārgaṁ</title>) and foreign-language text (<foreign xml:lang="kan-Latn">samasaṁskr̥taṅgaḷ</foreign>).
+abstract: This is an abstract for the test article. It uses titles (<i xml:lang="kan-Latn">Kavirājamārgaṁ</i>) and foreign-language text (<i xml:lang="kan-Latn">samasaṁskr̥taṅgaḷ</i>).
 
 dates:
   publication: July 7, 2022

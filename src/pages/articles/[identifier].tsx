@@ -13,7 +13,7 @@ import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
 
-import styles from './[identifier].module.css';
+import styles from './[identifier].module.scss';
 
 const DATA = getData();
 
@@ -70,7 +70,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           showTitleEnd
         />
 
-        <div
+        <div className={styles.articleBody}
           dangerouslySetInnerHTML={{ __html: data.content }}
         />
       </Layout>

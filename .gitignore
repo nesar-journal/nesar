@@ -38,3 +38,5 @@ yarn-error.log*
 
 # generated data dump
 data.json
+
+*~

@@ -211,7 +211,7 @@
 	</quote>
         <p>Precisely what this means can be understood, in part, from Śrīvijaya’s choices in this very verse. “Kannada words” (<foreign xml:lang="kan-Latn">kannaḍaṅgaḷ</foreign>) is modified by a Kannaḍa expression that means “well-known” (<foreign xml:lang="kan-Latn">negaḻd’ irda</foreign>), and “Sanskrit expressions” (<foreign xml:lang="kan-Latn">saṁskr̥tōkti</foreign>) is modified by a Sanskrit expression that similarly means “well-known” (<foreign xml:lang="kan-Latn">vidita-</foreign>). The idea is that a careful author should be aware of whether the word he is using is a Sanskrit or Kannada word, because the possibilities of combination for each are different. In general, Sanskrit words can only enter into compounds with other Sanskrit words (as in <foreign xml:lang="kan-Latn">vidita-saṁskr̥tōkti</foreign>). Śrīvijaya does not say it here — he may have taken it as given from the preceding discussion — but his examples make it clear that the restriction does not apply to lexical items that are borrowed from Sanskrit (e.g., <foreign xml:lang="kan-Latn">sakkadam</foreign>from <foreign xml:lang="kan-Latn">saṁskr̥tam</foreign>), but only to “Sanskrit-identical” words, which are borrowed from Sanskrit without any phonological changes at all. This is presumably why he speaks of a “series” of Sanskrit expressions in this verse: the Sanskrit expressions will form compounds with each other, ending in a Kannada inflection that forms their point of attachment into the syntax of the sentence.
         </p>
-        <p>Śrīvijaya once again gives two examples, one that disregards the rule he enunciated (1.59), and one that follows it (1.60). The first example includes what would later be called “enemy-compounds” (<foreign xml:lang="kan-Latn">arisamāsa</foreign>s), where Kannada and Sanskrit stems are joined together in a nominal compound, such as <foreign xml:lang="kan-Latn">arasu-kumāra-</foreign>“son of the king.” The grammarian Kēśirāja (1260 CE) would reuse these examples in his <foreign xml:lang="kan-Latn">Śabdamaṇidarpaṇaṁ</foreign>(v. 174, p. 217).<note place="foot" xml:id="ftn11" n="12"><p> As noted by Pathak in his edition, and <ref target="#Fleet1904">Fleet</ref> (<ref target="#Fleet1904">1904</ref>): 275–276) in his review.</p></note> Śrīvijaya comments on these examples as follows:</p>
+        <p>Śrīvijaya once again gives two examples, one that disregards the rule he enunciated (1.59), and one that follows it (1.60). The first example includes what would later be called “enemy-compounds” (<foreign xml:lang="kan-Latn">arisamāsa</foreign>s), where Kannada and Sanskrit stems are joined together in a nominal compound, such as <foreign xml:lang="kan-Latn">arasu-kumāra-</foreign>“son of the king.” The grammarian Kēśirāja (1260 CE) would reuse these examples in his <foreign xml:lang="kan-Latn">Śabdamaṇidarpaṇaṁ</foreign> (v. 174, p. 217).<note place="foot" xml:id="ftn11" n="12"><p> As noted by Pathak in his edition, and <ref target="#Fleet1904">Fleet</ref> (<ref target="#Fleet1904">1904</ref>): 275–276) in his review.</p></note> Śrīvijaya comments on these examples as follows:</p>
 	<quote xml:lang="kan-Latn">
 	  <lg met="kanda">
             <l>taṟisand’ ā sakkadamuman</l>
@@ -368,11 +368,11 @@
 	<listBibl>
           <head><anchor xml:id="ixwsk4dfln0"/>Primary Sources</head>
           <listBibl>
-	    <head><title>Abhinavabhāratī</title>by Abhinavagupta (early 11th c. CE):</head>
+	    <head><title>Abhinavabhāratī</title> by Abhinavagupta (early 11th c. CE):</head>
             <bibl>M. Ramakrishna Kavi and J. S. Pade (eds.). 2006. <title>Nāṭyaśāstra of Bharatamuni, With the Commentary Abhinavabhāratī by Abhinavaguptācārya (Chapters 28–37)</title>. Vol. IV. Second edition revised by V. M. Kulkarni and T. S. Nandi. Baroda: Oriental Institute.</bibl>
 	  </listBibl>
           <listBibl xml:id="Kavirājamārgaṁ">
-	    <head><title>Kavirājamārgaṁ</title>by Śrīvijaya (870s CE):</head>
+	    <head><title>Kavirājamārgaṁ</title> by Śrīvijaya (870s CE):</head>
 	    <bibl>P = K. B. Pathak (ed.). <title>Nṛipatuṅga’s Kavirâjamârgga: A Treatise of the 9th century on Alaṅkâra</title>. Bangalore: Mysore Government Press, 1898. </bibl>
             <bibl>M = A. Venkata Rau and H. Sesha Aiyangar (eds.). <title>Karṇāṭaka Kavirājamārgaṁ</title>. Madras [Chennai]: University of Madras, 1973. </bibl>
             <bibl>S = M. V. Seetha Ramaiah (ed.). <title>Śrī Nr̥patuṅgadēvānumatamappa Śrīvijayakr̥ta Kavirājamārgaṁ</title>. Beṅgaḷūru: B.M. Śrī Smāraka Pratiṣṭhāna, 1994 (rev. edition; first published in 1958). </bibl>
@@ -383,31 +383,31 @@
             <bibl>C = MS K 1250 at the Government Oriental Manuscripts Liberary, University of Madras (now at the Anna Cententary Library, Chennai).</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Kāvyāvalōkanaṁ </title>by Nāgavarma (1040s CE):</head>
+	    <head><title>Kāvyāvalōkanaṁ </title> by Nāgavarma (1040s CE):</head>
             <bibl xml:id="Dēvīrappa2004">H. Dēvīrappa (ed.). 2004. <title>Nāgavarma viracitaṁ Kāvyāvalōkanaṁ</title>. Bengaluru: Kannaḍa Sāhitya Pariṣattu.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Jayadhavalā</title>by Vīrasēna and Jinasēna (837 CE):</head>
+	    <head><title>Jayadhavalā</title> by Vīrasēna and Jinasēna (837 CE):</head>
             <bibl xml:id="Chandra1944">Phul Chandra, Mehendra Kumar and Kailash Chandra (eds.). 1944. <title>Kasāya-pāhudam by Gunadharāchārya with the Churni Sutra of Yativrashabhāchārya and The Commentary Jayadhavalā of Veersenachārya Upon Both [Pejjadosa Vihatti I]</title>. D. Jain Sangh Granthamala 1-1. Benaras: Benaras Hindu University Press.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Vardhamānapurāṇam </title>by Nāgavarma (1042 CE):</head>
+	    <head><title>Vardhamānapurāṇam</title> by Nāgavarma (1042 CE):</head>
             <bibl>B. S. Saṇṇaya (ed.). 1974. <title>Eraḍaneya Nāgavarma Viracita Vardhamāna Purāṇaṁ</title>. Mysore: Kannaḍa Adhyayana Saṁsthe, University of Mysore.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title xml:lang="tam-Latn">Vīracōḻiyam</title>by Puttiramittiraṉ (1065–1070 CE):</head>
+	    <head><title xml:lang="tam-Latn">Vīracōḻiyam</title> by Puttiramittiraṉ (1065–1070 CE):</head>
             <bibl>K. E. Kōvintarāca Mutaliyār (ed.). 1970. <title>Poṉpaṟṟi kāvalar Puttamittiraṉār iyaṟṟiya Vīracōḻiyam peruṅktēvaṉār iyaṟṟiya uraiyuṭaṉ</title>. Cennai [Chennai]: Tiruvelvēlit Teṉṉintiya Caivasittānta Nūṟpatippuk Kaḻakam.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Vīrastutiḥ</title>by Dhanapāla (early 11th c. CE):</head>
+	    <head><title>Vīrastutiḥ</title> by Dhanapāla (early 11th c. CE):</head>
             <bibl xml:id="Hiralal1933">Hiralal Kapadia (ed.). 1933. <title>Paramārhata-kavīśvara-Śrīdhanapālapraṇītaḥ R̥ṣabhapañcāśikā-Vīrastutidvayarūpakr̥tikalāpaḥ Ṭīkāprastāvanādisamalaṅkr̥taḥ</title>. Surat: Sheth Devchand Lalbhai Jain Pustakoddhar Fund.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Vr̥ṣādhipaśatakam</title>by Pālkuriki Sōmanātha (12th/13th c. CE):</head>
+	    <head><title>Vr̥ṣādhipaśatakam</title> by Pālkuriki Sōmanātha (12th/13th c. CE):</head>
 	    <bibl><ref target="http://andhrabharati.com/shatakamulu/vRishhAdhipa/index.html">http://andhrabharati.com/shatakamulu/vRishhAdhipa/index.html</ref></bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Śabdamaṇidarpaṇaṁ</title>by Kēśirāja/Kēśava (ca. 1260 CE):</head>
+	    <head><title>Śabdamaṇidarpaṇaṁ</title> by Kēśirāja/Kēśava (ca. 1260 CE):</head>
             <bibl xml:id="Kedilaya1964-1977">Kedilaya, A. Shanker. 1964–1977. “Śabdamaṇidarpaṇa.” <title>Annals of Oriental Research, University of Madras</title> 19–27: 1–460.</bibl>
 	  </listBibl>
 
