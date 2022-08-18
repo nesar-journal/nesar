@@ -15,7 +15,7 @@ type HeadingProps = {
 
 // TODO: replace with actual module
 function slugify (text: string) {
-  return text.toLowerCase().replaceAll(' ', '-');
+  return text.toLowerCase().replace(/ /g, '-');
 }
 
 const Heading = (props: HeadingProps) => {
