@@ -16,6 +16,7 @@ type ResourceCardProps = {
   tags: string[];
   title: string;
   url: string;
+  showTitleEnd?: boolean;
 };
 
 const ResourceCard = (props: ResourceCardProps) => {
