@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 
 const Home: NextPage = () => {
   return (

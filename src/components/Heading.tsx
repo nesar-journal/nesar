@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import classnames from 'classnames';
 
-import styles from './Heading.module.css';
+import styles from './Heading.module.scss';
 
 type HeadingProps = {
   children: string;

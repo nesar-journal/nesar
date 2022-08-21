@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import classnames from 'classnames';
 
-import styles from './ResourceCard.module.css';
+import styles from './ResourceCard.module.scss';
 
 type ResourceCardProps = {
   abstract: string;

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Navbar from './Navbar';
 import Navmenu from './Navmenu';
 
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 type HeaderProps = {
   largeCover?: boolean;

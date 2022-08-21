@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from './Navmenu.module.css';
+import styles from './Navmenu.module.scss';
 
 import { menuItems } from './Navbar';
 
