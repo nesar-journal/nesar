@@ -4,26 +4,79 @@
 // ----- in module SASS that have not been defined in
 // ----- [identifier].tsx (which is necessarily the case
 // ----- because the HTML data is imported).
+$breakpoint-mobile: 480px;
 
 .articleBody {
-    line-height:135%;
-    blockquote {
-	margin:0;
-	margin:0 2rem;
-	background:rgba(0,0,0,.035);
-	padding: 1rem 1rem 0 1rem;
-	p {
-	    margin:0;
-	    + p {
-		margin-top:0.5rem;
+    --lh: 1.4rem;
+    line-height: var(--lh);
+    .text-section {
+	@media (max-width: $breakpoint-mobile) {
+	    padding:0;
+	}
+	padding-right:14rem;
+    }
+    sup {
+	font-style: normal!important;
+    }
+    .textandnotes {
+	position: relative;
+	@media (min-width: $breakpoint-mobile) {
+	    ul.sidenotes {
+		position: absolute;
+		overflow: visible;
+		top: 0;
+		margin: 0;
+		width: 11rem;
+		right: -12.5rem;
+		padding:0;
+		list-style-type: none;
+		li {
+		    font-size: 80%;
+		    margin-bottom: 0.45rem;
+		    p {
+			a:first-child {
+			    margin-right:0.2rem;
+			    font-weight:bold;
+			}
+			font-style: normal;
+			font-size: 0.78rem;
+			line-height: 1.05rem;
+			position: relative;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;  
+			overflow: hidden;
+			margin: 0;
+		    }
+		}
 	    }
 	}
+	@media (max-width: $breakpoint-mobile) {
+	    ul.sidenotes {
+		display: none;
+	    }
+	}
+    }
+    blockquote {
+	margin:0 0 0 2rem;
+	background:rgba(0,0,0,.035);
+	padding: 1rem 1rem 1rem 1rem;
 	+ blockquote {
-	    padding-bottom:1rem;
+	    padding-top:0!important;
+	}
+	p {
+	    margin:0;
+	    padding: 0.55rem 0;
+	}
+	ul.sidenotes {
+	    right: -13.5rem!important;
+	    p {
+		padding:0;
+	    }
 	}
     }
     .lg {
-	line-height:150%;
+	line-height:1.5rem;
 	+ p {
 	    margin-top:0.5rem;
 	}
@@ -47,11 +100,15 @@
 	    &:last-of-type:after {
 		content:".";
 	    }
-	    .source, .wit {
+	    .source {
 		font-style:normal;
-		&.wit {
-		    font-weight:bold;
+		&:last-of-type:after {
+		    content:" ";
 		}
+	    }
+	    .wit {
+		font-style:normal;
+		font-weight:bold;
 		&:last-of-type:after {
 		    content:" ";
 		}
