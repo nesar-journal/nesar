@@ -58,29 +58,35 @@ brew install woff2
 
 ## To Do
 
-### Ravi + Andrew
+### Pre-Launch
 
-* [ ] wire up domain
-* [ ] add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
-* [ ] set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
-* [ ] update SEO values in `src/components/SEO.tsx`
+#### Ravi
 
-### Ravi
+* wire up transliteration
+* add Information box (tabs), link through to Submit page
+* update mobile styles
 
-* [ ] add Information box (tabs), link through to Submit page
-* [ ] build out Submit page
-* [ ] add Tag resource
-* [ ] add Author resource
-* [ ] wire up search functionality via inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
-* [ ] dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
-* [ ] add mobile styles
-* [ ] swap in actual slugify package for `<Heading>`
-* [ ] update security policy
-* [ ] add transliteration toggle
-* [ ] add author data
-  * [ ] name
-  * [ ] email
-  * [ ] institutional affiliation
-  * [ ] VIAF number
-* [ ] merge credits into about page
-* [ ] add author section to about page
+#### Ravi + Andrew
+
+* define and update homepage
+* wire up domain (mid-September)
+* update SEO values in `src/components/SEO.tsx`
+* go live
+
+### Post-Launch
+
+#### Ravi
+
+* add Tag resource
+* add Author resource
+
+* dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
+* wire up search functionality via inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
+  * search authors, tags, title, abstracts
+
+* update security policy (`next.config.js`)
+
+#### Ravi + Andrew
+
+* add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
+* set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
