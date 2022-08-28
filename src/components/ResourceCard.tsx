@@ -54,7 +54,7 @@ const ResourceCard = (props: ResourceCardProps) => {
           <Link href={{ pathname: pdfUrl }} passHref><div className={styles.pdf}>PDF</div></Link>
           <div className={styles.publishedDate}>published: {publicationDate}</div>
         </div>
-        {authors && <div className={styles.authors}>{authors}</div>}
+        {authors && <div className={styles.authors}>{authors.join(', ')}</div>}
         {doi && <div className={styles.doi}>{doi}</div>}
         <Link href={{ pathname: url }} passHref>
           <a className={styles.title}>

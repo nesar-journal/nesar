@@ -1,11 +1,15 @@
 ollett:
-  name        : Andrew Ollett
+  displayName : Andrew Ollett
+  firstName   : Andrew
+  lastName    : Ollett
   email       : email@email.com
   institution : University of Chicago
   viaf        : viaf_number
 
 otherperson:
-  name        : Other Person
+  displayName : Other Person
+  firstName   : Other
+  lastName    : Person
   email       : other@email.com
   institution : Harvard
   viaf        : viaf_number_2

@@ -70,7 +70,11 @@ function compileResourceData (folderName: string) {
           }
 
           if (entryData.authors) {
-            entryData.authors = entryData.authors.map((authorId: string) => authorsData.data[authorId].name);
+            entryData.authors = entryData.authors.map((authorId: string) => authorsData.data[authorId].displayName);
+          }
+
+          if (entryData.editors) {
+            entryData.editors = entryData.editors.map((editorId: string) => authorsData.data[editorId].displayName);
           }
 
           data.data[id] = entryData;

@@ -47,7 +47,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
                 return (
                   <tr key={authorData.email}>
-                    <td>{authorData.name}</td>
+                    <td>{authorData.displayName}</td>
                     <td>{authorData.email}</td>
                     <td>{authorData.institution}</td>
                     <td>{authorData.viaf}</td>

@@ -95,7 +95,9 @@ export type IssueData = ResourceData & {
 }
 
 export type AuthorData = {
-  name        : string;
+  displayName : string;
+  firstName   : string;
+  lastName    : string;
   email       : string;
   institution : string;
   viaf        : string;

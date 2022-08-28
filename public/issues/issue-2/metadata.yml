@@ -7,6 +7,10 @@ doi: <DOI>
 
 title: Issue 2
 
+editors:
+  - ollett
+  - otherperson
+
 abstract: Issue Abstract
 
 dates:

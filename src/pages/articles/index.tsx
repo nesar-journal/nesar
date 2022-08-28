@@ -52,6 +52,7 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
 
                 <ResourceCard
                   abstract={articleData.abstract}
+                  authors={articleData.authors}
                   coverUrl={`/articles/${id}/${articleData.paths.cover}`}
                   pdfUrl={`/articles/${id}/${articleData.paths.pdf}`}
                   publicationDate={articleData.dates.publication}
