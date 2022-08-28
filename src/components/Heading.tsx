@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import classnames from 'classnames';
+import urlSlug from 'url-slug';
 
 import styles from './Heading.module.scss';
 
@@ -12,11 +13,6 @@ type HeadingProps = {
   linkText?: string;
   titleEnd?: number;
 };
-
-// TODO: replace with actual module
-function slugify (text: string) {
-  return text.toLowerCase().replace(/ /g, '-');
-}
 
 const Heading = (props: HeadingProps) => {
   const {
@@ -47,7 +43,7 @@ const Heading = (props: HeadingProps) => {
         [styles.titleEndOne]: titleEnd === 1,
         [styles.titleEndTwo]: titleEnd === 2,
       }),
-      id: slugify(children),
+      id: urlSlug(children),
     };
   }
 
