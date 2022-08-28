@@ -47,6 +47,8 @@ const ResourceCard = (props: ResourceCardProps) => {
               width={264}
               height={368}
               quality={90}
+              objectFit="cover"
+              objectPosition="center"
             />
           </div>
           <Link href={{ pathname: pdfUrl }} passHref><div className={styles.pdf}>PDF</div></Link>
