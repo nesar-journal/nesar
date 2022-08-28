@@ -35,6 +35,15 @@ a:hover {
   text-decoration: underline;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 8px 16px;
+  border: 1px solid lightgray;
+}
+
 input:focus {
   outline: 2px solid var(--brand);
 }

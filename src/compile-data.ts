@@ -9,10 +9,13 @@ import {
   Data,
   IndexedArticlesData,
   IndexedIssuesData,
+  IndexedAuthorsData,
 
   readFile,
   writeFile,
 } from './utils';
+
+const authorsData = compileAuthorsData();
 
 function getResourceIds (resource: string): string[] {
   const resourcePath = path.resolve(__dirname, '..', 'public', resource);
@@ -66,6 +69,10 @@ function compileResourceData (folderName: string) {
             }
           }
 
+          if (entryData.authors) {
+            entryData.authors = entryData.authors.map((authorId: string) => authorsData.data[authorId].name);
+          }
+
           data.data[id] = entryData;
         }
       }
@@ -77,8 +84,34 @@ function compileResourceData (folderName: string) {
   return data;
 }
 
+function compileAuthorsData () {
+  const authorsPath = path.resolve(__dirname, '..', 'public', 'authors.yml');
+
+  const data: IndexedAuthorsData = {
+    ids  : [],
+    data : {},
+  };
+
+  if (fs.existsSync(authorsPath)) {
+    const rawData = readFile(authorsPath);
+
+    if (rawData) {
+      const parsedData = yaml.parse(rawData);
+
+      const ids = Object.keys(parsedData);
+      ids.sort();
+
+      data.ids  = ids;
+      data.data = parsedData;
+    }
+  }
+
+  return data;
+}
+
 function compileData () {
   const data: Data = {
+    authors  : authorsData,
     articles : compileResourceData('articles') as IndexedArticlesData,
     issues   : compileResourceData('issues') as IndexedIssuesData,
   };

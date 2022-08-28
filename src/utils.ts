@@ -42,6 +42,7 @@ type Identifier = string;
 
 type IssueIdentifier   = Identifier;
 type ArticleIdentifier = Identifier;
+type AuthorIdentifier = string;
 
 enum ResourceType {
   Article     = 'article',
@@ -76,7 +77,7 @@ type ResourceData = {
 }
 
 export type ArticleData = ResourceData & {
-  authors: string[];
+  authors: AuthorIdentifier[];
 
   paths: {
     content: string;
@@ -88,9 +89,16 @@ export type ArticleData = ResourceData & {
 export type IssueData = ResourceData & {
   issue: number;
 
-  editors: string[];
+  editors: AuthorIdentifier[];
 
   articles: ArticleIdentifier[];
+}
+
+export type AuthorData = {
+  name        : string;
+  email       : string;
+  institution : string;
+  viaf        : string;
 }
 
 type ArticlesData = {
@@ -99,6 +107,10 @@ type ArticlesData = {
 
 type IssuesData = {
   [key: IssueIdentifier]: IssueData;
+};
+
+type AuthorsData = {
+  [key: AuthorIdentifier]: AuthorData;
 };
 
 export type IndexedArticlesData = {
@@ -111,7 +123,13 @@ export type IndexedIssuesData = {
   data : IssuesData;
 }
 
+export type IndexedAuthorsData = {
+  ids  : AuthorIdentifier[];
+  data : AuthorsData;
+}
+
 export type Data = {
+  authors  : IndexedAuthorsData;
   articles : IndexedArticlesData;
   issues   : IndexedIssuesData;
 };
