@@ -1,0 +1,20 @@
+.transliterationToggle {
+  background-color: white;
+  border: 1px solid darkgray;
+
+  display: flex;
+}
+
+.toggleItem {
+  padding: 4px 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+}
+
+.selected {
+  font-weight: bold;
+  background-color: lighten(lightgray, 10%);
+}

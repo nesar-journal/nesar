@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
-import styles from './Navmenu.module.scss';
-
 import { menuItems } from './Navbar';
+import TransliterationToggle from './TransliterationToggle';
+
+import styles from './Navmenu.module.scss';
 
 type NavmenuProps = {}
 
@@ -28,6 +29,10 @@ const Navmenu = (props: NavmenuProps) => {
           <ul className={styles.menuList}>
             {renderLinks()}
           </ul>
+        </div>
+
+        <div className={styles.transliterationToggle}>
+          <TransliterationToggle />
         </div>
       </nav>
     </>
