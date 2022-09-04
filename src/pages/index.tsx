@@ -12,20 +12,35 @@ const HomePage: NextPage = () => {
           title="Home"
         />
 
+        <p>short description</p>
+
         <Heading
           level={2}
           titleEnd={1}
         >
-          Latest Issue
+          Hero Article
         </Heading>
+
+        {/* hero article */}
 
         <Heading
           level={2}
-          titleEnd={2}
-          link="/issues"
-          linkText="View All Issues"
-        >Previous Issues</Heading>
+          titleEnd={1}
+        >
+          Featured Article
+        </Heading>
 
+        {/*   */}
+
+        <Heading
+          level={2}
+          titleEnd={1}
+        >
+          Latest Articles
+        </Heading>
+
+        {/* dynamically generate most recent  */}
+        {/* exclude featured article  */}
       </Layout>
     </>
   );
