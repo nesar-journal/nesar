@@ -5,6 +5,19 @@ import Sanscript from '@indic-transliteration/sanscript';
 
 import styles from './TransliterationToggle.module.scss';
 
+const SCRIPT_SCHEMA_MAPPING: { [key: string]: string} = {
+  // list of scripts: https://en.wikipedia.org/wiki/ISO_15924#List_of_codes
+  // list of schemas: https://github.com/indic-transliteration/sanscript.js#usage
+  Deva: 'devanagari',
+  Knda: 'kannada',
+  Latn: 'iso',
+  Mlym: 'malayalam',
+  Taml: 'tamil',
+  Telu: 'telugu',
+}
+
+const NON_LATIN_SCRIPTS = Object.keys(SCRIPT_SCHEMA_MAPPING).filter((script) => script !== 'Latn');
+
 function removeAccents(input: string) {
   return input
     .replace(/á/g,"a")
@@ -44,7 +57,10 @@ function getTextNodes (element: Element) {
   return nodes;
 }
 
-function transliterateTextElements (scriptFrom: string, scriptTo: string, schemeFrom: string, schemeTo: string) {
+function transliterateTextElements (scriptFrom: string, scriptTo: string) {
+  const schemeFrom = SCRIPT_SCHEMA_MAPPING[scriptFrom];
+  const schemeTo   = SCRIPT_SCHEMA_MAPPING[scriptTo];
+
   const scriptInstances = document.querySelectorAll(`[data-script="${scriptFrom}"]`);
 
   scriptInstances.forEach((scriptInstance) => {
@@ -58,12 +74,16 @@ function transliterateTextElements (scriptFrom: string, scriptTo: string, scheme
   });
 }
 
-function transliterateLatinToDevanagari () {
-  transliterateTextElements('Latn', 'Deva', 'iso', 'devanagari');
+function transliterateFromLatin () {
+  NON_LATIN_SCRIPTS.forEach((script) => {
+    transliterateTextElements('Latn', script);
+  });
 }
 
-function transliterateDevanagariToLatin () {
-  transliterateTextElements('Deva', 'Latn', 'devanagari', 'iso');
+function transliterateToLatin () {
+  NON_LATIN_SCRIPTS.forEach((script) => {
+    transliterateTextElements(script, 'Latn');
+  });
 }
 
 export default function TransliterationToggle () {
@@ -76,10 +96,10 @@ export default function TransliterationToggle () {
       if (storedTransliterationValue) {
         if (storedTransliterationValue === "1") {
           setShouldTransliterate(true);
-          transliterateDevanagariToLatin();
+          transliterateToLatin();
         } else {
           setShouldTransliterate(false);
-          transliterateLatinToDevanagari();
+          transliterateFromLatin();
         }
       }
     }
@@ -92,9 +112,9 @@ export default function TransliterationToggle () {
       localStorage.setItem('transliterate', shouldTransliterate ? '0' : '1');
 
       if (shouldTransliterate) {
-        transliterateDevanagariToLatin();
+        transliterateToLatin();
       } else {
-        transliterateLatinToDevanagari();
+        transliterateFromLatin();
       }
     }
   }
