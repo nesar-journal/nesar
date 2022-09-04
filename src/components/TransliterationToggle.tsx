@@ -51,7 +51,7 @@ function transliterateTextElements (scriptFrom: string, scriptTo: string, scheme
     const textElements = getTextNodes(scriptInstance);
 
     textElements.forEach((textElement) => {
-      textElement.textContent = Sanscript.t(textElement.textContent, schemeFrom, schemeTo);
+      textElement.textContent = Sanscript.t(textElement.textContent || '', schemeFrom, schemeTo);
     });
 
     scriptInstance.setAttribute('data-script', scriptTo);
