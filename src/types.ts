@@ -97,7 +97,7 @@ export type Data = {
   issues   : IndexedIssuesData;
 };
 
-export type Cache = {
+export type Index = {
   generalWords  : { [key: string]: ArticleIdentifier[] };
   languageWords : { [key: string]: ArticleIdentifier[] };
 };

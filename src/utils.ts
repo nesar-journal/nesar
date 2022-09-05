@@ -3,7 +3,7 @@ import path from 'path';
 
 import fuzzysort from 'fuzzysort';
 
-import { Cache, Data } from './types';
+import { Data, Index } from './types';
 
 // =====================
 // ======= FILES =======
@@ -49,20 +49,20 @@ export function getData (): Data {
 }
 
 // =====================
-// ======= CACHE =======
+// ======= INDEX =======
 // =====================
 
-export const CACHE_PATH = path.resolve(process.cwd(), 'cache.json');
+export const INDEX_PATH = path.resolve(process.cwd(), 'index.json');
 
-function getCache (): Cache {
-  return readJSON(CACHE_PATH);
+function getIndex (): Index {
+  return readJSON(INDEX_PATH);
 }
 
-export function queryCacheForMatches (query: string) {
-  const CACHE = getCache();
+export function queryIndexForMatches (query: string) {
+  const INDEX = getIndex();
 
-  const generalWords  = Object.keys(CACHE.generalWords).map((word) => fuzzysort.prepare(word));
-  const languageWords = Object.keys(CACHE.languageWords).map((word) => fuzzysort.prepare(word));
+  const generalWords  = Object.keys(INDEX.generalWords).map((word) => fuzzysort.prepare(word));
+  const languageWords = Object.keys(INDEX.languageWords).map((word) => fuzzysort.prepare(word));
 
   // == SEPARATED MATCHES ==
 
@@ -75,14 +75,14 @@ export function queryCacheForMatches (query: string) {
   // generalFuzzyMatches.forEach((match) => {
   //   generalWordsMatches.push({
   //     searchTerm: match,
-  //     results: CACHE.generalWords[match],
+  //     results: INDEX.generalWords[match],
   //   });
   // });
 
   // languageFuzzyMatches.forEach((match) => {
   //   languageWordsMatches.push({
   //     searchTerm: match,
-  //     results: CACHE.languageWords[match],
+  //     results: INDEX.languageWords[match],
   //   });
   // });
 
@@ -96,8 +96,8 @@ export function queryCacheForMatches (query: string) {
     matches.push({
       searchTerm: match,
       results: Array.from(new Set([ // make unique
-        ...(CACHE.generalWords[match] || []),
-        ...(CACHE.languageWords[match] || []),
+        ...(INDEX.generalWords[match] || []),
+        ...(INDEX.languageWords[match] || []),
       ])),
     });
   });

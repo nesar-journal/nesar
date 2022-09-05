@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "npm run disable-telemetry && npm run compile && next build",
-    "compile": "npm run compile-data && npm run compile-cache",
-    "compile-cache": "npx ts-node --project ./tsconfig.node.json ./src/compile-cache.ts",
+    "compile": "npm run compile-data && npm run compile-index",
     "compile-data": "npx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
+    "compile-index": "npx ts-node --project ./tsconfig.node.json ./src/compile-index.ts",
     "dev": "npm run compile && next dev",
     "disable-telemetry": "next telemetry disable",
     "lint-fix": "next lint --fix",

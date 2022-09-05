@@ -1,7 +1,7 @@
 import { Parser } from 'htmlparser2';
 
-import { Cache } from './types';
-import { CACHE_PATH, getData, writeFile } from './utils';
+import { Index } from './types';
+import { INDEX_PATH, getData, writeFile } from './utils';
 
 function sanitize (input: string) {
   return input
@@ -45,8 +45,8 @@ function getWordsFromHTML (html: string) {
   return { generalWords, languageWords };
 }
 
-function getCache (): Cache {
-  const cache: Cache = {
+function getIndex (): Index {
+  const index: Index = {
     generalWords: {},
     languageWords: {},
   };
@@ -79,29 +79,29 @@ function getCache (): Cache {
     ])).filter((word) => word.length > 2);
 
     generalWords.forEach((word) => {
-      if (!cache['generalWords'][word]) {
-        cache['generalWords'][word] = [ identifier ];
+      if (!index['generalWords'][word]) {
+        index['generalWords'][word] = [ identifier ];
       } else {
-        cache['generalWords'][word].push(identifier);
+        index['generalWords'][word].push(identifier);
       }
     });
 
     languageWords.forEach((word) => {
-      if (!cache['languageWords'][word]) {
-        cache['languageWords'][word] = [ identifier ];
+      if (!index['languageWords'][word]) {
+        index['languageWords'][word] = [ identifier ];
       } else {
-        cache['languageWords'][word].push(identifier);
+        index['languageWords'][word].push(identifier);
       }
     });
   });
 
-  return cache;
+  return index;
 }
 
-function compileCache () {
-  const cache = getCache();
+function compileIndex () {
+  const index = getIndex();
 
-  writeFile(CACHE_PATH, JSON.stringify(cache, null, 2));
+  writeFile(INDEX_PATH, JSON.stringify(index, null, 2));
 }
 
-compileCache();
+compileIndex();
