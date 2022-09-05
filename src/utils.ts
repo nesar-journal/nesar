@@ -3,7 +3,7 @@ import path from 'path';
 
 import fuzzysort from 'fuzzysort';
 
-import { Data, Index } from './types';
+import { Data, Index, Matches } from './types';
 
 // =====================
 // ======= FILES =======
@@ -59,6 +59,8 @@ function getIndex (): Index {
 }
 
 export function queryIndexForMatches (query: string) {
+  if (query.length < 2) return [];
+
   const INDEX = getIndex();
 
   const generalWords  = Object.keys(INDEX.generalWords).map((word) => fuzzysort.prepare(word));
@@ -90,7 +92,7 @@ export function queryIndexForMatches (query: string) {
 
   const fuzzyMatches  = fuzzysort.go(query, [...generalWords, ...languageWords], { limit: 20 }).map((match) => match.target);
 
-  const matches: { searchTerm: string; results: string[] }[]  = [];
+  const matches: Matches = [];
 
   fuzzyMatches.forEach((match) => {
     matches.push({

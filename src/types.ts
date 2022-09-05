@@ -101,3 +101,10 @@ export type Index = {
   generalWords  : { [key: string]: ArticleIdentifier[] };
   languageWords : { [key: string]: ArticleIdentifier[] };
 };
+
+type Match = {
+  searchTerm : string;
+  results    : string[];
+};
+
+export type Matches = Match[];

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import Search from './Search';
 import TransliterationToggle from './TransliterationToggle';
 
 import styles from './Navbar.module.scss';
@@ -40,11 +41,7 @@ const Navbar = (props: NavbarProps) => {
     <>
       <nav className={styles.navbar}>
         <div className={styles.top}>
-          <input
-            className={styles.input}
-            placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEARCH"
-            type="text"
-          />
+          <Search />
 
           <div className={styles.transliterationToggle}>
             <TransliterationToggle />
