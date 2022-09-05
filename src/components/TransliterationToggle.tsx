@@ -28,32 +28,6 @@ const SCRIPT_SCHEMA_MAPPING: { [key: string]: string} = {
 
 const LANGUAGES = Object.keys(LANGUAGE_SCRIPT_MAPPING);
 
-function removeAccents(input: string) {
-  return input
-    .replace(/á/g,"a")
-    .replace(/à/g,"a")
-    .replace(/ā`/g,"ā")
-    .replace(/ā́/g,"ā")
-    .replace(/ā́/g,"ā")
-    .replace(/ḗ/g,"ē")
-    .replace(/ē`/g,"ē")
-    .replace(/ō`/g,"ō")
-    .replace(/ō´/g,"ō")
-    .replace(/ṓ/g,"ō")
-    .replace(/ṑ/g,"ō")
-    .replace(/í/g,"i")
-    .replace(/ì/g,"i")
-    .replace(/ī́/g,"ī")
-    .replace(/ī`/g,"ī")
-    .replace(/ú/g,"u")
-    .replace(/ù/g,"u")
-    .replace(/ū`/g,"ū")
-    .replace(/ū́/g,"ū")
-    .replace(/ū´/g,"ū")
-    .replace(/ŕ̥/g,"r̥")
-  ;
-};
-
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
   const languageInstances = document.querySelectorAll(`[data-lang="${language}"]`);
   languageInstances.forEach((languageInstance) => {
