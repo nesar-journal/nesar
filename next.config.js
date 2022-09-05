@@ -1,10 +1,10 @@
 // TODO: should actually fill this in
 const ContentSecurityPolicy = [
-  // `child-src example.com;`,
+  // `child-src nesarjournal.org;`,
   // `default-src 'self';`,
   // `font-src 'self';`,
   // `script-src 'self';`,
-  // `style-src 'self' example.com;`,
+  // `style-src 'self' nesarjournal.org;`,
 ].join(' ').replace(/\s{2,}/g, ' ').trim();
 
 // https://nextjs.org/docs/advanced-features/security-headers
