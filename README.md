@@ -62,16 +62,9 @@ brew install woff2
 
 #### Ravi
 
-* wire up transliteration
+* update homepage
 * add Information box (tabs), link through to Submit page
 * update mobile styles
-
-#### Ravi + Andrew
-
-* define and update homepage
-* wire up domain (mid-September)
-* update SEO values in `src/components/SEO.tsx`
-* go live
 
 ### Post-Launch
 
@@ -90,4 +83,3 @@ brew install woff2
 
 * add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
 * set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
-
