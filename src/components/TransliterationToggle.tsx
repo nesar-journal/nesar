@@ -54,40 +54,30 @@ function removeAccents(input: string) {
   ;
 };
 
-function getTextNodes (element: Element) {
-  let node;
-  let nodes = [];
-
-  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null);
-
-  while(node = walker.nextNode()) {
-    nodes.push(node);
-  }
-
-  return nodes;
-}
-
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
-  const fromScript = fromLatin ? 'Latn' : LANGUAGE_SCRIPT_MAPPING[language];
-  const toScript   = fromLatin ? LANGUAGE_SCRIPT_MAPPING[language] : 'Latn';
-
-  const fromScheme = SCRIPT_SCHEMA_MAPPING[fromScript];
-  const toScheme   = SCRIPT_SCHEMA_MAPPING[toScript];
-
   const languageInstances = document.querySelectorAll(`[data-lang="${language}"]`);
-
   languageInstances.forEach((languageInstance) => {
-    // If you're going to Latin, but you're already in Latin,
-    if (!fromLatin && languageInstance.getAttribute('data-script') === 'Latn') {
-      // do nothing.
+    const originalContent = languageInstance.getAttribute('data-original') || '';
+
+    // If you're going to Latin,
+    if (!fromLatin) {
+      // and you are not already in Latin,
+      if (languageInstance.getAttribute('data-script') !== 'Latn') {
+        // restore original content, which is always written in Latin script.
+        languageInstance.textContent = originalContent;
+        languageInstance.setAttribute('data-script', 'Latn');
+      }
+    // Otherwise,
     } else {
-      const textElements = getTextNodes(languageInstance);
+      // update with a version of the original content, which is always in Latin script,
+      // transliterated into the target script.
+      const sourceSchema    = SCRIPT_SCHEMA_MAPPING['Latn'];
+      const targetScript    = LANGUAGE_SCRIPT_MAPPING[language];
+      const targetSchema    = SCRIPT_SCHEMA_MAPPING[targetScript];
+      const replacementText = Sanscript.t(originalContent, sourceSchema, targetSchema);
 
-      textElements.forEach((textElement) => {
-        textElement.textContent = Sanscript.t(textElement.textContent || '', fromScheme, toScheme);
-      });
-
-      languageInstance.setAttribute('data-script', toScript);
+      languageInstance.textContent = replacementText;
+      languageInstance.setAttribute('data-script', targetScript);
     }
   });
 }
