@@ -42,7 +42,7 @@ const Navbar = (props: NavbarProps) => {
         <div className={styles.top}>
           <input
             className={styles.input}
-            placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEARCH"
+            placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEARCH"
             type="text"
           />
 
