@@ -5,18 +5,28 @@ import Sanscript from '@indic-transliteration/sanscript';
 
 import styles from './TransliterationToggle.module.scss';
 
+const LANGUAGE_SCRIPT_MAPPING: { [key: string]: string} = {
+  // list of languages : https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+  // list of scripts   : https://en.wikipedia.org/wiki/ISO_15924#List_of_codes
+  san: 'Deva',
+  kan: 'Knda',
+  mal: 'Mlym',
+  tam: 'Taml',
+  tel: 'Telu',
+};
+
 const SCRIPT_SCHEMA_MAPPING: { [key: string]: string} = {
-  // list of scripts: https://en.wikipedia.org/wiki/ISO_15924#List_of_codes
-  // list of schemas: https://github.com/indic-transliteration/sanscript.js#usage
+  // list of scripts : https://en.wikipedia.org/wiki/ISO_15924#List_of_codes
+  // list of schemas : https://github.com/indic-transliteration/sanscript.js#usage
   Deva: 'devanagari',
   Knda: 'kannada',
   Latn: 'iso',
   Mlym: 'malayalam',
   Taml: 'tamil',
   Telu: 'telugu',
-}
+};
 
-const NON_LATIN_SCRIPTS = Object.keys(SCRIPT_SCHEMA_MAPPING).filter((script) => script !== 'Latn');
+const LANGUAGES = Object.keys(LANGUAGE_SCRIPT_MAPPING);
 
 function removeAccents(input: string) {
   return input
@@ -57,73 +67,80 @@ function getTextNodes (element: Element) {
   return nodes;
 }
 
-function transliterateTextElements (scriptFrom: string, scriptTo: string) {
-  const schemeFrom = SCRIPT_SCHEMA_MAPPING[scriptFrom];
-  const schemeTo   = SCRIPT_SCHEMA_MAPPING[scriptTo];
+function transliterateTextElements (language: string, fromLatin: boolean = false) {
+  const fromScript = fromLatin ? 'Latn' : LANGUAGE_SCRIPT_MAPPING[language];
+  const toScript   = fromLatin ? LANGUAGE_SCRIPT_MAPPING[language] : 'Latn';
 
-  const scriptInstances = document.querySelectorAll(`[data-script="${scriptFrom}"]`);
+  const fromScheme = SCRIPT_SCHEMA_MAPPING[fromScript];
+  const toScheme   = SCRIPT_SCHEMA_MAPPING[toScript];
 
-  scriptInstances.forEach((scriptInstance) => {
-    const textElements = getTextNodes(scriptInstance);
+  const languageInstances = document.querySelectorAll(`[data-lang="${language}"]`);
 
-    textElements.forEach((textElement) => {
-      textElement.textContent = Sanscript.t(textElement.textContent || '', schemeFrom, schemeTo);
-    });
+  languageInstances.forEach((languageInstance) => {
+    // If you're going to Latin, but you're already in Latin,
+    if (!fromLatin && languageInstance.getAttribute('data-script') === 'Latn') {
+      // do nothing.
+    } else {
+      const textElements = getTextNodes(languageInstance);
 
-    scriptInstance.setAttribute('data-script', scriptTo);
+      textElements.forEach((textElement) => {
+        textElement.textContent = Sanscript.t(textElement.textContent || '', fromScheme, toScheme);
+      });
+
+      languageInstance.setAttribute('data-script', toScript);
+    }
   });
 }
 
 function transliterateFromLatin () {
-  NON_LATIN_SCRIPTS.forEach((script) => {
-    transliterateTextElements('Latn', script);
+  LANGUAGES.forEach((script) => {
+    transliterateTextElements(script, true);
   });
 }
 
 function transliterateToLatin () {
-  NON_LATIN_SCRIPTS.forEach((script) => {
-    transliterateTextElements(script, 'Latn');
+  LANGUAGES.forEach((script) => {
+    transliterateTextElements(script);
   });
 }
 
 export default function TransliterationToggle () {
-  const [ shouldTransliterate, setShouldTransliterate ] = useState(true);
+  const [ isLatinScript, setIsLatinScript ] = useState(true);
 
   useEffect(() => {
+    // On load, the text will be in the Latin script.
+    // Here, we load the transliteration preference of the user from local
+    // storage and we transliterate from the Latin script to Indian scripts if
+    // necessary exactly one time on load.
     if (typeof window !== "undefined") {
-      const storedTransliterationValue = localStorage.getItem('transliterate');
-
-      if (storedTransliterationValue) {
-        if (storedTransliterationValue === "1") {
-          setShouldTransliterate(true);
-          transliterateToLatin();
-        } else {
-          setShouldTransliterate(false);
-          transliterateFromLatin();
-        }
+      const storedTransliterationValue = localStorage.getItem('isLatinScript');
+      if (storedTransliterationValue === '0') {
+        setIsLatinScript(false);
       }
     }
-  }, [setShouldTransliterate]);
+  }, []);
 
-  function toggle () {
-    setShouldTransliterate(!shouldTransliterate);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('isLatinScript', isLatinScript ? '1' : '0');
 
-    if (typeof window !== "undefined") {
-      localStorage.setItem('transliterate', shouldTransliterate ? '0' : '1');
-
-      if (shouldTransliterate) {
+      if (isLatinScript) {
         transliterateToLatin();
       } else {
         transliterateFromLatin();
       }
     }
+  }, [isLatinScript]);
+
+  function toggle () {
+    setIsLatinScript(!isLatinScript);
   }
 
   return (
     <div className={styles.transliterationToggle}>
       <div
         className={classnames(styles.toggleItem, {
-          [styles.selected]: !shouldTransliterate,
+          [styles.selected]: !isLatinScript,
         })}
         onClick={toggle}
         title="Use original script"
@@ -131,7 +148,7 @@ export default function TransliterationToggle () {
 
       <div
         className={classnames(styles.toggleItem, {
-          [styles.selected]: shouldTransliterate,
+          [styles.selected]: isLatinScript,
         })}
         onClick={toggle}
         title="Use transliterated script"
