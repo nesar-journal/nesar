@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import Link from 'next/link';
 
 import styles from './Search.module.scss';
 
-import { Matches } from '../types';
+import { Matches, MatchesResponse } from '../types';
 
 function Search () {
+  const emptyResponse = useMemo(() => ({ articleTitles: {}, matches: [] }), []);
+
   const [query, setQuery]     = useState('');
-  const [matches, setMatches] = useState<Matches>([]);
+  const [apiData, setApiData] = useState<MatchesResponse>(emptyResponse);
 
   function onChange (event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value;
@@ -20,13 +22,13 @@ function Search () {
       fetch(`/api/search?q=${query}`)
         .then((response) => response.json())
         .then((response) => {
-          setMatches(response.matches);
+          setApiData(response);
         })
       ;
     } else {
-      setMatches([]);
+      setApiData(emptyResponse);
     }
-  }, [query]);
+  }, [emptyResponse, query]);
 
   return (
     <div className={styles.search}>
@@ -47,7 +49,7 @@ function Search () {
         </thead>
         <tbody>
           {
-            matches.map(({ searchTerm, results }) => {
+            apiData.matches.map(({ searchTerm, results }) => {
               return (
                 <tr key={searchTerm}>
                   <td className={styles.searchColumn}>
@@ -59,7 +61,7 @@ function Search () {
                         return (
                           <div key={result}>
                             <Link href="/articles/[result]" as={`/articles/${result}`}>
-                              <a>{result}</a>
+                              <a>{apiData.articleTitles[result]}</a>
                             </Link>
                           </div>
                         );
