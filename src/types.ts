@@ -5,6 +5,9 @@ type ArticleIdentifier = ResourceIdentifier;
 
 type AuthorIdentifier  = string;
 
+type ResourceTitle = string;
+type ArticleTitle = ResourceTitle;
+
 enum ResourceType {
   Article     = 'article',
   Brief       = 'brief',
@@ -97,18 +100,20 @@ export type Data = {
   issues   : IndexedIssuesData;
 };
 
+type ArticlesMapping = { [key: ArticleIdentifier]: ArticleTitle };
+
 export type Index = {
   generalWords  : { [key: string]: ArticleIdentifier[] };
   languageWords : { [key: string]: ArticleIdentifier[] };
 };
 
 type Match = {
-  searchTerm : string;
-  results    : string[];
+  searchTerm    : string;
+  results       : ArticleTitle[];
 };
 
 export type Matches = Match[];
 
 export type MatchesResponse = {
-  matches: Matches;
+  matches : Matches;
 };
