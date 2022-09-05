@@ -73,9 +73,6 @@ brew install woff2
 
 * add Tag resource
 * add Author resource
-
-* dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
-
 * update security policy (`next.config.js`)
 
 #### Ravi + Andrew

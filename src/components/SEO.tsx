@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import Heading from '../components/Heading';
 
@@ -7,7 +8,6 @@ type SEOProps = {
   coverAltText?: string;
   description?: string;
   title?: string;
-  url?: string;
 }
 
 const SEO = (props: SEOProps) => {
@@ -16,8 +16,9 @@ const SEO = (props: SEOProps) => {
     coverAltText,
     description,
     title,
-    url,
   } = props;
+
+  const router = useRouter();
 
   const siteName = 'NESAR';
   const siteUrl = 'https://nesarjournal.org';
@@ -25,12 +26,14 @@ const SEO = (props: SEOProps) => {
   const siteLogo = `${siteUrl}/assets/images/logo.png`;
   const siteLogoDescription = 'The logo for the NESAR journal.';
 
+  const canonicalUrl = (siteUrl + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   // set up defaults
   const tagDescription = description || siteDescription;
   const tagImageAltText = coverAltText || siteLogoDescription;
   const tagImageUrl = cover || siteLogo;
   const tagTitle = title ? `${title} | ${siteName}` : siteName;
-  const tagUrl = url || siteUrl;
+  const tagUrl = canonicalUrl || siteUrl;
 
   return (
     <>
