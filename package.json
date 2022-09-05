@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run disable-telemetry && npm run compile-data && next build",
+    "build": "npm run disable-telemetry && npm run compile && next build",
+    "compile": "npm run compile-data && npm run compile-cache",
+    "compile-cache": "npx ts-node --project ./tsconfig.node.json ./src/compile-cache.ts",
     "compile-data": "npx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
-    "dev": "npm run compile-data && next dev",
+    "dev": "npm run compile && next dev",
     "disable-telemetry": "next telemetry disable",
     "lint-fix": "next lint --fix",
     "lint": "next lint",
@@ -16,6 +18,8 @@
   "dependencies": {
     "@indic-transliteration/sanscript": "^1.2.7",
     "classnames": "^2.3.1",
+    "fuzzysort": "^2.0.1",
+    "htmlparser2": "^8.0.1",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",

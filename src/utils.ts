@@ -1,9 +1,13 @@
-// =======================
-// ======= GENERAL =======
-// =======================
-
 import fs from 'fs';
 import path from 'path';
+
+import fuzzysort from 'fuzzysort';
+
+import { Cache, Data } from './types';
+
+// =====================
+// ======= FILES =======
+// =====================
 
 export function readFile (filePath: string) {
   try {
@@ -38,106 +42,65 @@ export function writeFile (filePath: string, data: string) {
 // ======= DATA =======
 // ====================
 
-type Identifier = string;
-
-type IssueIdentifier   = Identifier;
-type ArticleIdentifier = Identifier;
-type AuthorIdentifier = string;
-
-enum ResourceType {
-  Article     = 'article',
-  Brief       = 'brief',
-  Editorial   = 'editorial',
-  Issue       = 'issue',
-  Review      = 'review',
-  Translation = 'translation',
-}
-
-type ResourceData = {
-  type: ResourceType;
-
-  identifier: ArticleIdentifier | IssueIdentifier;
-
-  doi: string;
-
-  title: string;
-
-  abstract: string;
-
-  dates: {
-    publication: string;
-  }
-
-  paths: {
-    cover: string;
-    pdf: string;
-  }
-
-  tags: string[];
-}
-
-export type ArticleData = ResourceData & {
-  authors: AuthorIdentifier[];
-
-  paths: {
-    content: string;
-  }
-
-  content: string;
-}
-
-export type IssueData = ResourceData & {
-  issue: number;
-
-  editors: AuthorIdentifier[];
-
-  articles: ArticleIdentifier[];
-}
-
-export type AuthorData = {
-  displayName : string;
-  firstName   : string;
-  lastName    : string;
-  email       : string;
-  institution : string;
-  viaf        : string;
-}
-
-type ArticlesData = {
-  [key: ArticleIdentifier]: ArticleData;
-};
-
-type IssuesData = {
-  [key: IssueIdentifier]: IssueData;
-};
-
-type AuthorsData = {
-  [key: AuthorIdentifier]: AuthorData;
-};
-
-export type IndexedArticlesData = {
-  ids  : ArticleIdentifier[];
-  data : ArticlesData;
-}
-
-export type IndexedIssuesData = {
-  ids  : IssueIdentifier[];
-  data : IssuesData;
-}
-
-export type IndexedAuthorsData = {
-  ids  : AuthorIdentifier[];
-  data : AuthorsData;
-}
-
-export type Data = {
-  authors  : IndexedAuthorsData;
-  articles : IndexedArticlesData;
-  issues   : IndexedIssuesData;
-};
-
 export const DATA_PATH = path.resolve(process.cwd(), 'data.json');
 
 export function getData (): Data {
   return readJSON(DATA_PATH);
+}
+
+// =====================
+// ======= CACHE =======
+// =====================
+
+export const CACHE_PATH = path.resolve(process.cwd(), 'cache.json');
+
+function getCache (): Cache {
+  return readJSON(CACHE_PATH);
+}
+
+export function queryCacheForMatches (query: string) {
+  const CACHE = getCache();
+
+  const generalWords  = Object.keys(CACHE.generalWords).map((word) => fuzzysort.prepare(word));
+  const languageWords = Object.keys(CACHE.languageWords).map((word) => fuzzysort.prepare(word));
+
+  // == SEPARATED MATCHES ==
+
+  // const generalFuzzyMatches  = fuzzysort.go(query, generalWords, { limit: 20 }).map((match) => match.target);
+  // const languageFuzzyMatches = fuzzysort.go(query, languageWords, { limit: 20 }).map((match) => match.target);
+
+  // const generalWordsMatches: { searchTerm: string; results: string[] }[]  = [];
+  // const languageWordsMatches: { searchTerm: string; results: string[] }[] = [];
+
+  // generalFuzzyMatches.forEach((match) => {
+  //   generalWordsMatches.push({
+  //     searchTerm: match,
+  //     results: CACHE.generalWords[match],
+  //   });
+  // });
+
+  // languageFuzzyMatches.forEach((match) => {
+  //   languageWordsMatches.push({
+  //     searchTerm: match,
+  //     results: CACHE.languageWords[match],
+  //   });
+  // });
+
+  // == COMBINED MATCHES ==
+
+  const fuzzyMatches  = fuzzysort.go(query, [...generalWords, ...languageWords], { limit: 20 }).map((match) => match.target);
+
+  const matches: { searchTerm: string; results: string[] }[]  = [];
+
+  fuzzyMatches.forEach((match) => {
+    matches.push({
+      searchTerm: match,
+      results: Array.from(new Set([ // make unique
+        ...(CACHE.generalWords[match] || []),
+        ...(CACHE.languageWords[match] || []),
+      ])),
+    });
+  });
+
+  return matches;
 }

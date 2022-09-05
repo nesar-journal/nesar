@@ -39,4 +39,7 @@ yarn-error.log*
 # generated data dump
 data.json
 
+# generated cache
+cache.json
+
 *~

@@ -4,13 +4,14 @@ import path from 'path';
 import yaml from 'yaml';
 
 import {
-  DATA_PATH,
-
   Data,
   IndexedArticlesData,
   IndexedIssuesData,
   IndexedAuthorsData,
+} from './types';
 
+import {
+  DATA_PATH,
   readFile,
   writeFile,
 } from './utils';
