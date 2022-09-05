@@ -368,46 +368,46 @@
 	<listBibl>
           <head><anchor xml:id="ixwsk4dfln0"/>Primary Sources</head>
           <listBibl>
-	    <head><title>Abhinavabhāratī</title> by Abhinavagupta (early 11th c. CE):</head>
+	    <head><title xml:lang="san-Latn">Abhinavabhāratī</title> by Abhinavagupta (early 11th c. CE):</head>
             <bibl>M. Ramakrishna Kavi and J. S. Pade (eds.). 2006. <title>Nāṭyaśāstra of Bharatamuni, With the Commentary Abhinavabhāratī by Abhinavaguptācārya (Chapters 28–37)</title>. Vol. IV. Second edition revised by V. M. Kulkarni and T. S. Nandi. Baroda: Oriental Institute.</bibl>
 	  </listBibl>
           <listBibl xml:id="Kavirājamārgaṁ">
-	    <head><title>Kavirājamārgaṁ</title> by Śrīvijaya (870s CE):</head>
+	    <head><title xml:lang="kan-Latn">Kavirājamārgaṁ</title> by Śrīvijaya (870s CE):</head>
 	    <bibl>P = K. B. Pathak (ed.). <title>Nṛipatuṅga’s Kavirâjamârgga: A Treatise of the 9th century on Alaṅkâra</title>. Bangalore: Mysore Government Press, 1898. </bibl>
-            <bibl>M = A. Venkata Rau and H. Sesha Aiyangar (eds.). <title>Karṇāṭaka Kavirājamārgaṁ</title>. Madras [Chennai]: University of Madras, 1973. </bibl>
-            <bibl>S = M. V. Seetha Ramaiah (ed.). <title>Śrī Nr̥patuṅgadēvānumatamappa Śrīvijayakr̥ta Kavirājamārgaṁ</title>. Beṅgaḷūru: B.M. Śrī Smāraka Pratiṣṭhāna, 1994 (rev. edition; first published in 1958). </bibl>
-            <bibl>K = K. Krishna Moorthy (ed.). <title>Nr̥patuṅgadēvānumataṁ Śrīvijaya Prabhūtaṁ Kavirājamārgaṁ</title>. Beṅgaḷūru: I.B.H. Prakāśana, 1983. </bibl>
-            <bibl>V = T. V. Venkatachala Sastry (ed.). <title>Śrīvijayaprabhūtaṁ Kavirājamārgaṁ</title>. Tumakūru: Tumakūru Viśvavidyānilaya, 2011. </bibl>
+            <bibl>M = A. Venkata Rau and H. Sesha Aiyangar (eds.). <title xml:lang="kan-Latn">Karṇāṭaka Kavirājamārgaṁ</title>. Madras [Chennai]: University of Madras, 1973. </bibl>
+            <bibl>S = M. V. Seetha Ramaiah (ed.). <title xml:lang="kan-Latn">Śrī Nr̥patuṅgadēvānumatamappa Śrīvijayakr̥ta Kavirājamārgaṁ</title>. Beṅgaḷūru: B.M. Śrī Smāraka Pratiṣṭhāna, 1994 (rev. edition; first published in 1958). </bibl>
+            <bibl>K = K. Krishna Moorthy (ed.). <title xml:lang="kan-Latn">Nr̥patuṅgadēvānumataṁ Śrīvijaya Prabhūtaṁ Kavirājamārgaṁ</title>. Beṅgaḷūru: I.B.H. Prakāśana, 1983. </bibl>
+            <bibl>V = T. V. Venkatachala Sastry (ed.). <title xml:lang="kan-Latn">Śrīvijayaprabhūtaṁ Kavirājamārgaṁ</title>. Tumakūru: Tumakūru Viśvavidyānilaya, 2011. </bibl>
             <bibl>A = MS K 125 at the Kannaḍa Adhyayana Saṁsthe, University of Mysore</bibl>
             <bibl>B = MS K 110 at the Kannaḍa Adhyayana Saṁsthe, University of Mysore.</bibl>
             <bibl>C = MS K 1250 at the Government Oriental Manuscripts Liberary, University of Madras (now at the Anna Cententary Library, Chennai).</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Kāvyāvalōkanaṁ </title> by Nāgavarma (1040s CE):</head>
-            <bibl xml:id="Dēvīrappa2004">H. Dēvīrappa (ed.). 2004. <title>Nāgavarma viracitaṁ Kāvyāvalōkanaṁ</title>. Bengaluru: Kannaḍa Sāhitya Pariṣattu.</bibl>
+	    <head><title xml:lang="kan-Latn">Kāvyāvalōkanaṁ </title> by Nāgavarma (1040s CE):</head>
+            <bibl xml:id="Dēvīrappa2004">H. Dēvīrappa (ed.). 2004. <title xml:lang="kan-Latn">Nāgavarma viracitaṁ Kāvyāvalōkanaṁ</title>. Bengaluru: Kannaḍa Sāhitya Pariṣattu.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Jayadhavalā</title> by Vīrasēna and Jinasēna (837 CE):</head>
+	    <head><title xml:lang="san-Latn">Jayadhavalā</title> by Vīrasēna and Jinasēna (837 CE):</head>
             <bibl xml:id="Chandra1944">Phul Chandra, Mehendra Kumar and Kailash Chandra (eds.). 1944. <title>Kasāya-pāhudam by Gunadharāchārya with the Churni Sutra of Yativrashabhāchārya and The Commentary Jayadhavalā of Veersenachārya Upon Both [Pejjadosa Vihatti I]</title>. D. Jain Sangh Granthamala 1-1. Benaras: Benaras Hindu University Press.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Vardhamānapurāṇam</title> by Nāgavarma (1042 CE):</head>
-            <bibl>B. S. Saṇṇaya (ed.). 1974. <title>Eraḍaneya Nāgavarma Viracita Vardhamāna Purāṇaṁ</title>. Mysore: Kannaḍa Adhyayana Saṁsthe, University of Mysore.</bibl>
+	    <head><title xml:lang="kan-Latn">Vardhamānapurāṇam</title> by Nāgavarma (1042 CE):</head>
+            <bibl>B. S. Saṇṇaya (ed.). 1974. <title xml:lang="kan-Latn">Eraḍaneya Nāgavarma Viracita Vardhamāna Purāṇaṁ</title>. Mysore: Kannaḍa Adhyayana Saṁsthe, University of Mysore.</bibl>
 	  </listBibl>
           <listBibl>
 	    <head><title xml:lang="tam-Latn">Vīracōḻiyam</title> by Puttiramittiraṉ (1065–1070 CE):</head>
-            <bibl>K. E. Kōvintarāca Mutaliyār (ed.). 1970. <title>Poṉpaṟṟi kāvalar Puttamittiraṉār iyaṟṟiya Vīracōḻiyam peruṅktēvaṉār iyaṟṟiya uraiyuṭaṉ</title>. Cennai [Chennai]: Tiruvelvēlit Teṉṉintiya Caivasittānta Nūṟpatippuk Kaḻakam.</bibl>
+            <bibl>K. E. Kōvintarāca Mutaliyār (ed.). 1970. <title xml:lang="tam-Latn">Poṉpaṟṟi kāvalar Puttamittiraṉār iyaṟṟiya Vīracōḻiyam peruṅktēvaṉār iyaṟṟiya uraiyuṭaṉ</title>. Cennai [Chennai]: Tiruvelvēlit Teṉṉintiya Caivasittānta Nūṟpatippuk Kaḻakam.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Vīrastutiḥ</title> by Dhanapāla (early 11th c. CE):</head>
-            <bibl xml:id="Hiralal1933">Hiralal Kapadia (ed.). 1933. <title>Paramārhata-kavīśvara-Śrīdhanapālapraṇītaḥ R̥ṣabhapañcāśikā-Vīrastutidvayarūpakr̥tikalāpaḥ Ṭīkāprastāvanādisamalaṅkr̥taḥ</title>. Surat: Sheth Devchand Lalbhai Jain Pustakoddhar Fund.</bibl>
+	    <head><title xml:lang="san-Latn">Vīrastutiḥ</title> by Dhanapāla (early 11th c. CE):</head>
+            <bibl xml:id="Hiralal1933">Hiralal Kapadia (ed.). 1933. <title xml:lang="san-Latn">Paramārhata-kavīśvara-Śrīdhanapālapraṇītaḥ R̥ṣabhapañcāśikā-Vīrastutidvayarūpakr̥tikalāpaḥ Ṭīkāprastāvanādisamalaṅkr̥taḥ</title>. Surat: Sheth Devchand Lalbhai Jain Pustakoddhar Fund.</bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Vr̥ṣādhipaśatakam</title> by Pālkuriki Sōmanātha (12th/13th c. CE):</head>
+	    <head><title xml:lang="tel-Latn">Vr̥ṣādhipaśatakamu</title> by Pālkuriki Sōmanātha (12th/13th c. CE):</head>
 	    <bibl><ref target="http://andhrabharati.com/shatakamulu/vRishhAdhipa/index.html">http://andhrabharati.com/shatakamulu/vRishhAdhipa/index.html</ref></bibl>
 	  </listBibl>
           <listBibl>
-	    <head><title>Śabdamaṇidarpaṇaṁ</title> by Kēśirāja/Kēśava (ca. 1260 CE):</head>
+	    <head><title xml:lang="kan-Latn">Śabdamaṇidarpaṇaṁ</title> by Kēśirāja/Kēśava (ca. 1260 CE):</head>
             <bibl xml:id="Kedilaya1964-1977">Kedilaya, A. Shanker. 1964–1977. “Śabdamaṇidarpaṇa.” <title>Annals of Oriental Research, University of Madras</title> 19–27: 1–460.</bibl>
 	  </listBibl>
 
