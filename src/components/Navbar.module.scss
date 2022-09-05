@@ -38,6 +38,7 @@
 .input::placeholder {
   font-family: var(--font-main);
   color: black;
+  letter-spacing: 1px;
 }
 
 .input:focus::placeholder {
@@ -54,7 +55,7 @@
   background-image: url('/assets/images/search.svg');
   background-size: 16px;
   background-repeat: no-repeat;
-  background-position-x: 32px;
+  background-position-x: 24px;
   background-position-y: 7px;
 }
 

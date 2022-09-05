@@ -20,7 +20,7 @@ const SEO = (props: SEOProps) => {
   } = props;
 
   const siteName            = 'NESAR';
-  const siteUrl             = 'https://nesar.org';
+  const siteUrl             = 'https://nesarjournal.org';
   const siteDescription     = 'UPDATE_THIS_DESCRIPTION';
   const siteLogo            = `${siteUrl}/assets/images/logo.png`;
   const siteLogoDescription = 'The logo for the NESAR journal.'
