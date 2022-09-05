@@ -2,6 +2,9 @@
   "name": "nesar",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16"
+  },
   "scripts": {
     "build": "npm run disable-telemetry && npm run compile && next build",
     "compile": "npm run compile-data && npm run compile-index",
