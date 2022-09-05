@@ -5,7 +5,8 @@
 html {
   font-family: var(--font-main);
   font-size: 16px;
-
+  --lh: 1.4rem;
+  line-height: var(--lh);
   background-color: var(--brand-light);
   color: var(--brand-dark);
 }
@@ -41,18 +42,35 @@ a:hover {
 
 table {
   border-collapse: collapse;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  thead {
+      text-align:left;
+      background-color: lightgray;
+  }
+  tbody {
+      border-top: 1px solid black;  }
+  td, th {
+      padding: 0.2rem 2rem 0.1rem 0.2rem;
+  }
 }
-
-td, th {
-  padding: 8px 16px;
-  border: 1px solid lightgray;
-}
-
 input:focus {
   outline: 2px solid var(--brand);
 }
-
 .hidden {
   position: absolute;
   left: -9999px;
+}
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  dt {
+      width: 25%;
+      font-weight:bold;
+      margin-bottom:0.25rem;
+  }
+  dd {
+      margin-left: auto;
+      width: 75%;
+  }
 }

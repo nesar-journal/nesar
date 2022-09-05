@@ -7,8 +7,6 @@
 $breakpoint-mobile: 480px;
 
 .articleBody {
-    --lh: 1.4rem;
-    line-height: var(--lh);
     .text-section {
 	@media (max-width: $breakpoint-mobile) {
 	    padding:0;
