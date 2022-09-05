@@ -108,3 +108,7 @@ type Match = {
 };
 
 export type Matches = Match[];
+
+export type MatchesResponse = {
+  matches: Matches;
+};
