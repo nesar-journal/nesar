@@ -22,7 +22,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   authorsIds,
   authors,
 }) => {
-  function renderAuthorsInfo() {
+  function renderAuthorsInfo () {
     return (
       <>
         <Heading
@@ -61,7 +61,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     );
   }
 
-  function renderPeople() {
+  function renderPeople () {
     return (
       <>
         <Heading
@@ -110,7 +110,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     );
   }
 
-  function renderCredits() {
+  function renderCredits () {
     return (
       <>
         <Heading
@@ -136,7 +136,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     );
   }
 
-  function renderFontTest() {
+  function renderFontTest () {
     return (
       <>
         <Heading
