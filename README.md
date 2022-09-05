@@ -74,7 +74,9 @@ brew install woff2
 * add Author resource
 
 * dynamically generate canonical url (https://rishimohan.me/blog/nextjs-canonical-tag)
-* wire up search functionality via inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
+* wire up search functionality
+  * inverted index (https://www.ahmadrosid.com/blog/fulltext-search-with-inverted-index)
+  * API (https://www.simplenextjs.com/posts/next-search)
   * search authors, tags, title, abstracts
 
 * update security policy (`next.config.js`)
