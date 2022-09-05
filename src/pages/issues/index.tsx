@@ -63,6 +63,6 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       </Layout>
     </>
   );
-}
+};
 
 export default IssuesIndex;

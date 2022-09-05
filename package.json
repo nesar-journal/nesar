@@ -8,6 +8,7 @@
     "dev": "npm run compile-data && next dev",
     "disable-telemetry": "next telemetry disable",
     "lint": "next lint",
+    "lint-fix": "next lint --fix",
     "start": "next start"
   },
   "dependencies": {

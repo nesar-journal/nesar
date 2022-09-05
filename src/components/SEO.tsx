@@ -23,7 +23,7 @@ const SEO = (props: SEOProps) => {
   const siteUrl = 'https://nesarjournal.org';
   const siteDescription = 'An open-access journal for South Asian studies, focusing on the languages, literature, art and philosophy of the subcontinent.';
   const siteLogo = `${siteUrl}/assets/images/logo.png`;
-  const siteLogoDescription = 'The logo for the NESAR journal.'
+  const siteLogoDescription = 'The logo for the NESAR journal.';
 
   // set up defaults
   const tagDescription = description || siteDescription;

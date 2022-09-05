@@ -67,6 +67,6 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
       </Layout>
     </>
   );
-}
+};
 
 export default ArticlesIndex;
