@@ -54,19 +54,6 @@ function removeAccents(input: string) {
   ;
 };
 
-function getTextNodes (element: Element) {
-  let node;
-  let nodes = [];
-
-  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null);
-
-  while(node = walker.nextNode()) {
-    nodes.push(node);
-  }
-
-  return nodes;
-}
-
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
   const fromScript = fromLatin ? 'Latn' : LANGUAGE_SCRIPT_MAPPING[language];
   const toScript   = fromLatin ? LANGUAGE_SCRIPT_MAPPING[language] : 'Latn';
@@ -81,12 +68,7 @@ function transliterateTextElements (language: string, fromLatin: boolean = false
     if (!fromLatin && languageInstance.getAttribute('data-script') === 'Latn') {
       // do nothing.
     } else {
-      const textElements = getTextNodes(languageInstance);
-
-      textElements.forEach((textElement) => {
-        textElement.textContent = Sanscript.t(textElement.textContent || '', fromScheme, toScheme);
-      });
-
+      languageInstance.textContent = Sanscript.t(languageInstance.textContent || '', fromScheme, toScheme);
       languageInstance.setAttribute('data-script', toScript);
     }
   });
