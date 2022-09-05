@@ -100,7 +100,7 @@ export type Data = {
   issues   : IndexedIssuesData;
 };
 
-type ArticlesMapping = { [key: ArticleIdentifier]: ArticleTitle };
+export type ArticlesMapping = { [key: ArticleIdentifier]: ArticleTitle };
 
 export type Index = {
   generalWords  : { [key: string]: ArticleIdentifier[] };
@@ -115,5 +115,6 @@ type Match = {
 export type Matches = Match[];
 
 export type MatchesResponse = {
-  matches : Matches;
+  articleTitles : ArticlesMapping;
+  matches       : Matches;
 };

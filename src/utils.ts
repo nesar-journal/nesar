@@ -3,7 +3,7 @@ import path from 'path';
 
 import fuzzysort from 'fuzzysort';
 
-import { Data, Index, Matches } from './types';
+import { ArticlesMapping, Data, Index, Matches } from './types';
 
 // =====================
 // ======= FILES =======
@@ -59,50 +59,61 @@ function getIndex (): Index {
 }
 
 export function queryIndexForMatches (query: string) {
-  if (query.length < 2) return [];
-
-  const INDEX = getIndex();
-
-  const generalWords  = Object.keys(INDEX.generalWords).map((word) => fuzzysort.prepare(word));
-  const languageWords = Object.keys(INDEX.languageWords).map((word) => fuzzysort.prepare(word));
-
-  // == SEPARATED MATCHES ==
-
-  // const generalFuzzyMatches  = fuzzysort.go(query, generalWords, { limit: 20 }).map((match) => match.target);
-  // const languageFuzzyMatches = fuzzysort.go(query, languageWords, { limit: 20 }).map((match) => match.target);
-
-  // const generalWordsMatches: { searchTerm: string; results: string[] }[]  = [];
-  // const languageWordsMatches: { searchTerm: string; results: string[] }[] = [];
-
-  // generalFuzzyMatches.forEach((match) => {
-  //   generalWordsMatches.push({
-  //     searchTerm: match,
-  //     results: INDEX.generalWords[match],
-  //   });
-  // });
-
-  // languageFuzzyMatches.forEach((match) => {
-  //   languageWordsMatches.push({
-  //     searchTerm: match,
-  //     results: INDEX.languageWords[match],
-  //   });
-  // });
-
-  // == COMBINED MATCHES ==
-
-  const fuzzyMatches  = fuzzysort.go(query, [...generalWords, ...languageWords], { limit: 20 }).map((match) => match.target);
-
   const matches: Matches = [];
+  const articleTitles: ArticlesMapping = {};
 
-  fuzzyMatches.forEach((match) => {
-    matches.push({
-      searchTerm: match,
-      results: Array.from(new Set([ // make unique
-        ...(INDEX.generalWords[match] || []),
-        ...(INDEX.languageWords[match] || []),
-      ])),
+  if (query.length > 2) {
+    const DATA  = getData();
+    const INDEX = getIndex();
+
+    const generalWords  = Object.keys(INDEX.generalWords).map((word) => fuzzysort.prepare(word));
+    const languageWords = Object.keys(INDEX.languageWords).map((word) => fuzzysort.prepare(word));
+
+    // == SEPARATED MATCHES ==
+
+    // const generalFuzzyMatches  = fuzzysort.go(query, generalWords, { limit: 20 }).map((match) => match.target);
+    // const languageFuzzyMatches = fuzzysort.go(query, languageWords, { limit: 20 }).map((match) => match.target);
+
+    // const generalWordsMatches: { searchTerm: string; results: string[] }[]  = [];
+    // const languageWordsMatches: { searchTerm: string; results: string[] }[] = [];
+
+    // generalFuzzyMatches.forEach((match) => {
+    //   generalWordsMatches.push({
+    //     searchTerm: match,
+    //     results: INDEX.generalWords[match],
+    //   });
+    // });
+
+    // languageFuzzyMatches.forEach((match) => {
+    //   languageWordsMatches.push({
+    //     searchTerm: match,
+    //     results: INDEX.languageWords[match],
+    //   });
+    // });
+
+    // == COMBINED MATCHES ==
+
+    const fuzzyMatches  = fuzzysort.go(query, [...generalWords, ...languageWords], { limit: 20 }).map((match) => match.target);
+
+    fuzzyMatches.forEach((match) => {
+      matches.push({
+        searchTerm: match,
+        results: Array.from(new Set([ // make unique
+          ...(INDEX.generalWords[match] || []),
+          ...(INDEX.languageWords[match] || []),
+        ])),
+      });
     });
-  });
 
-  return matches;
+    matches.forEach((match) => {
+      match.results.forEach((result) => {
+        articleTitles[result] = DATA.articles.data[result].title;
+      });
+    });
+  }
+
+  return {
+    articleTitles,
+    matches,
+  };
 }
