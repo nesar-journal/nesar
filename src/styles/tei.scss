@@ -7,6 +7,21 @@
 $breakpoint-mobile: 480px;
 
 .articleBody {
+    position: relative;
+    .nesar-toc {
+	@media (min-width: $breakpoint-mobile) {
+	    ul {
+		position: absolute;
+		left: -12.5rem;
+		top: 0;
+		width: 10rem;
+		text-indent: -1rem;
+		margin-left: 1rem;
+		list-style: none;
+		font-size:10pt;
+	    }
+	}
+    }
     .text-section {
 	@media (max-width: $breakpoint-mobile) {
 	    padding:0;
@@ -98,17 +113,23 @@ $breakpoint-mobile: 480px;
 	    &:last-of-type:after {
 		content:".";
 	    }
-	    .source {
-		font-style:normal;
-		&:last-of-type:after {
-		    content:" ";
-		}
-	    }
-	    .wit {
-		font-style:normal;
-		font-weight:bold;
-		&:last-of-type:after {
-		    content:" ";
+	    .app-label {
+		display:inline-flex;
+		.source,.wit,.resp {
+		    display:inline;
+		    font-style:normal;
+		    font-weight:normal;
+		    margin-block:0 0;
+		    margin-inline:0 0;
+		    margin:0!important;
+		    padding:0!important;
+		    font-size:1em;
+		    &:last-of-type:after {
+			content:"\00a0";
+		    }
+		    &.wit {
+			font-weight:bold;
+		    }
 		}
 	    }
 	}
@@ -120,7 +141,7 @@ $breakpoint-mobile: 480px;
 	li {
 	    margin-bottom: 0.5rem;
 	    &.text-group {
-		h3 {
+		h4 {
 		    margin: 0 0 0.25rem 0;
 		}
 		margin-bottom: 0;
