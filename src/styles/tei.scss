@@ -1,151 +1,151 @@
-// -- Article styles 
+@import './breakpoints';
+
+// -- Article styles
 // ----- Not contained in [identifier].module.css
 // ----- because Next.js cannot deal with nested classes
 // ----- in module SASS that have not been defined in
 // ----- [identifier].tsx (which is necessarily the case
 // ----- because the HTML data is imported).
-$breakpoint-mobile: 480px;
-
 .articleBody {
+  position: relative;
+  .nesar-toc {
+    @media (min-width: $mobile-breakpoint) {
+      ul {
+        position: absolute;
+        left: -12.5rem;
+        top: 0;
+        width: 10rem;
+        text-indent: -1rem;
+        margin-left: 1rem;
+        list-style: none;
+        font-size:10pt;
+      }
+    }
+  }
+  .text-section {
+    @media (max-width: $mobile-breakpoint) {
+      padding:0;
+    }
+    padding-right:14rem;
+  }
+  sup {
+    font-style: normal!important;
+  }
+  .textandnotes {
     position: relative;
-    .nesar-toc {
-	@media (min-width: $breakpoint-mobile) {
-	    ul {
-		position: absolute;
-		left: -12.5rem;
-		top: 0;
-		width: 10rem;
-		text-indent: -1rem;
-		margin-left: 1rem;
-		list-style: none;
-		font-size:10pt;
-	    }
-	}
+    @media (min-width: $mobile-breakpoint) {
+      ul.sidenotes {
+        position: absolute;
+        overflow: visible;
+        top: 0;
+        margin: 0;
+        width: 11rem;
+        right: -12.5rem;
+        padding:0;
+        list-style-type: none;
+        li {
+          font-size: 80%;
+          margin-bottom: 0.45rem;
+          p {
+            a:first-child {
+              margin-right:0.2rem;
+              font-weight:bold;
+            }
+            font-style: normal;
+            font-size: 0.78rem;
+            line-height: 1.05rem;
+            position: relative;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin: 0;
+          }
+        }
+      }
     }
-    .text-section {
-	@media (max-width: $breakpoint-mobile) {
-	    padding:0;
-	}
-	padding-right:14rem;
+    @media (max-width: $mobile-breakpoint) {
+      ul.sidenotes {
+        display: none;
+      }
     }
-    sup {
-	font-style: normal!important;
+  }
+  blockquote {
+    margin:0 0 0 2rem;
+    background:rgba(0,0,0,.035);
+    padding: 1rem 1rem 1rem 1rem;
+    + blockquote {
+      padding-top:0!important;
     }
-    .textandnotes {
-	position: relative;
-	@media (min-width: $breakpoint-mobile) {
-	    ul.sidenotes {
-		position: absolute;
-		overflow: visible;
-		top: 0;
-		margin: 0;
-		width: 11rem;
-		right: -12.5rem;
-		padding:0;
-		list-style-type: none;
-		li {
-		    font-size: 80%;
-		    margin-bottom: 0.45rem;
-		    p {
-			a:first-child {
-			    margin-right:0.2rem;
-			    font-weight:bold;
-			}
-			font-style: normal;
-			font-size: 0.78rem;
-			line-height: 1.05rem;
-			position: relative;
-			display: -webkit-box;
-			-webkit-line-clamp: 4;
-			-webkit-box-orient: vertical;  
-			overflow: hidden;
-			margin: 0;
-		    }
-		}
-	    }
-	}
-	@media (max-width: $breakpoint-mobile) {
-	    ul.sidenotes {
-		display: none;
-	    }
-	}
+    p {
+      margin:0;
+      padding: 0.55rem 0;
     }
-    blockquote {
-	margin:0 0 0 2rem;
-	background:rgba(0,0,0,.035);
-	padding: 1rem 1rem 1rem 1rem;
-	+ blockquote {
-	    padding-top:0!important;
-	}
-	p {
-	    margin:0;
-	    padding: 0.55rem 0;
-	}
-	ul.sidenotes {
-	    right: -13.5rem!important;
-	    p {
-		padding:0;
-	    }
-	}
+    ul.sidenotes {
+      right: -13.5rem!important;
+      p {
+        padding:0;
+      }
     }
-    .lg {
-	line-height:1.5rem;
-	+ p {
-	    margin-top:0.5rem;
-	}
-	.l {
-	    display:block;
-	}
+  }
+  .lg {
+    line-height:1.5rem;
+    + p {
+      margin-top:0.5rem;
     }
-    .apparatus {
-	list-style-type: none;
-	padding-left:1rem;
-	margin: 0.45rem 0 0 0;
-	li {
-	    font-size:90%;
-	    margin:0;
-	    line-height:125%;
-	}
-	li > span {
-	    &:not(:last-child):after {
-		content:"; ";
-	    }
-	    &:last-of-type:after {
-		content:".";
-	    }
-	    .app-label {
-		display:inline-flex;
-		.source,.wit,.resp {
-		    display:inline;
-		    font-style:normal;
-		    font-weight:normal;
-		    margin-block:0 0;
-		    margin-inline:0 0;
-		    margin:0!important;
-		    padding:0!important;
-		    font-size:1em;
-		    &:last-of-type:after {
-			content:"\00a0";
-		    }
-		    &.wit {
-			font-weight:bold;
-		    }
-		}
-	    }
-	}
+    .l {
+      display:block;
     }
-    .bibliography ul {
-	list-style-type: none;
-	padding-left: 2rem;
-	text-indent:-2rem;
-	li {
-	    margin-bottom: 0.5rem;
-	    &.text-group {
-		h4 {
-		    margin: 0 0 0.25rem 0;
-		}
-		margin-bottom: 0;
-	    }
-	}
+  }
+  .apparatus {
+    list-style-type: none;
+    padding-left:1rem;
+    margin: 0.45rem 0 0 0;
+    li {
+      font-size:90%;
+      margin:0;
+      line-height:125%;
     }
+    li > span {
+      &:not(:last-child):after {
+        content:"; ";
+      }
+      &:last-of-type:after {
+        content:".";
+      }
+      .app-label {
+        display:inline-flex;
+        .source,.wit,.resp {
+          display:inline;
+          font-style:normal;
+          font-weight:normal;
+          margin-block:0 0;
+          margin-inline:0 0;
+          margin:0!important;
+          padding:0!important;
+          font-size:1em;
+          &:last-of-type:after {
+            content:"\00a0";
+          }
+          &.wit {
+            font-weight:bold;
+          }
+        }
+      }
+    }
+  }
+  .bibliography ul {
+    list-style-type: none;
+    padding-left: 2rem;
+    text-indent:-2rem;
+    li {
+      margin-bottom: 0.5rem;
+      &.text-group {
+        h4 {
+          margin: 0 0 0.25rem 0;
+        }
+        margin-bottom: 0;
+      }
+    }
+  }
 }

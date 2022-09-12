@@ -1,3 +1,5 @@
+@import './breakpoints';
+
 * {
   box-sizing: border-box;
 }
@@ -11,10 +13,11 @@ html {
   color: var(--brand-dark);
 }
 
-@media (max-width: 900px) {
+@media (max-width: $tablet-breakpoint) {
   html { font-size: 14px; }
 }
-@media (max-width: 400px) {
+
+@media (max-width: $mobile-breakpoint) {
   html { font-size: 12px; }
 }
 
