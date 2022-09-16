@@ -72,7 +72,8 @@ const ResourceCard = (props: ResourceCardProps) => {
           {tags.map((tag) => {
             return (
               <span key={tag} className={styles.tag}>
-                <Link href={`/tags/${tag}`}>{tag}</Link>
+                {/* <Link href={`/tags/${tag}`}>{tag}</Link> */}
+                {tag}
               </span>
             );
           })}
