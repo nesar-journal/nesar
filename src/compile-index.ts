@@ -29,10 +29,12 @@ function getWordsFromHTML (html: string) {
       }
     },
     ontext (text) {
+      const sanitizedTextWords = sanitize(text).split(' ');
+
       if (isLangTag) {
-        sanitize(text).split(' ').forEach((word) => languageWords.push(word));
+        sanitizedTextWords.forEach((word) => { if (!word.includes('http')) languageWords.push(word); });
       } else {
-        sanitize(text).split(' ').forEach((word) => generalWords.push(word));
+        sanitizedTextWords.forEach((word) => { if (!word.includes('http')) generalWords.push(word); });
       }
     },
     onclosetag (_tagname) {
