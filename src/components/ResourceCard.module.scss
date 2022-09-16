@@ -33,7 +33,7 @@
 .publishedDate {
   position: absolute;
 
-  padding: 14px 20px 10px 20px;
+  padding: 8px 10px 4px 10px;
   line-height: 1;
 
   background-color: white;
@@ -49,11 +49,36 @@
   cursor: pointer;
 
   font-weight: bold;
+
+  display: flex;
+  align-items: center;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: #F3F3F3;
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.14);
+  }
+}
+
+.pdfIcon {
+  &:before {
+    content: url('/assets/images/download.svg');
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+  }
 }
 
 .publishedDate {
   bottom: 16px;
-  left: 96px;
+  left: 80px;
 
   border-radius: 4px;
 
