@@ -64,7 +64,7 @@ brew install woff2
 
 * update homepage
 * add Information box (tabs), link through to Submit page
-* style Search
+* style Search (focus issue)
 * update mobile styles
 
 ### Post-Launch
@@ -74,6 +74,8 @@ brew install woff2
 * add Tag resource
 * add Author resource
 * update security policy (`next.config.js`)
+* allow search to support multiple scripts
+* fix search sort order
 
 #### Ravi + Andrew
 
