@@ -87,13 +87,14 @@ export function queryIndexForMatches (query: string) {
     // const generalFuzzyMatches  = fuzzysort.go(query, generalWords, { limit: 20 }).map((match) => match.target);
     // const languageFuzzyMatches = fuzzysort.go(query, languageWords, { limit: 20 }).map((match) => match.target);
 
-    // const generalWordsMatches: { searchTerm: string; results: string[] }[]  = [];
-    // const languageWordsMatches: { searchTerm: string; results: string[] }[] = [];
+    // const generalWordsMatches: Matches  = [];
+    // const languageWordsMatches: Matches = [];
 
     // generalFuzzyMatches.forEach((match) => {
     //   generalWordsMatches.push({
     //     searchTerm: match,
     //     results: INDEX.generalWords[match],
+    //     id: generateRandomString(),
     //   });
     // });
 
@@ -101,19 +102,22 @@ export function queryIndexForMatches (query: string) {
     //   languageWordsMatches.push({
     //     searchTerm: match,
     //     results: INDEX.languageWords[match],
+    //     id: generateRandomString(),
     //   });
     // });
 
     // == COMBINED MATCHES ==
 
-    const fuzzyMatches  = fuzzysort.go(query, [...generalWords, ...languageWords], { limit: 20 }).map((match) => match.target);
+    const fuzzyMatches  = fuzzysort.go(query, [...generalWords, ...languageWords], { limit: 20 });
 
     fuzzyMatches.forEach((match) => {
+      const matchTerm = match.target;
       matches.push({
-        searchTerm: match,
+        searchTerm: matchTerm,
+        highlighted: fuzzysort.highlight(match, '<span class="highlighted">', '</span>') || '',
         results: Array.from(new Set([ // make unique
-          ...(INDEX.generalWords[match] || []),
-          ...(INDEX.languageWords[match] || []),
+          ...(INDEX.generalWords[matchTerm] || []),
+          ...(INDEX.languageWords[matchTerm] || []),
         ])),
         id: generateRandomString(),
       });

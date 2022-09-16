@@ -64,16 +64,8 @@ input:focus {
   position: absolute;
   left: -9999px;
 }
-dl {
-  display: flex;
-  flex-wrap: wrap;
-  dt {
-      width: 25%;
-      font-weight:bold;
-      margin-bottom:0.25rem;
-  }
-  dd {
-      margin-left: auto;
-      width: 75%;
-  }
+
+.highlighted {
+  font-weight: bold;
+  color: var(--brand);
 }

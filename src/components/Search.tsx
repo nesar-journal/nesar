@@ -74,12 +74,13 @@ function Search () {
         </thead>
         <tbody>
           {
-            apiData.matches.map(({ id, searchTerm, results }) => {
+            apiData.matches.map(({ highlighted, id, searchTerm, results }) => {
               return (
                 <tr key={id}>
-                  <td className={styles.searchColumn}>
-                    {searchTerm}
-                  </td>
+                  <td
+                    className={styles.searchColumn}
+                    dangerouslySetInnerHTML={{__html: highlighted}}
+                  />
                   <td className={styles.resultColumn}>
                     {
                       results.map((result: string) => {
