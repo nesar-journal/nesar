@@ -228,7 +228,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           About
         </Heading>
 
-        <p>This journal is the product of ... .</p>
+        <p></p>
 
         <hr />
 
@@ -248,9 +248,9 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
         {renderCredits()}
 
-        <hr />
+        {/* <hr /> */}
 
-        {renderFontTest()}
+        {/* {renderFontTest()} */}
 
       </Layout>
     </>
