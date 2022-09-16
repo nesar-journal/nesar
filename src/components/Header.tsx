@@ -58,7 +58,7 @@ const Header = (props: HeaderProps) => {
         </div>
 
         <Navbar />
-        <Navmenu />
+        {/* <Navmenu /> */}
       </header>
     </>
   );
