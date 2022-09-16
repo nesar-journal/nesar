@@ -31,23 +31,23 @@
   padding-left: 136px;
   margin-block-end: 0;
   margin-block-start: 0;
-}
 
-.menuList li {
-  padding: 8px 16px 0 16px;
-  margin: 0 24px;
-  transform: translateX(-24px);
-  background-color: white;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: bold;
-}
+  li {
+    padding: 8px 16px 0 16px;
+    margin: 0 24px;
+    transform: translateX(-24px);
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
 
-.menuList li a {
-  text-decoration: none;
-  color: var(--brand-dark);
-}
+    a {
+      text-decoration: none;
+      color: var(--brand-dark);
 
-.menuList li a:hover {
-  color: var(--brand);
+      &:hover {
+        color: var(--brand);
+      }
+    }
+  }
 }

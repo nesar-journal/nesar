@@ -16,30 +16,30 @@
 
   transition: width 300ms;
   transition-delay: 150ms;
-}
 
-.input::placeholder {
-  font-family: var(--font-main);
-  color: black;
-  letter-spacing: 1px;
-}
+  &::placeholder {
+    font-family: var(--font-main);
+    color: black;
+    letter-spacing: 1px;
+  }
 
-.input:focus::placeholder {
-  color: transparent;
-}
+  &:focus {
+    width: 336px;
+    max-width: 55vw;
+    background-image: none;
 
-.input:focus {
-  width: 336px;
-  max-width: 55vw;
-  background-image: none;
-}
+    &::placeholder {
+      color: transparent;
+    }
+  }
 
-.input:not(:focus) {
-  background-image: url('/assets/images/search.svg');
-  background-size: 16px;
-  background-repeat: no-repeat;
-  background-position-x: 24px;
-  background-position-y: 7px;
+  &:not(:focus) {
+    background-image: url('/assets/images/search.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position-x: 24px;
+    background-position-y: 7px;
+  }
 }
 
 .matches {
@@ -51,17 +51,17 @@
   background-color: white;
   border-left: 2px solid black;
   border-right: 2px solid black;
-}
 
-.matches tbody {
-  display: block;
-  max-height: 50vh;
-  overflow-y: scroll;
-}
+  tbody {
+    display: block;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
 
-.matches th,
-.matches td {
-  padding: 4px;
+  th,
+  td {
+    padding: 4px;
+  }
 }
 
 .searchColumn,

@@ -193,27 +193,27 @@
 [data-script="Knda"] {
   font-family: var(--font-kannada);
 }
-[data-script="Telu"] {
-  font-family: var(--font-telugu);
-}
 [data-script="Mlym"] {
   font-family: var(--font-malayalam);
 }
 [data-script="Taml"] {
   font-family: var(--font-tamil);
 }
+[data-script="Telu"] {
+  font-family: var(--font-telugu);
+}
 
-span[data-script="Telu"],
+span[data-script="Knda"],
 span[data-script="Mlym"],
 span[data-script="Taml"],
-span[data-script="Knda"] {
+span[data-script="Telu"] {
     font-size: 115%;
-    font-style:normal;
+    font-style: normal;
 }
 
 span[data-script="Deva"] {
     font-size: 125%;
-    font-style:normal;
+    font-style: normal;
 }
 
 div[data-script="Latn"],
