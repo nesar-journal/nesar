@@ -52,6 +52,8 @@ export function getData (): Data {
 // ======= INDEX =======
 // =====================
 
+const INDEX_QUERY_MINIMUM_LENGTH = 3;
+
 export const INDEX_PATH = path.resolve(process.cwd(), 'index.json');
 
 function generateRandomString (length: number = 5) {
@@ -73,7 +75,7 @@ export function queryIndexForMatches (query: string) {
   const matches: Matches = [];
   const articleTitles: ArticlesMapping = {};
 
-  if (query.length > 2) {
+  if (query?.length >= INDEX_QUERY_MINIMUM_LENGTH) {
     const DATA  = getData();
     const INDEX = getIndex();
 

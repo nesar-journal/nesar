@@ -6,6 +6,8 @@ import styles from './Search.module.scss';
 
 import { MatchesResponse } from '../types';
 
+const QUERY_MINIMUM_LENGTH = 3;
+
 function Search () {
   const emptyResponse = useMemo(() => ({ articleTitles: {}, matches: [] }), []);
 
@@ -17,13 +19,13 @@ function Search () {
     const value = event.target.value;
     setQuery(value);
 
-    if (value.length > 2) {
+    if (value.length >= QUERY_MINIMUM_LENGTH) {
       setShouldShowResults(true);
     }
   }
 
   function onFocus (_event: React.FocusEvent<HTMLInputElement>) {
-    if (query.length > 2) {
+    if (query.length >= QUERY_MINIMUM_LENGTH) {
       setShouldShowResults(true);
     }
   }
@@ -35,7 +37,7 @@ function Search () {
   }
 
   useEffect(() => {
-    if (query.length) {
+    if (query?.length >= QUERY_MINIMUM_LENGTH) {
       fetch(`/api/search?q=${query}`)
         .then((response) => response.json())
         .then((response) => {
