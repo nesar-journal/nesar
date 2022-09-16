@@ -41,10 +41,6 @@
   background-position-y: 7px;
 }
 
-.input:not(:focus) + .matches {
-  display: none;
-}
-
 .matches {
   position: absolute;
   width: 100%;

@@ -4,17 +4,34 @@ import Link from 'next/link';
 
 import styles from './Search.module.scss';
 
-import { Matches, MatchesResponse } from '../types';
+import { MatchesResponse } from '../types';
 
 function Search () {
   const emptyResponse = useMemo(() => ({ articleTitles: {}, matches: [] }), []);
 
-  const [query, setQuery]     = useState('');
-  const [apiData, setApiData] = useState<MatchesResponse>(emptyResponse);
+  const [query, setQuery]                         = useState('');
+  const [apiData, setApiData]                     = useState<MatchesResponse>(emptyResponse);
+  const [shouldShowResults, setShouldShowResults] = useState(false);
 
   function onChange (event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value;
     setQuery(value);
+
+    if (value.length > 2) {
+      setShouldShowResults(true);
+    }
+  }
+
+  function onFocus (_event: React.FocusEvent<HTMLInputElement>) {
+    if (query.length > 2) {
+      setShouldShowResults(true);
+    }
+  }
+
+  function onBlur (_event: React.FocusEvent<HTMLInputElement>) {
+    setTimeout(() => {
+      setShouldShowResults(false);
+    }, 500);
   }
 
   useEffect(() => {
@@ -30,16 +47,22 @@ function Search () {
     }
   }, [emptyResponse, query]);
 
-  return (
-    <div className={styles.search}>
+  function renderInput () {
+    return (
       <input
         className={styles.input}
         placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEARCH"
         type="text"
         onChange={onChange}
+        onBlur={onBlur}
+        onFocus={onFocus}
         value={query}
       />
+    );
+  }
 
+  function renderResults () {
+    return (
       <table className={styles.matches}>
         <thead>
           <tr>
@@ -74,6 +97,13 @@ function Search () {
           }
         </tbody>
       </table>
+    );
+  }
+
+  return (
+    <div className={styles.search}>
+      {renderInput()}
+      {shouldShowResults && renderResults()}
     </div>
   );
 }
