@@ -1,5 +1,11 @@
+@import '../styles/breakpoints';
+
 .resourceCard {
   margin-bottom: 64px;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-bottom: 32px;
+  }
 }
 
 .horizontal {

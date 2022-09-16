@@ -6,7 +6,6 @@ import '../styles/fonts.scss';
 import '../styles/globals.scss';
 import '../styles/tei.scss';
 
-
 function App ({ Component, pageProps }: AppProps) {
   return (
     <Component {...pageProps} />
