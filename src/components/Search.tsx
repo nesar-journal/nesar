@@ -21,12 +21,16 @@ function Search () {
 
     if (value.length >= QUERY_MINIMUM_LENGTH) {
       setShouldShowResults(true);
+    } else {
+      setShouldShowResults(false);
     }
   }
 
   function onFocus (_event: React.FocusEvent<HTMLInputElement>) {
     if (query.length >= QUERY_MINIMUM_LENGTH) {
       setShouldShowResults(true);
+    } else {
+      setShouldShowResults(false);
     }
   }
 
