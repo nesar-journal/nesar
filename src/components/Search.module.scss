@@ -50,6 +50,10 @@
   width: 100%;
   overflow: hidden;
   font-size: 75%;
+
+  background-color: white;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .matches tbody {
@@ -66,8 +70,8 @@
 .searchColumn,
 .resultColumn {
   display: inline-block;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -79,4 +83,10 @@
 .resultColumn {
   width: 60%;
   text-align: left;
+
+  a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
