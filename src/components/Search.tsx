@@ -49,9 +49,9 @@ function Search () {
         </thead>
         <tbody>
           {
-            apiData.matches.map(({ searchTerm, results }) => {
+            apiData.matches.map(({ id, searchTerm, results }) => {
               return (
-                <tr key={searchTerm}>
+                <tr key={id}>
                   <td className={styles.searchColumn}>
                     {searchTerm}
                   </td>

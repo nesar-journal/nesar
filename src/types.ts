@@ -108,8 +108,9 @@ export type Index = {
 };
 
 type Match = {
-  searchTerm    : string;
-  results       : ArticleTitle[];
+  searchTerm : string;
+  results    : ArticleTitle[];
+  id         : string;
 };
 
 export type Matches = Match[];

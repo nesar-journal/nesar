@@ -54,6 +54,17 @@ export function getData (): Data {
 
 export const INDEX_PATH = path.resolve(process.cwd(), 'index.json');
 
+function generateRandomString (length: number = 5) {
+  const chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890";
+
+  const randomArray = Array.from(
+    { length },
+    (v, k) => chars[Math.floor(Math.random() * chars.length)],
+  );
+
+  return randomArray.join('');
+};
+
 function getIndex (): Index {
   return readJSON(INDEX_PATH);
 }
@@ -102,6 +113,7 @@ export function queryIndexForMatches (query: string) {
           ...(INDEX.generalWords[match] || []),
           ...(INDEX.languageWords[match] || []),
         ])),
+        id: generateRandomString(),
       });
     });
 
