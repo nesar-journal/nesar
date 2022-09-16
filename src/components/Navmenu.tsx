@@ -14,7 +14,7 @@ const Navmenu = (props: NavmenuProps) => {
 
       return (
         <li key={`navmenu-${text}`}>
-          <Link href={{ pathname: link }}>
+          <Link href={link}>
             {text}
           </Link>
         </li>

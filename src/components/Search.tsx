@@ -60,7 +60,7 @@ function Search () {
                       results.map((result: string) => {
                         return (
                           <div key={result}>
-                            <Link href="/articles/[result]" as={`/articles/${result}`}>
+                            <Link href={`/articles/${result}`}>
                               <a>{apiData.articleTitles[result]}</a>
                             </Link>
                           </div>

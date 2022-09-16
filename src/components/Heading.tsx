@@ -29,7 +29,7 @@ const Heading = (props: HeadingProps) => {
 
     return (
       <>
-        <Link href={{ pathname: link }}>
+        <Link href={link}>
           {linkText}
         </Link>
       </>

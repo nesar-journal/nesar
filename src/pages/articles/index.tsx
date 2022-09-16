@@ -46,7 +46,7 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
 
             return (
               <div key={id}>
-                <Link href={{ pathname: `/articles/${id}` }}>
+                <Link href={`/articles/${id}`}>
                   {articleData.title}
                 </Link>
 

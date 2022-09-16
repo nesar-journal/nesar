@@ -29,7 +29,7 @@ const Navbar = (props: NavbarProps) => {
 
       return (
         <li key={`navbar-${text}`}>
-          <Link href={{ pathname: link }}>
+          <Link href={link}>
             {text}
           </Link>
         </li>

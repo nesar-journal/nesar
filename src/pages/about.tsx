@@ -128,9 +128,9 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <p>This site uses the following fonts:</p>
 
         <ul>
-          <li><Link href={{ pathname: 'https://adishila.com/fonts/' }}>Adishila</Link> (by Krishna Prasad G / Sri Suvidyendra Tirtha Swamiji under a custom license)</li>
-          <li><Link href={{ pathname: 'https://bombay.indology.info/software/fonts/induni/index.html' }}>IndUni-C / IndUni-P</Link> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
-          <li><Link href={{ pathname: 'https://fonts.google.com/noto/specimen/Noto+Serif+Kannada' }}>Noto Serif Kannada</Link> (by Google under the Open Font License)</li>
+          <li><a href="https://adishila.com/fonts/">Adishila</a> (by Krishna Prasad G / Sri Suvidyendra Tirtha Swamiji under a custom license)</li>
+          <li><a href="https://bombay.indology.info/software/fonts/induni/index.html">IndUni-C / IndUni-P</a> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
+          <li><a href="https://fonts.google.com/noto/specimen/Noto+Serif+Kannada">Noto Serif Kannada</a> (by Google under the Open Font License)</li>
         </ul>
       </>
     );

@@ -51,12 +51,12 @@ const ResourceCard = (props: ResourceCardProps) => {
               objectPosition="center"
             />
           </div>
-          <Link href={{ pathname: pdfUrl }} passHref><div className={styles.pdf}>PDF</div></Link>
+          <div className={styles.pdf}><a href={pdfUrl}>PDF</a></div>
           <div className={styles.publishedDate}>published: {publicationDate}</div>
         </div>
         {authors && <div className={styles.authors}>{authors.join(', ')}</div>}
         {doi && <div className={styles.doi}>{doi}</div>}
-        <Link href={{ pathname: url }} passHref>
+        <Link href={url} passHref>
           <a className={styles.title}>
             {title}
           </a>
@@ -69,7 +69,7 @@ const ResourceCard = (props: ResourceCardProps) => {
           {tags.map((tag) => {
             return (
               <span key={tag} className={styles.tag}>
-                <Link href={{ pathname: `/tags/${tag}` }}>{tag}</Link>
+                <Link href={`/tags/${tag}`}>{tag}</Link>
               </span>
             );
           })}
