@@ -20,7 +20,7 @@ const SEO = (props: SEOProps) => {
 
   const router = useRouter();
 
-  const siteName = 'NESAR';
+  const siteName = 'NESAR: New Explorations in South Asia Research';
   const siteUrl = 'https://nesarjournal.org';
   const siteDescription = 'An open-access journal for South Asian studies, focusing on the languages, literature, art and philosophy of the subcontinent.';
   const siteLogo = `${siteUrl}/assets/images/logo.png`;
