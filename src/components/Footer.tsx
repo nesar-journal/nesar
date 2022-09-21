@@ -1,9 +1,10 @@
-import type { NextPage } from 'next';
+import { FunctionComponent } from 'react';
+
 import Image from 'next/image';
 
 import styles from './Footer.module.scss';
 
-const Home: NextPage = () => {
+const Footer: FunctionComponent = () => {
   return (
     <>
       <div className={styles.divider}></div>
@@ -32,4 +33,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Footer;
