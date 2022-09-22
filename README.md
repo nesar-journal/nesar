@@ -64,6 +64,7 @@ brew install woff2
 
 * update homepage
 * add Information box (tabs), link through to Submit page
+* agree on article title format
 
 ### Post-Launch
 
@@ -71,9 +72,9 @@ brew install woff2
 
 * add Tag resource
 * add Author resource
-* update security policy (`next.config.js`)
-* allow search to support multiple scripts
 * fix search sort order
+* allow search to support multiple scripts
+* update security policy (`next.config.js`)
 
 #### Ravi + Andrew
 
