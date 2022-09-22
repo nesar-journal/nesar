@@ -10,16 +10,12 @@ html {
   line-height: var(--lh);
   background-color: var(--brand-light);
   color: var(--brand-dark);
-}
 
-@media (max-width: $tablet-breakpoint) {
-  html {
+  @media (max-width: $tablet-breakpoint) {
     font-size: 14px;
   }
-}
 
-@media (max-width: $mobile-breakpoint) {
-  html {
+  @media (max-width: $mobile-breakpoint) {
     font-size: 12px;
   }
 }

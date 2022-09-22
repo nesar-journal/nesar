@@ -32,28 +32,42 @@
 .pdfContainer {
   position: absolute;
 
-  top: 8px;
-  left: 150px;
+  @media (min-width: $mobile-breakpoint) {
+    top: 8px;
+    left: 150px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    bottom: 17px;
+    right: 115px;
+  }
 }
 
 .publishedDate {
   position: absolute;
 
   padding: 8px 10px 4px 10px;
+
+  font-family: var(--font-monospace);
+  font-size: 80%;
   line-height: 1;
 
   background-color: white;
 
-  font-family: var(--font-monospace);
-}
-
-.publishedDate {
-  bottom: 16px;
-  left: 80px;
-
   border-radius: 4px;
 
-  font-size: 0.8125em;
+  @media (min-width: $mobile-breakpoint) {
+    bottom: 16px;
+    left: 80px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    top: 10px;
+    left: 10px;
+
+    font-weight: bold;
+    font-size: 90%;
+  }
 }
 
 .authors,

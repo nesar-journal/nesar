@@ -64,7 +64,6 @@ brew install woff2
 
 * update homepage
 * add Information box (tabs), link through to Submit page
-* update mobile styles
 
 ### Post-Launch
 

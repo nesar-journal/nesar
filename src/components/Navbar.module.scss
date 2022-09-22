@@ -8,6 +8,10 @@
 
   text-align: right;
   padding-right: 75px;
+
+  @media (max-width: $mobile-breakpoint) {
+    padding-right: 20%;
+  }
 }
 
 .bottom {
@@ -16,21 +20,19 @@
   background-position: center;
   background-size: 20%;
   height: 32px;
-}
 
-@media (max-width: $mobile-breakpoint) {
-  .bottom {
+  @media (max-width: $mobile-breakpoint) {
     display: none;
-  }
-
-  .transliterationToggle {
-    display: none !important;
   }
 }
 
 .transliterationToggle {
   display: inline-block;
   margin-left: 75px;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: none !important;
+  }
 }
 
 .menuList {

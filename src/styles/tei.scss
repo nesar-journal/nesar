@@ -62,11 +62,10 @@
             margin: 0;
           }
         }
-      }
-    }
-    @media (max-width: $mobile-breakpoint) {
-      ul.sidenotes {
-        display: none;
+
+        @media (max-width: $mobile-breakpoint) {
+          display: none;
+        }
       }
     }
   }

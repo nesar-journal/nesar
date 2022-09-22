@@ -1,16 +1,12 @@
 @import '../styles/breakpoints';
 
 $toggleHeight: 48px;
-$togglePositionTop: 10px;
-$togglePositionRight: 10px;
+$togglePositionTop: 20px;
+$togglePositionRight: 20px;
 $toggleZIndex: 2;
 
-@media (min-width: $mobile-breakpoint) {
-  .navmenuToggleContainer {
-    display: none !important;
-  }
-
-  .navmenu {
+.navmenuToggleContainer {
+  @media (min-width: $mobile-breakpoint) {
     display: none !important;
   }
 }
@@ -33,6 +29,10 @@ $toggleZIndex: 2;
   background-position-x: right;
   background-position-y: top;
   background-size: cover;
+
+  @media (min-width: $mobile-breakpoint) {
+    display: none !important;
+  }
 }
 
 .navmenuToggleContainerOpen {
