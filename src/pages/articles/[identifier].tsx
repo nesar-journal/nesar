@@ -105,19 +105,12 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
   return (
     <>
-      <Layout>
+      <Layout marginTop>
         <SEO
           title={data.title}
         />
 
         {renderToc()}
-
-        <div className={styles.titleEnd}>
-          <div className={styles.titleContainer}>
-            <div className={styles.title}>{data.title}</div>
-            <div className={styles.authors}>{data.authors.join(', ')}</div>
-          </div>
-        </div>
 
         <ResourceCard
           abstract={data.abstract}
@@ -129,11 +122,11 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           tags={data.tags}
           title={data.title}
           url={`/articles/${data.identifier}`}
-          horizontal
           showTitleEnd
         />
 
-        <div className='articleBody'
+        <div
+          className="articleBody"
           dangerouslySetInnerHTML={{ __html: contentWithoutToc }}
         />
       </Layout>

@@ -11,7 +11,6 @@ type ResourceCardProps = {
   authors?: string[];
   coverUrl: string;
   doi?: string;
-  horizontal?: boolean;
   pdfUrl?: string;
   publicationDate: string;
   tags: string[];
@@ -26,9 +25,9 @@ const ResourceCard = (props: ResourceCardProps) => {
     authors,
     coverUrl,
     doi,
-    horizontal,
     pdfUrl,
     publicationDate,
+    showTitleEnd,
     tags,
     title,
     url,
@@ -36,9 +35,7 @@ const ResourceCard = (props: ResourceCardProps) => {
 
   return (
     <>
-      <div className={classnames(styles.resourceCard, {
-        [styles.horizontal]: horizontal,
-      })}>
+      <div className={styles.resourceCard}>
         <div className={styles.coverContainer}>
           <div className={styles.coverImageContainer}>
             <Image
@@ -61,26 +58,35 @@ const ResourceCard = (props: ResourceCardProps) => {
           </div>
           <div className={styles.publishedDate}>published: {publicationDate}</div>
         </div>
-        {authors && <div className={styles.authors}>{authors.join(', ')}</div>}
-        {doi && <div className={styles.doi}>{doi}</div>}
-        <Link href={url} passHref>
-          <a className={styles.title}>
-            {title}
-          </a>
-        </Link>
-        <div
-          className={styles.abstract}
-          dangerouslySetInnerHTML={{ __html: abstract }}
-        />
-        <div className={styles.tags}>
-          {tags.map((tag) => {
-            return (
-              <span key={tag} className={styles.tag}>
-                {/* <Link href={`/tags/${tag}`}>{tag}</Link> */}
-                {tag}
-              </span>
-            );
-          })}
+        <div>
+          <div className={classnames({
+            [styles.titleEnd]: showTitleEnd,
+          })}>
+            <div>
+              {authors && <div className={styles.authors}>{authors.join(', ')}</div>}
+              <Link href={url} passHref>
+                <a className={styles.title}>
+                  {title}
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div
+            className={styles.abstract}
+            dangerouslySetInnerHTML={{ __html: abstract }}
+          />
+          <div className={styles.tags}>
+            {tags.map((tag) => {
+              return (
+                <span key={tag} className={styles.tag}>
+                  {/* <Link href={`/tags/${tag}`}>{tag}</Link> */}
+                  {tag}
+                </span>
+              );
+            })}
+          </div>
+
+          {doi && <div className={styles.doi}>{doi}</div>}
         </div>
       </div>
     </>

@@ -4,16 +4,19 @@ import styles from './Layout.module.scss';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import classnames from 'classnames';
 
 type LayoutProps = {
   children: ReactNode;
   largeCover?: boolean;
+  marginTop?: boolean;
 }
 
 const Layout = (props: LayoutProps) => {
   const {
     children,
     largeCover = false,
+    marginTop = false,
   } = props;
 
   return (
@@ -23,7 +26,9 @@ const Layout = (props: LayoutProps) => {
           largeCover={largeCover}
         />
 
-        <main className={styles.main}>
+        <main className={classnames(styles.main, {
+          [styles.marginTop]: marginTop,
+        })}>
           {children}
         </main>
 
