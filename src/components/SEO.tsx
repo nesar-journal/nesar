@@ -61,7 +61,7 @@ const SEO = (props: SEOProps) => {
 
         {/* Other Meta Tags */}
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="theme-color" content="#19191C" />
         <link rel="canonical" href={tagUrl} />
 
