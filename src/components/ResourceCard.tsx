@@ -4,6 +4,7 @@ import Link from 'next/link';
 import classnames from 'classnames';
 
 import styles from './ResourceCard.module.scss';
+import ButtonLink from './ButtonLink';
 
 type ResourceCardProps = {
   abstract: string;
@@ -51,9 +52,12 @@ const ResourceCard = (props: ResourceCardProps) => {
               objectPosition="center"
             />
           </div>
-          <div className={styles.pdf}>
-            <span className={styles.pdfIcon}></span>
-            <a href={pdfUrl}>PDF</a>
+          <div className={styles.pdfContainer}>
+            <ButtonLink
+              href={pdfUrl || '#'}
+              text="PDF"
+              downloadLink
+            />
           </div>
           <div className={styles.publishedDate}>published: {publicationDate}</div>
         </div>

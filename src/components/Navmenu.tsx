@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import classnames from 'classnames';
 
+import ButtonLink from './ButtonLink';
 import TransliterationToggle from './TransliterationToggle';
 
 import { menuItems } from './Navbar';
@@ -21,9 +22,10 @@ const Navmenu = (props: NavmenuProps) => {
 
       return (
         <li key={`navmenu-${text}`}>
-          <Link href={link}>
-            {text}
-          </Link>
+          <ButtonLink
+            text={text}
+            href={link}
+          />
         </li>
       );
     });
@@ -31,15 +33,19 @@ const Navmenu = (props: NavmenuProps) => {
 
   function renderMenuToggle () {
     return (
-      <div
-        className={styles.navmenuToggle}
-        role="button"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <div className={classnames(styles.navmenuToggleIcon, {
-          [styles.navmenuOpen]   : isMenuOpen,
-          [styles.navmenuClosed] : !isMenuOpen,
-        })}/>
+      <div className={classnames(styles.navmenuToggleContainer, {
+        [styles.navmenuToggleContainerOpen]: isMenuOpen,
+      })}>
+        <div
+          className={styles.navmenuToggle}
+          role="button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <div className={classnames(styles.navmenuToggleIcon, {
+            [styles.navmenuOpen]   : isMenuOpen,
+            [styles.navmenuClosed] : !isMenuOpen,
+          })}/>
+        </div>
       </div>
     );
   }
@@ -48,11 +54,9 @@ const Navmenu = (props: NavmenuProps) => {
     if (isMenuOpen) {
       return (
         <nav className={styles.navmenu}>
-          <div className={styles.menu}>
-            <ul className={styles.menuList}>
-              {renderLinks()}
-            </ul>
-          </div>
+          <ul className={styles.menuList}>
+            {renderLinks()}
+          </ul>
 
           <div className={styles.transliterationToggle}>
             <TransliterationToggle />

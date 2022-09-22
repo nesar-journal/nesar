@@ -38,23 +38,21 @@ const Navbar = (props: NavbarProps) => {
   }
 
   return (
-    <>
-      <nav className={styles.navbar}>
-        <div className={styles.top}>
-          <Search />
+    <nav className={styles.navbar}>
+      <div className={styles.top}>
+        <Search />
 
-          <div className={styles.transliterationToggle}>
-            <TransliterationToggle />
-          </div>
+        <div className={styles.transliterationToggle}>
+          <TransliterationToggle />
         </div>
+      </div>
 
-        <div className={styles.bottom}>
-          <ul className={styles.menuList}>
-            {renderLinks()}
-          </ul>
-        </div>
-      </nav>
-    </>
+      <div className={styles.bottom}>
+        <ul className={styles.menuList}>
+          {renderLinks()}
+        </ul>
+      </div>
+    </nav>
   );
 };
 

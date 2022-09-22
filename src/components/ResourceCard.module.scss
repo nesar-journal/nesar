@@ -29,7 +29,13 @@
   border-radius: 8px;
 }
 
-.pdf,
+.pdfContainer {
+  position: absolute;
+
+  top: 8px;
+  left: 150px;
+}
+
 .publishedDate {
   position: absolute;
 
@@ -39,41 +45,6 @@
   background-color: white;
 
   font-family: var(--font-monospace);
-}
-
-.pdf {
-  top: 16px;
-  left: 168px;
-
-  border-radius: 8px;
-  cursor: pointer;
-
-  font-weight: bold;
-
-  display: flex;
-  align-items: center;
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  &:active {
-    background: #F3F3F3;
-  }
-
-  &:hover {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.14);
-  }
-}
-
-.pdfIcon {
-  &:before {
-    content: url('/assets/images/download.svg');
-    height: 24px;
-    width: 24px;
-    margin-right: 8px;
-  }
 }
 
 .publishedDate {
