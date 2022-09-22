@@ -55,7 +55,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <div className={styles.titleEnd}>
           <div className={styles.titleContainer}>
             <div className={styles.title}>{data.title}</div>
-            <div className={styles.authors}>{data.authors}</div>
+            <div className={styles.authors}>{data.authors.join(', ')}</div>
           </div>
         </div>
 
