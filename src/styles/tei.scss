@@ -8,20 +8,6 @@
 // ----- because the HTML data is imported).
 .articleBody {
   position: relative;
-  .nesar-toc {
-    @media (min-width: $mobile-breakpoint) {
-      ul {
-        position: absolute;
-        left: -12.5rem;
-        top: 0;
-        width: 10rem;
-        text-indent: -1rem;
-        margin-left: 1rem;
-        list-style: none;
-        font-size:10pt;
-      }
-    }
-  }
   .text-section {
     @media (max-width: $mobile-breakpoint) {
       padding:0;

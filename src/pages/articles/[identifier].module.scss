@@ -1,3 +1,34 @@
+@import '../../styles/breakpoints';
+
+.toc {
+  position: sticky;
+  top: 0;
+
+  ul {
+    position: absolute;
+    left: -12rem;
+    top: 0;
+
+    width: 9rem;
+
+    margin-left: 1rem;
+    text-indent: -1rem;
+
+    list-style: none;
+
+    font-size: 10pt;
+
+    a {
+      padding-left: 3px;
+      border-left: 3px solid transparent;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
 .titleEnd {
   display: flex;
   align-items: flex-start;

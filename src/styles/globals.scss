@@ -90,3 +90,8 @@ table {
   font-weight: bold;
   color: var(--brand);
 }
+
+.toc-active {
+  font-weight: bold;
+  border-left-color: lightgray !Important;
+}

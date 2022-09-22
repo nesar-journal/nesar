@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { ParsedUrlQuery } from 'querystring';
 
 import type {
@@ -45,12 +47,70 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<ArticlePa
 const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   data,
 }) => {
+  // React seems to be stripping out these tags already, but just in case:
+  const content           = data.content.replace(/<\/?body>|<\/?html>/g, '');
+  const tocPattern        = /(<div class="nesar-toc">\s*?<ul>.*?<\/ul>\s*?<\/div>)/s;
+  const tocMatch          = content.match(tocPattern);
+  const tocContent        = tocMatch?.length ? tocMatch[0] : '';
+  const contentWithoutToc = tocContent?.length ? content.replace(tocContent, '') : content;
+
+  function renderToc () {
+    if (tocContent) {
+      return (
+        <div className={styles.toc}
+          dangerouslySetInnerHTML={{ __html: tocContent }}
+        />
+      );
+    }
+
+    return null;
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const isInViewport = (element: HTMLElement) => {
+        const rect = element.getBoundingClientRect();
+
+        return (
+          (rect.top >= 0)
+          && (rect.left >= 0)
+          && (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+          && (rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+        );
+      };
+
+      window.addEventListener('scroll', () => {
+        const toc = document.querySelectorAll<HTMLAnchorElement>('.nesar-toc a');
+        if (toc?.length) {
+          document.querySelectorAll('h2').forEach((heading) => {
+            if (isInViewport(heading)) {
+              const headingLink = heading.querySelector('a');
+              if (headingLink) {
+                const headerId = headingLink.id;
+
+                toc.forEach((link) => {
+                  if (link.href.includes(headerId)) {
+                    link.classList.add('toc-active');
+                  } else {
+                    link.classList.remove('toc-active');
+                  }
+                });
+              }
+            }
+          });
+        }
+      });
+    }
+  }, []);
+
   return (
     <>
       <Layout>
         <SEO
           title={data.title}
         />
+
+        {renderToc()}
 
         <div className={styles.titleEnd}>
           <div className={styles.titleContainer}>
@@ -69,11 +129,12 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           tags={data.tags}
           title={data.title}
           url={`/articles/${data.identifier}`}
+          horizontal
           showTitleEnd
         />
 
         <div className='articleBody'
-          dangerouslySetInnerHTML={{ __html: data.content }}
+          dangerouslySetInnerHTML={{ __html: contentWithoutToc }}
         />
       </Layout>
     </>
