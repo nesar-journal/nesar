@@ -49,7 +49,7 @@ const nextConfig = {
 
   reactStrictMode: true,
 
-  async headers() {
+  async headers () {
     return [
       {
         'source': '/(.*)',
