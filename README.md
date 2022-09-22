@@ -62,7 +62,6 @@ brew install woff2
 
 #### Ravi
 
-* update homepage
 * add Information box (tabs), link through to Submit page
 
 ### Post-Launch
