@@ -26,10 +26,10 @@ export const getStaticPaths: GetStaticPaths<IssueParams> = async () => {
     .map((identifier) => ({ params: { identifier } }))
   ;
 
-  return {
+  return ({
     paths,
     fallback: false,
-  };
+  });
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext<IssueParams>) => {

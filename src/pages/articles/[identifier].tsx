@@ -37,11 +37,11 @@ export const getStaticPaths: GetStaticPaths<ArticleParams> = async () => {
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext<ArticleParams>) => {
-  return {
+  return ({
     props: {
       data: DATA.articles.data[params?.identifier || ''],
     }
-  };
+  });
 };
 
 const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
