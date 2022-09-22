@@ -58,12 +58,6 @@ brew install woff2
 
 ## To Do
 
-### Pre-Launch
-
-#### Ravi
-
-* add Information box (tabs), link through to Submit page
-
 ### Post-Launch
 
 #### Ravi

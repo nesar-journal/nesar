@@ -8,6 +8,7 @@ import type {
 
 import Heading from '../components/Heading';
 import HeroCard from '../components/HeroCard';
+import InformationBox from '../components/InformationBox';
 import Layout from '../components/Layout';
 import ResourceCard from '../components/ResourceCard';
 import SEO from '../components/SEO';
@@ -45,6 +46,8 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ar
         />
 
         <p><i>New Explorations in South Asia Research</i>, or <i>NESAR</i> (<span className="scriptWrapper" data-lang="kan" data-script="Latn" data-original="nesaṟ">nesaṟ</span> being a Kannada word for “sun”) is a totally <b>free</b> and <b>open-access</b> journal publishing original research of the highest quality in South Asian Studies, with a focus on the intellectual and expressive traditions of South India.</p>
+
+        <InformationBox />
 
         <HeroCard
           coverUrl={`/articles/${heroArticleIdentifier}/${heroArticleData.paths.cover}`}

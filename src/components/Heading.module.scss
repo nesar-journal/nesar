@@ -4,7 +4,8 @@
 }
 
 .titleEndOne::before,
-.titleEndTwo::before {
+.titleEndTwo::before,
+.titleEndThree::before {
   content: '';
   display: inline-block;
   height: 32px;
@@ -21,4 +22,8 @@
 
 .titleEndTwo::before {
   background-image: url('/assets/images/title-end-2.png');
+}
+
+.titleEndThree::before {
+  background-image: url('/assets/images/title-end-3.png');
 }

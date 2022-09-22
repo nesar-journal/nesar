@@ -2,9 +2,9 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import Link from 'next/link';
 
 import Heading from '../../components/Heading';
+import InformationBox from '../../components/InformationBox';
 import Layout from '../../components/Layout';
 import ResourceCard from '../../components/ResourceCard';
 import SEO from '../../components/SEO';
@@ -32,6 +32,8 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <SEO
           title="Issues"
         />
+
+        <InformationBox />
 
         <Heading
           level={2}

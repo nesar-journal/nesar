@@ -40,8 +40,9 @@ const Heading = (props: HeadingProps) => {
     return {
       className: classnames(styles.heading, {
         hidden: hidden,
-        [styles.titleEndOne]: titleEnd === 1,
-        [styles.titleEndTwo]: titleEnd === 2,
+        [styles.titleEndOne]   : titleEnd === 1,
+        [styles.titleEndTwo]   : titleEnd === 2,
+        [styles.titleEndThree] : titleEnd === 3,
       }),
       id: urlSlug(children),
     };

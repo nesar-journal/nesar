@@ -1,0 +1,67 @@
+@import '../styles/breakpoints';
+
+.informationBox {
+  border: 2px solid #D8D6D6;
+
+  @media (min-width: $mobile-breakpoint) {
+    padding: 16px 32px;
+    // border-radius: 16px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 8px 16px;
+    border-radius: 0;
+  }
+}
+
+.tabTrigger {
+  padding: 8px 8px 4px 8px;
+  margin-right: 16px;
+
+  border: 1px solid black;
+  border-radius: 4px;
+
+  font-family: var(--font-monospace);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 80%;
+
+  cursor: pointer;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.informationBoxLink {
+  display: flex;
+  align-items: center;
+
+  margin-left: 16px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--font-monospace);
+  font-style: normal;
+
+  &.addIcon::before {
+    content: '';
+
+    height: 24px;
+    width: 24px;
+
+    margin-right: 8px;
+
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-image: url('/assets/images/add.svg');
+  }
+}
+
+.tabContent {
+  font-family: var(--font-main);
+  font-style: italic;
+  font-weight: bold;
+  color: #606264;
+}
