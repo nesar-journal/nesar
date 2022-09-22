@@ -6,7 +6,7 @@ $togglePositionRight: 20px;
 $toggleZIndex: 2;
 
 .navmenuToggleContainer {
-  @media (max-width: $mobile-breakpoint) {
+  @media (min-width: $mobile-breakpoint) {
     display: none !important;
   }
 }
@@ -30,7 +30,7 @@ $toggleZIndex: 2;
   background-position-y: top;
   background-size: cover;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (min-width: $mobile-breakpoint) {
     display: none !important;
   }
 }
