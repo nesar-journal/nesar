@@ -1,11 +1,32 @@
-.titleEnd::before {
-  content: '';
-  display: inline-block;
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
-  background-position: center;;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url('/assets/images/animal-pillar.png');
+.titleEnd {
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    content: '';
+
+    display: inline-block;
+
+    height: 75px;
+    width: 75px;
+
+    margin-right: 10px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/animal-pillar.png');
+  }
+}
+
+.title {
+  font-size: 175%;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.authors {
+  color: #494949;
+  font-weight: bold;
+  margin-bottom: 42px;
 }

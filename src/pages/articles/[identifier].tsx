@@ -53,8 +53,10 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         />
 
         <div className={styles.titleEnd}>
-          {data.authors}
-          {data.title}
+          <div className={styles.titleContainer}>
+            <div className={styles.title}>{data.title}</div>
+            <div className={styles.authors}>{data.authors}</div>
+          </div>
         </div>
 
         <ResourceCard
