@@ -32,6 +32,7 @@ a:hover,
 a:visited {
   color: var(--brand);
   text-decoration: none;
+  word-wrap: break-word;
 }
 
 a:hover {
