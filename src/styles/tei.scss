@@ -19,8 +19,9 @@
   }
   .textandnotes {
     position: relative;
-    @media (min-width: $mobile-breakpoint) {
-      ul.sidenotes {
+
+    ul.sidenotes {
+      @media (min-width: $mobile-breakpoint) {
         position: absolute;
         overflow: visible;
         top: 0;
@@ -48,10 +49,10 @@
             margin: 0;
           }
         }
+      }
 
-        @media (max-width: $mobile-breakpoint) {
-          display: none;
-        }
+      @media (max-width: $mobile-breakpoint) {
+        display: none;
       }
     }
   }
