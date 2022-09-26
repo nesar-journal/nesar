@@ -63,7 +63,11 @@ const ResourceCard = (props: ResourceCardProps) => {
             [styles.titleEnd]: showTitleEnd,
           })}>
             <div>
-              {authors && <div className={styles.authors}>{authors.join(', ')}</div>}
+              {authors && <div className={styles.authors}>
+                {authors.map((author) => {
+                  return null;
+                })}
+              </div>}
               <Link href={url} passHref>
                 <a className={styles.title}>
                   {title}

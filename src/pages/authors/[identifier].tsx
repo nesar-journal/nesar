@@ -8,21 +8,22 @@ import type {
 } from 'next';
 
 import Layout from '../../components/Layout';
-import ResourceCard from '../../components/ResourceCard';
 import SEO from '../../components/SEO';
 
 import { getData } from '../../utils';
+import Heading from '../../components/Heading';
+import Link from 'next/link';
 
 const DATA = getData();
 
-interface IssueParams extends ParsedUrlQuery {
+interface AuthorParams extends ParsedUrlQuery {
   identifier: string;
 }
 
-export const getStaticPaths: GetStaticPaths<IssueParams> = async () => {
-  const issues = DATA.issues.ids;
+export const getStaticPaths: GetStaticPaths<AuthorParams> = async () => {
+  const authorsIds = DATA.authors.ids;
 
-  const paths = issues
+  const paths = authorsIds
     .map((identifier) => ({ params: { identifier } }))
   ;
 
@@ -32,58 +33,53 @@ export const getStaticPaths: GetStaticPaths<IssueParams> = async () => {
   });
 };
 
-export const getStaticProps = async ({ params }: GetStaticPropsContext<IssueParams>) => {
+export const getStaticProps = async ({ params }: GetStaticPropsContext<AuthorParams>) => {
   return {
     props: {
-      data: DATA.issues.data[params?.identifier || ''],
+      data: DATA.authors.data[params?.identifier || ''],
+      articlesIds: DATA.articles.ids,
       articlesData: DATA.articles.data,
     }
   };
 };
 
-const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articlesData,
+  articlesIds,
   data,
 }) => {
   return (
     <>
       <Layout>
         <SEO
-          title={data.title}
+          title={data.displayName}
         />
 
-        <ResourceCard
-          abstract={data.abstract}
-          authors={data.editors}
-          coverUrl={`/issues/${data.identifier}/${data.paths.cover}`}
-          doi={data.doi}
-          pdfUrl={`/issues/${data.identifier}/${data.paths.pdf}`}
-          publicationDate={data.dates.publication}
-          tags={data.tags}
-          title={data.title}
-          url={`/issues/${data.identifier}`}
-        />
+        <Heading
+          level={2}
+          titleEnd={1}
+        >
+          {data.displayName}
+        </Heading>
 
-        <h2>Articles</h2>
+
+        <Heading
+          level={3}
+        >
+          Articles
+        </Heading>
 
         {
-          data.articles.map((articleId) => {
+          articlesIds.map((articleId) => {
             const articleData = articlesData[articleId];
 
-            return (
-              <ResourceCard
-                abstract={articleData.abstract}
-                authors={articleData.authors}
-                coverUrl={`/articles/${articleId}/${articleData.paths.cover}`}
-                doi={articleData.doi}
-                key={articleId}
-                pdfUrl={`/articles/${articleId}/${articleData.paths.pdf}`}
-                publicationDate={articleData.dates.publication}
-                tags={articleData.tags}
-                title={articleData.title}
-                url={`/articles/${articleId}`}
-              />
-            );
+            if (articleData.authors.includes(data.displayName)) {
+              return (
+                <li key={articleId}>
+                  <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
+                </li>
+              );
+            }
           })
         }
       </Layout>
@@ -91,4 +87,4 @@ const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   );
 };
 
-export default IssuePage;
+export default AuthorPage;

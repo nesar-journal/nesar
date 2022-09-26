@@ -62,8 +62,8 @@ brew install woff2
 
 #### Ravi
 
+* wire up Author resource to ResourceCard
 * add Tag resource
-* add Author resource
 * fix search sort order
 * allow search to support multiple scripts
 * update security policy (`next.config.js`)
