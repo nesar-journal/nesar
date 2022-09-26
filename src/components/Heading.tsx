@@ -6,7 +6,7 @@ import urlSlug from 'url-slug';
 import styles from './Heading.module.scss';
 
 type HeadingProps = {
-  children: string;
+  children?: string;
   hidden?: boolean;
   level: number;
   link?: string;
@@ -25,7 +25,7 @@ const Heading = (props: HeadingProps) => {
   } = props;
 
   function renderLink () {
-    if (!link) return null;
+    if (!(link && linkText)) return null;
 
     return (
       <>
@@ -44,18 +44,23 @@ const Heading = (props: HeadingProps) => {
         [styles.titleEndTwo]   : titleEnd === 2,
         [styles.titleEndThree] : titleEnd === 3,
       }),
-      id: urlSlug(children),
+      id: urlSlug(children || linkText || ''),
     };
   }
 
   function getContent () {
-    return (
-      <>
-        {children}
-
-        {renderLink()}
-      </>
-    );
+    if (children && link && linkText) {
+      return (
+        <>
+          {children}
+          {renderLink()}
+        </>
+      );
+    } else if (children) {
+      return children;
+    } else if (link && linkText) {
+      return renderLink();
+    }
   }
 
   if (level === 1) return (<h1 {...getProps()}>{getContent()}</h1>);

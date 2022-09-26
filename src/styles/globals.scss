@@ -85,9 +85,17 @@ table {
   }
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .hidden {
   position: absolute;
   left: -9999px;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .highlighted {
