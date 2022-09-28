@@ -28,7 +28,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Heading
           level={3}
         >
-                    Authors
+          Authors
         </Heading>
 
         <table className="authors">
@@ -68,13 +68,13 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           level={2}
           titleEnd={1}
         >
-                    People
+          People
         </Heading>
 
         <Heading
           level={3}
         >
-                    Editorial board
+          Editorial board
         </Heading>
 
         <dl>
@@ -89,7 +89,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Heading
           level={3}
         >
-                    Advisory board
+          Advisory board
         </Heading>
 
         <dl>
@@ -117,7 +117,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           level={2}
           titleEnd={1}
         >
-                    Credits
+          Credits
         </Heading>
 
         <p>This site was designed by <a href="https://www.penguinchilli.co.uk/#1" target="_blank" rel="noreferrer">Alex Bellingham</a> and developed for the web by Ravi S. Rāmphal.</p>
@@ -142,28 +142,28 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Heading
           level={4}
         >
-                    Font Test
+          Font Test
         </Heading>
 
         <Heading
           level={5}
         >
-                    Block Devanagari
+          Block Devanagari
         </Heading>
 
         <div data-lang="san" data-script="Deva">
-                    सर्वे मानवाः जन्मना स्वतन्त्राः वैयक्तिकगौरवेण अधिकारेण च तुल्याः एव,<br />
-                    सर्वेषां विवेकः आत्मसाक्षी च वर्तते, सर्वे परस्परं भ्रातृभावेन व्यवहरेयुः.
+          सर्वे मानवाः जन्मना स्वतन्त्राः वैयक्तिकगौरवेण अधिकारेण च तुल्याः एव,<br />
+          सर्वेषां विवेकः आत्मसाक्षी च वर्तते, सर्वे परस्परं भ्रातृभावेन व्यवहरेयुः.
         </div>
 
         <Heading
           level={5}
         >
-                    Inline Devanagari
+          Inline Devanagari
         </Heading>
 
         <p>
-                    This is an example of some inline <span data-lang="san" data-script="Deva">आत्मसाक्षीव्यवहरेयुः</span> so we can see how it looks.
+          This is an example of some inline <span data-lang="san" data-script="Deva">आत्मसाक्षीव्यवहरेयुः</span> so we can see how it looks.
         </p>
 
         <hr />
@@ -171,21 +171,21 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Heading
           level={5}
         >
-                    Block Kannada
+          Block Kannada
         </Heading>
 
         <div data-lang="kan" data-script="Knda">
-                    ಕವಿರಾಜಮಾರ್ಗದ ಪ್ರತಿ ಪರಿಚ್ಛೇದದ ಕೊನೆಯಲ್ಲಿ &apos;ನೃಪತುಂಗ ದೇವಾನುಮತಪ್ಪ ಕವಿರಾಜಮಾರ್ಗದೊಳ್&apos; ಎಂದು ಹೇಳುವುದರಿಂದ ಇದು ರಾಷ್ಟ್ರಕೂಟದೊರೆ ಅಮೋಘವರ್ಷ ನೃಪತುಂಗನ (ಕ್ರಿ.ಶ ೮೧೪-೮೭೭)ಕಾಲದಲ್ಲಿ ಹುಟ್ಟಿದುದದೆಂದು ನಿರ್ಧರಿಸಲಾಗಿದೆ. ಕವಿರಾಜಮಾರ್ಗ ಕೃತಿಯಲ್ಲಿ ಮೂರು ಪರಿಚ್ಛೇದಗಳಿವೆ. ಮೊದಲ ಪರಿಚ್ಛೇದದಲ್ಲಿ ಮಂಗಳಾಚರಣೆ, ಪೂರ್ವಕವಿಸ್ತುತಿ ಮೊದಲಾದ ಪೀಠಿಕಾಭಾಗದ ಪದ್ಯಗಳಾದ ಮೇಲೆ ನೃಪತುಂಗ ಕಾವ್ಯಾಭ್ಯಾಸದ ಅವಶ್ಯಕತೆ, ಕವಿತ್ವರಚನಾಶಕ್ತಿಯಿಂದ ಉಂಟಾಗುವ ಮಾರ್ಗ ಮೊದಲಾದ ವಿಷಯಗಳ ಬಗ್ಗೆ ತಿಳಿಸಿದ್ದಾನೆ.
+          ಕವಿರಾಜಮಾರ್ಗದ ಪ್ರತಿ ಪರಿಚ್ಛೇದದ ಕೊನೆಯಲ್ಲಿ &apos;ನೃಪತುಂಗ ದೇವಾನುಮತಪ್ಪ ಕವಿರಾಜಮಾರ್ಗದೊಳ್&apos; ಎಂದು ಹೇಳುವುದರಿಂದ ಇದು ರಾಷ್ಟ್ರಕೂಟದೊರೆ ಅಮೋಘವರ್ಷ ನೃಪತುಂಗನ (ಕ್ರಿ.ಶ ೮೧೪-೮೭೭)ಕಾಲದಲ್ಲಿ ಹುಟ್ಟಿದುದದೆಂದು ನಿರ್ಧರಿಸಲಾಗಿದೆ. ಕವಿರಾಜಮಾರ್ಗ ಕೃತಿಯಲ್ಲಿ ಮೂರು ಪರಿಚ್ಛೇದಗಳಿವೆ. ಮೊದಲ ಪರಿಚ್ಛೇದದಲ್ಲಿ ಮಂಗಳಾಚರಣೆ, ಪೂರ್ವಕವಿಸ್ತುತಿ ಮೊದಲಾದ ಪೀಠಿಕಾಭಾಗದ ಪದ್ಯಗಳಾದ ಮೇಲೆ ನೃಪತುಂಗ ಕಾವ್ಯಾಭ್ಯಾಸದ ಅವಶ್ಯಕತೆ, ಕವಿತ್ವರಚನಾಶಕ್ತಿಯಿಂದ ಉಂಟಾಗುವ ಮಾರ್ಗ ಮೊದಲಾದ ವಿಷಯಗಳ ಬಗ್ಗೆ ತಿಳಿಸಿದ್ದಾನೆ.
         </div>
 
         <Heading
           level={5}
         >
-                    Inline Kannada
+          Inline Kannada
         </Heading>
 
         <p>
-                    This is an example of some inline <span data-lang="kan" data-script="Knda">ಕವಿರಾಜಮಾರ್ಗದ</span> so we can see how it looks.
+          This is an example of some inline <span data-lang="kan" data-script="Knda">ಕವಿರಾಜಮಾರ್ಗದ</span> so we can see how it looks.
         </p>
 
         <hr />
@@ -193,22 +193,22 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Heading
           level={5}
         >
-                    Block Romanization
+          Block Romanization
         </Heading>
 
         <div data-lang="san" data-script="Latn">
-                    sarve mānavāḥ janmanā svatantrāḥ vaiyaktikagauraveṇa adhikāreṇa ca tulyāḥ eva,<br />
-                    sarveṣāṃ vivekaḥ ātmasākṣī ca vartate, sarve parasparaṃ bhrātṛbhāvena vyavahareyuḥ
+          sarve mānavāḥ janmanā svatantrāḥ vaiyaktikagauraveṇa adhikāreṇa ca tulyāḥ eva,<br />
+          sarveṣāṃ vivekaḥ ātmasākṣī ca vartate, sarve parasparaṃ bhrātṛbhāvena vyavahareyuḥ
         </div>
 
         <Heading
           level={5}
         >
-                    Inline Romanization
+          Inline Romanization
         </Heading>
 
         <p>
-                    This is an example of some inline <span data-lang="san" data-script="Latn">svatantrāḥ vaiyaktikagauraveṇa</span> so we can see how it looks.
+          This is an example of some inline <span data-lang="san" data-script="Latn">svatantrāḥ vaiyaktikagauraveṇa</span> so we can see how it looks.
         </p>
       </>
     );
@@ -225,7 +225,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           level={2}
           titleEnd={1}
         >
-                    About
+          About
         </Heading>
 
         <p><i>New Explorations in South Asia Research</i>, or <i>NESAR</i> (<span className="scriptWrapper" data-lang="kan" data-script="Latn" data-original="nesaṟ">nesaṟ</span> being a Kannada word for “sun”) is an <b>open-access</b> journal publishing original research in South Asian Studies, with a focus on the intellectual and expressive traditions of South India.</p>
@@ -244,7 +244,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           level={2}
           titleEnd={1}
         >
-                    Submissions
+          Submissions
         </Heading>
         <p>Please see the <Link href="/submit">guidelines for submission</Link> for further information.</p>
 
