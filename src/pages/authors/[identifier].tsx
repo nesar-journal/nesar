@@ -38,11 +38,11 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<AuthorPar
 
   return {
     props: {
-      data: DATA.authors.data[authorId],
-      articlesIds: DATA.articles.ids,
-      articlesData: DATA.articles.data,
-      issuesIds: DATA.issues.ids,
-      issuesData: DATA.issues.data,
+      data         : DATA.authors.data[authorId],
+      articlesIds  : DATA.articles.ids,
+      articlesData : DATA.articles.data,
+      issuesIds    : DATA.issues.ids,
+      issuesData   : DATA.issues.data,
       authorId,
     }
   };

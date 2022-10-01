@@ -21,6 +21,7 @@ paths:
   pdf: contents1.pdf
 
 tags:
+  - tag1
   - tag5
 
 articles:

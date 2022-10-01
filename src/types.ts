@@ -4,6 +4,7 @@ type IssueIdentifier   = ResourceIdentifier;
 type ArticleIdentifier = ResourceIdentifier;
 
 type AuthorIdentifier  = string;
+type TagIdentifier     = string;
 
 type ResourceTitle = string;
 type ArticleTitle = ResourceTitle;
@@ -38,12 +39,12 @@ type ResourceData = {
   }
 
   tags: string[];
-}
+};
 
 type Author = {
   displayName: string;
   id: AuthorIdentifier;
-}
+};
 
 export type Authors = Author[];
 
@@ -55,7 +56,7 @@ export type ArticleData = ResourceData & {
   }
 
   content: string;
-}
+};
 
 export type IssueData = ResourceData & {
   issue: number;
@@ -66,7 +67,7 @@ export type IssueData = ResourceData & {
   }[];
 
   articles: ArticleIdentifier[];
-}
+};
 
 export type AuthorData = {
   displayName : string;
@@ -75,7 +76,7 @@ export type AuthorData = {
   email       : string;
   institution : string;
   viaf        : string;
-}
+};
 
 type ArticlesData = {
   [key: ArticleIdentifier]: ArticleData;
@@ -92,22 +93,47 @@ type AuthorsData = {
 export type IndexedArticlesData = {
   ids  : ArticleIdentifier[];
   data : ArticlesData;
-}
+};
 
 export type IndexedIssuesData = {
   ids  : IssueIdentifier[];
   data : IssuesData;
-}
+};
 
 export type IndexedAuthorsData = {
   ids  : AuthorIdentifier[];
   data : AuthorsData;
-}
+};
+
+export type ResourceTag = {
+  slug        : string;
+  displayName : string;
+  ids         : string[];
+};
+
+export type ResourceTags = { [key: string]: ResourceTag};
+
+export type TagData = {
+  slug        : string;
+  displayName : string;
+  articles    : ArticleIdentifier[];
+  issues      : IssueIdentifier[];
+};
+
+type TagsData = {
+  [key: TagIdentifier]: TagData;
+};
+
+export type IndexedTagsData = {
+  ids  : TagIdentifier[];
+  data : TagsData;
+};
 
 export type Data = {
   authors  : IndexedAuthorsData;
   articles : IndexedArticlesData;
   issues   : IndexedIssuesData;
+  tags     : IndexedTagsData;
 };
 
 export type ArticlesMapping = { [key: ArticleIdentifier]: ArticleTitle };

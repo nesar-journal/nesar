@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import classnames from 'classnames';
+import urlSlug from 'url-slug';
 
 import styles from './ResourceCard.module.scss';
 import ButtonLink from './ButtonLink';
@@ -95,8 +96,7 @@ const ResourceCard = (props: ResourceCardProps) => {
             {tags.map((tag) => {
               return (
                 <span key={tag} className={styles.tag}>
-                  {/* <Link href={`/tags/${tag}`}>{tag}</Link> */}
-                  {tag}
+                  <Link href={`/tags/${urlSlug(tag)}`}>{tag}</Link>
                 </span>
               );
             })}
