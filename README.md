@@ -55,17 +55,3 @@ brew install woff2
 # woff2_compress myfont.ttf
 # woff2_decompress myfont.woff2
 ```
-
-## To Do
-
-#### Ravi
-
-* add Tag resource
-* fix search sort order
-* allow search to support multiple scripts
-* update security policy (`next.config.js`)
-
-#### Ravi + Andrew
-
-* add NESAR to Google Search Console (https://search.google.com/search-console/about?hl=en)
-* set up analytics either via Vercel ($10) or Google Analytics (https://analytics.google.com/analytics/web/)
