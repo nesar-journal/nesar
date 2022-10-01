@@ -4,7 +4,6 @@ import type {
 } from 'next';
 
 import Heading from '../../components/Heading';
-import InformationBox from '../../components/InformationBox';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
@@ -31,8 +30,6 @@ const AuthorsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
         <SEO
           title="Authors"
         />
-
-        <InformationBox />
 
         <Heading
           level={2}
