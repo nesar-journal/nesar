@@ -6,9 +6,11 @@ import classnames from 'classnames';
 import styles from './ResourceCard.module.scss';
 import ButtonLink from './ButtonLink';
 
+import { Authors } from '../types';
+
 type ResourceCardProps = {
   abstract: string;
-  authors?: string[];
+  authors?: Authors;
   coverUrl: string;
   doi?: string;
   pdfUrl?: string;
@@ -65,7 +67,17 @@ const ResourceCard = (props: ResourceCardProps) => {
             <div>
               {authors && <div className={styles.authors}>
                 {authors.map((author) => {
-                  return null;
+                  return (
+                    <Link
+                      href={`/authors/${author.id}`}
+                      key={author.id}
+                      passHref
+                    >
+                      <a className={styles.authorLink}>
+                        {author.displayName}
+                      </a>
+                    </Link>
+                  );
                 })}
               </div>}
               <Link href={url} passHref>

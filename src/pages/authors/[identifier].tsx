@@ -34,11 +34,14 @@ export const getStaticPaths: GetStaticPaths<AuthorParams> = async () => {
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext<AuthorParams>) => {
+  const authorId = params?.identifier || '';
+
   return {
     props: {
-      data: DATA.authors.data[params?.identifier || ''],
+      data: DATA.authors.data[authorId],
       articlesIds: DATA.articles.ids,
       articlesData: DATA.articles.data,
+      authorId,
     }
   };
 };
@@ -46,6 +49,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<AuthorPar
 const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articlesData,
   articlesIds,
+  authorId,
   data,
 }) => {
   return (
@@ -73,7 +77,7 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           articlesIds.map((articleId) => {
             const articleData = articlesData[articleId];
 
-            if (articleData.authors.includes(data.displayName)) {
+            if (articleData.authors.map((author) => author.id).includes(authorId)) {
               return (
                 <li key={articleId}>
                   <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>

@@ -40,8 +40,15 @@ type ResourceData = {
   tags: string[];
 }
 
+type Author = {
+  displayName: string;
+  id: AuthorIdentifier;
+}
+
+export type Authors = Author[];
+
 export type ArticleData = ResourceData & {
-  authors: AuthorIdentifier[];
+  authors: Authors;
 
   paths: {
     content: string;
@@ -53,7 +60,10 @@ export type ArticleData = ResourceData & {
 export type IssueData = ResourceData & {
   issue: number;
 
-  editors: AuthorIdentifier[];
+  editors: {
+    displayName: string;
+    id: AuthorIdentifier;
+  }[];
 
   articles: ArticleIdentifier[];
 }

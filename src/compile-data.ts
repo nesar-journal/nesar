@@ -71,11 +71,21 @@ function compileResourceData (folderName: string) {
           }
 
           if (entryData.authors) {
-            entryData.authors = entryData.authors.map((authorId: string) => authorsData.data[authorId].displayName);
+            entryData.authors = entryData.authors.map((authorId: string) => {
+              return ({
+                displayName: authorsData.data[authorId].displayName,
+                id: authorId,
+              });
+            });
           }
 
           if (entryData.editors) {
-            entryData.editors = entryData.editors.map((editorId: string) => authorsData.data[editorId].displayName);
+            entryData.editors = entryData.editors.map((editorId: string) => {
+              return ({
+                displayName: authorsData.data[editorId].displayName,
+                id: editorId,
+              });
+            });
           }
 
           data.data[id] = entryData;

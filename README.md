@@ -58,11 +58,8 @@ brew install woff2
 
 ## To Do
 
-### Post-Launch
-
 #### Ravi
 
-* wire up Author resource to ResourceCard
 * add Tag resource
 * fix search sort order
 * allow search to support multiple scripts

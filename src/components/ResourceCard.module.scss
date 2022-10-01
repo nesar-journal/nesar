@@ -105,6 +105,18 @@ display: flex;
   color: #494949;
 }
 
+.authorLink {
+  display: inline-block;
+
+  &:not(:last-of-type) {
+    &::after {
+      content: ',';
+      margin-right: 4px;
+      color: black;
+    }
+  }
+}
+
 .title {
   font-size: 1.5em;
   line-height: 2;

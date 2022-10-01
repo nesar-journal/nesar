@@ -62,7 +62,7 @@ function getIndex (): Index {
     const { abstract, authors, content, identifier, title } = articleData;
 
     const abstractWords = getWordsFromHTML(abstract);
-    const authorWords   = getWordsFromHTML(authors.join(' '));
+    const authorWords   = getWordsFromHTML(authors.map((author) => author.displayName).join(' '));
     const contentWords  = getWordsFromHTML(content);
     const titleWords    = getWordsFromHTML(title);
 
