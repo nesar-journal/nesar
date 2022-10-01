@@ -66,19 +66,21 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             Issues
           </Heading>
 
-          {
-            issuesIds.map((issueId) => {
-              const issueData = issuesData[issueId];
+          <ul>
+            {
+              issuesIds.map((issueId) => {
+                const issueData = issuesData[issueId];
 
-              if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
-                return (
-                  <li key={issueId}>
-                    <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
-                  </li>
-                );
-              }
-            })
-          }
+                if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
+                  return (
+                    <li key={issueId}>
+                      <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
+                    </li>
+                  );
+                }
+              })
+            }
+          </ul>
         </>
       );
     }
@@ -96,19 +98,21 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             Articles
           </Heading>
 
-          {
-            articlesIds.map((articleId) => {
-              const articleData = articlesData[articleId];
+          <ul>
+            {
+              articlesIds.map((articleId) => {
+                const articleData = articlesData[articleId];
 
-              if (articleData.authors.map((author) => author.id).includes(authorId)) {
-                return (
-                  <li key={articleId}>
-                    <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
-                  </li>
-                );
-              }
-            })
-          }
+                if (articleData.authors.map((author) => author.id).includes(authorId)) {
+                  return (
+                    <li key={articleId}>
+                      <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
+                    </li>
+                  );
+                }
+              })
+            }
+          </ul>
         </>
       );
     }

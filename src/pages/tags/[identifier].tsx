@@ -56,17 +56,19 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             Issues
           </Heading>
 
-          {
-            data.issues.map((issueId) => {
-              const issueData = issuesData[issueId];
+          <ul>
+            {
+              data.issues.map((issueId) => {
+                const issueData = issuesData[issueId];
 
-              return (
-                <li key={issueId}>
-                  <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
-                </li>
-              );
-            })
-          }
+                return (
+                  <li key={issueId}>
+                    <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
+                  </li>
+                );
+              })
+            }
+          </ul>
         </>
       );
     }
@@ -84,17 +86,19 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             Articles
           </Heading>
 
-          {
-            data.articles.map((articleId) => {
-              const articleData = articlesData[articleId];
+          <ul>
+            {
+              data.articles.map((articleId) => {
+                const articleData = articlesData[articleId];
 
-              return (
-                <li key={articleId}>
-                  <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
-                </li>
-              );
-            })
-          }
+                return (
+                  <li key={articleId}>
+                    <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
+                  </li>
+                );
+              })
+            }
+          </ul>
         </>
       );
     }
