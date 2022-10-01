@@ -46,9 +46,16 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 const authorData = authors[id];
 
                 return (
-                  <tr key={authorData.email}>
-                    <td>{authorData.displayName}</td>
-                    <td>{authorData.email}</td>
+                  <tr key={id}>
+                    <td>
+                      <Link
+                        href={`/authors/${id}`}
+                        passHref
+                      >
+                        <a>{authorData.displayName}</a>
+                      </Link>
+                    </td>
+                    <td><a href={`mailto:${authorData.email}`}>{authorData.email}</a></td>
                     <td>{authorData.institution}</td>
                     <td>{authorData.viaf}</td>
                   </tr>

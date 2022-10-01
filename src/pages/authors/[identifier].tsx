@@ -41,6 +41,8 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<AuthorPar
       data: DATA.authors.data[authorId],
       articlesIds: DATA.articles.ids,
       articlesData: DATA.articles.data,
+      issuesIds: DATA.issues.ids,
+      issuesData: DATA.issues.data,
       authorId,
     }
   };
@@ -49,9 +51,69 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<AuthorPar
 const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articlesData,
   articlesIds,
+  issuesData,
+  issuesIds,
   authorId,
   data,
 }) => {
+  function renderIssues () {
+    if (issuesIds && issuesData) {
+      return (
+        <>
+          <Heading
+            level={3}
+          >
+            Issues
+          </Heading>
+
+          {
+            issuesIds.map((issueId) => {
+              const issueData = issuesData[issueId];
+
+              if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
+                return (
+                  <li key={issueId}>
+                    <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
+                  </li>
+                );
+              }
+            })
+          }
+        </>
+      );
+    }
+
+    return null;
+  }
+
+  function renderArticles () {
+    if (articlesIds && articlesData) {
+      return (
+        <>
+          <Heading
+            level={3}
+          >
+            Articles
+          </Heading>
+
+          {
+            articlesIds.map((articleId) => {
+              const articleData = articlesData[articleId];
+
+              if (articleData.authors.map((author) => author.id).includes(authorId)) {
+                return (
+                  <li key={articleId}>
+                    <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
+                  </li>
+                );
+              }
+            })
+          }
+        </>
+      );
+    }
+  }
+
   return (
     <>
       <Layout>
@@ -66,26 +128,8 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           {data.displayName}
         </Heading>
 
-
-        <Heading
-          level={3}
-        >
-          Articles
-        </Heading>
-
-        {
-          articlesIds.map((articleId) => {
-            const articleData = articlesData[articleId];
-
-            if (articleData.authors.map((author) => author.id).includes(authorId)) {
-              return (
-                <li key={articleId}>
-                  <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
-                </li>
-              );
-            }
-          })
-        }
+        {renderIssues()}
+        {renderArticles()}
       </Layout>
     </>
   );

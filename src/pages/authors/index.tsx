@@ -2,6 +2,7 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
+import Link from 'next/link';
 
 import Heading from '../../components/Heading';
 import Layout from '../../components/Layout';
@@ -38,38 +39,39 @@ const AuthorsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
           Authors
         </Heading>
 
-        {
-          authorsIds.map((id) => {
-            const authorData = authors[id];
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Institution</th>
+              <th>VIAF</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              authorsIds.map((id) => {
+                const authorData = authors[id];
 
-            return (
-              <div key={id}>
-                <Heading
-                  level={3}
-                  link={`/authors/${id}`}
-                  linkText={authorData.displayName}
-                />
-
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Institution</th>
-                      <td>{authorData.institution}</td>
-                    </tr>
-                    <tr>
-                      <th>Email</th>
-                      <td><a href={`mailto:${authorData.email}`}>{authorData.email}</a></td>
-                    </tr>
-                    <tr>
-                      <th>VIAF</th>
-                      <td>{authorData.viaf}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            );
-          })
-        }
+                return (
+                  <tr key={id}>
+                    <td>
+                      <Link
+                        href={`/authors/${id}`}
+                        passHref
+                      >
+                        <a>{authorData.displayName}</a>
+                      </Link>
+                    </td>
+                    <td><a href={`mailto:${authorData.email}`}>{authorData.email}</a></td>
+                    <td>{authorData.institution}</td>
+                    <td>{authorData.viaf}</td>
+                  </tr>
+                );
+              })
+            }
+          </tbody>
+        </table>
       </Layout>
     </>
   );
