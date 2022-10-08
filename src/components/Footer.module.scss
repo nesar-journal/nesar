@@ -21,6 +21,20 @@
     background-size: 75%;
   }
 }
+.logobox {
+  display: flex;
+  flex-direction: row;
+  .linkbox {
+    display: flex;
+    flex-direction: column;
+    flex-flow: space-between;
+    p {
+      font-size: 0.9rem;
+      padding:0;
+      margin:0 0 0.5rem 0;
+    }
+  }
+}
 
 .item {
   padding: 0 20px 10px 20px;

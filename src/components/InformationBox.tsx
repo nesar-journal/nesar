@@ -103,13 +103,14 @@ const InformationBoxTabs = () => {
 const InformationBox: FunctionComponent = () => {
   return (
     <aside className={styles.informationBox}>
+      <p style={{fontSize: 145 + '%', lineHeight: 2 + 'rem'}}><em>New Explorations in South Asia Research</em>, or <em>NESAR</em> is a <b>free</b> and <b>open-access</b> journal publishing original research of the highest quality in South Asian Studies, with a focus on the intellectual and expressive traditions of South India.</p>
+
       <Heading
         level={3}
         titleEnd={3}
       >
         Information
       </Heading>
-
       <InformationBoxTabs />
     </aside>
   );

@@ -45,8 +45,6 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ar
           title="Home"
         />
 
-        <p><i>New Explorations in South Asia Research</i>, or <i>NESAR</i> (<span className="scriptWrapper" data-lang="kan" data-script="Latn" data-original="nesaṟ">nesaṟ</span> being a Kannada word for “sun”) is a totally <b>free</b> and <b>open-access</b> journal publishing original research of the highest quality in South Asian Studies, with a focus on the intellectual and expressive traditions of South India.</p>
-
         <InformationBox />
 
         <HeroCard

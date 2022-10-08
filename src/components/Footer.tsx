@@ -10,14 +10,20 @@ const Footer: FunctionComponent = () => {
       <div className={styles.divider}></div>
 
       <footer className={styles.footer}>
-        <div className={styles.item}>
-          <Image
-            alt="NESAR Logo"
-            src="/assets/images/logo-wordmark.png"
-            width={240}
-            height={53}
-            quality={90}
-          />
+        <div className={styles.logobox}>
+          <div className={styles.item}>
+            <Image
+              alt="NESAR Logo"
+              src="/assets/images/logo-wordmark.png"
+              width={240}
+              height={53}
+              quality={90}
+            />
+          </div>
+	  <div className={styles.linkbox}>
+	    <p>ISSN: 2834-3875</p>
+	    <p><a href="">Privacy Policy</a></p>
+          </div>
         </div>
         <div className={styles.item}>
           <Image
