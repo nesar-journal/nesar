@@ -6,6 +6,14 @@ ollett:
   institution : University of Chicago
   viaf        : viaf_number
 
+piercetaylor:
+  displayName : Sarah Pierce Taylor
+  firstName   : Sarah
+  lastName    : Pierce Taylor
+  email       : email@email.com
+  institution : University of Chicago
+  viaf        : viaf_number
+
 otherperson:
   displayName : Other Person
   firstName   : Other
