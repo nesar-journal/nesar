@@ -1,0 +1,27 @@
+type: article
+
+identifier: ollett-introducing-nesar
+
+doi: <DOI>
+
+title: Introducing NESAR
+
+authors:
+  - ollett
+
+abstract: This is an abstract for the test article. It uses titles (<span class="foreign"><span class="scriptWrapper" data-script="Latn" data-lang="kan" data-original="Kavirājamārgaṁ">Kavirājamārgaṁ</span></span>) and foreign-language text (<span class="foreign"><span class="scriptWrapper" data-script="Latn" data-lang="kan" data-original="samasaṁskr̥taṅgaḷ">samasaṁskr̥taṅgaḷ</span></span>).
+
+dates:
+  publication: July 7, 2022
+
+paths:
+  cover: ollett-introducing-nesar.jpg
+  pdf: ollett-introducing-nesar.pdf
+  content: ollett-introducing-nesar.html
+
+tags:
+  - Maṇipravāḷam
+  - Language mixture
+  - Kannada
+  - Nāgavarman
+  - Kavirājamārgaṁ
