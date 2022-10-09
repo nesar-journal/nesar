@@ -13,6 +13,13 @@
     border-radius: 0;
   }
 }
+.tabPreface {
+  font-family: var(--font-monospace);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 80%;
+  margin-right:0.5rem;
+}
 
 .tabTrigger {
   padding: 8px 8px 4px 8px;
@@ -61,7 +68,7 @@
 
 .tabContent {
   font-family: var(--font-main);
-  font-style: italic;
+//  font-style: italic;
   font-weight: bold;
   color: #606264;
 }

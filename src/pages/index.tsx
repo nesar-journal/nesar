@@ -30,9 +30,9 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext<IssuePara
 };
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ articlesData }) => {
-  const heroArticleIdentifier     = 'ollett-images-of-language-mixture';
-  const featuredArticleIdentifier = 'articlekey-2';
-  const latestArticleIdentifier   = 'articlekey-1';
+  const heroArticleIdentifier     = 'ollett-introducing-nesar';
+  const featuredArticleIdentifier = 'ollett-images-of-language-mixture';
+  const latestArticleIdentifier   = 'ollett-pierce-taylor-representing-kannada-text';
 
   const heroArticleData     = articlesData[heroArticleIdentifier];
   const featuredArticleData = articlesData[featuredArticleIdentifier];
