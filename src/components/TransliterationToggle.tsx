@@ -29,7 +29,7 @@ const SCRIPT_SCHEMA_MAPPING: { [key: string]: string } = {
 
 const LANGUAGES = Object.keys(LANGUAGE_SCRIPT_MAPPING);
 
-function transliterateTextElements(language: string, fromLatin: boolean = false) {
+function transliterateTextElements (language: string, fromLatin: boolean = false) {
   const languageInstances = document.querySelectorAll(`[data-lang="${language}"]`);
   languageInstances.forEach((languageInstance) => {
     const originalContent = languageInstance.getAttribute('data-original') || '';
@@ -57,19 +57,19 @@ function transliterateTextElements(language: string, fromLatin: boolean = false)
   });
 }
 
-function transliterateFromLatin() {
+function transliterateFromLatin () {
   LANGUAGES.forEach((script) => {
     transliterateTextElements(script, true);
   });
 }
 
-function transliterateToLatin() {
+function transliterateToLatin () {
   LANGUAGES.forEach((script) => {
     transliterateTextElements(script);
   });
 }
 
-export default function TransliterationToggle() {
+export default function TransliterationToggle () {
   const [isLatinScript, setIsLatinScript] = useState(true);
 
   useEffect(() => {
@@ -97,7 +97,7 @@ export default function TransliterationToggle() {
     }
   }, [isLatinScript]);
 
-  function toggle() {
+  function toggle () {
     setIsLatinScript(!isLatinScript);
   }
 
