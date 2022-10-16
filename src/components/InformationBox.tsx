@@ -89,7 +89,7 @@ const InformationBoxTabs = () => {
     },
   ];
 
-  function renderTabTriggers() {
+  function renderTabTriggers () {
     const titles = tabsContent.map((entry) => entry.title);
 
     return (

@@ -1,9 +1,9 @@
 import { ParsedUrlQuery } from 'querystring';
 
 import type {
-    GetStaticPropsContext,
-    InferGetStaticPropsType,
-    NextPage,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+  NextPage,
 } from 'next';
 
 import Heading from '../components/Heading';
@@ -22,44 +22,44 @@ interface IssueParams extends ParsedUrlQuery {
 }
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext<IssueParams>) => {
-    return {
-        props: {
-            articlesData: DATA.articles.data,
-        }
-    };
+  return {
+    props: {
+      articlesData: DATA.articles.data,
+    }
+  };
 };
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ articlesData }) => {
-    const heroArticleIdentifier = 'ollett-introducing-nesar';
-    /**
+  const heroArticleIdentifier = 'ollett-introducing-nesar';
+  /**
     const featuredArticleIdentifier = 'articlekey-2';
     const latestArticleIdentifier = 'articlekey-1';
     **/
 
-    const heroArticleData = articlesData[heroArticleIdentifier];
-    /**
+  const heroArticleData = articlesData[heroArticleIdentifier];
+  /**
     const featuredArticleData = articlesData[featuredArticleIdentifier];
     const latestArticleData = articlesData[latestArticleIdentifier];
     **/
 
-    return (
-        <>
-            <Layout largeCover>
-                <SEO
-                    title="Home"
-                />
+  return (
+    <>
+      <Layout largeCover>
+        <SEO
+          title="Home"
+        />
 
 
-                <HeroCard
-                    coverUrl={`/articles/${heroArticleIdentifier}/${heroArticleData.paths.cover}`}
-                    title={heroArticleData.title}
-                    url={`/articles/${heroArticleIdentifier}`}
-                />
+        <HeroCard
+          coverUrl={`/articles/${heroArticleIdentifier}/${heroArticleData.paths.cover}`}
+          title={heroArticleData.title}
+          url={`/articles/${heroArticleIdentifier}`}
+        />
 
-                <InformationBox />
+        <InformationBox />
 
 
-                {/*
+        {/*
                     <Heading
                     level={2}
                     titleEnd={1}
@@ -99,9 +99,9 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ar
                     url={`/articles/${latestArticleIdentifier}`}
                     />
                   */}
-            </Layout>
-        </>
-    );
+      </Layout>
+    </>
+  );
 };
 
 export default HomePage;
