@@ -1,0 +1,27 @@
+type: issue
+
+identifier: issue-0
+issue: 0
+
+doi: <DOI>
+
+title: Introducing NESAR
+
+editors:
+  - ollett
+
+abstract: 
+
+dates:
+  publication: October 18, 2022
+
+paths:
+  cover: issue-0.jpg
+  pdf: contents1.pdf
+
+tags:
+  - open access
+  - south asian studies
+
+articles:
+  - ollett-introducing-nesar

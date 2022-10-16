@@ -8,6 +8,7 @@
 // ----- because the HTML data is imported).
 .articleBody {
   position: relative;
+  line-height: 1.35;
   .text-section {
     @media (max-width: $mobile-breakpoint) {
       padding:0;

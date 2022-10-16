@@ -17,19 +17,19 @@ const InformationBoxTabs = () => {
       content: (
         <>
           <p>
- 	    <em>NESAR</em> aims to publish research in South Asian Studies on a variety of topics, including but not limited to:
-	  </p>
+            <em>NESAR</em> aims to publish research in South Asian Studies on a variety of topics, including but not limited to:
+          </p>
           <ul>
-	    <li>literature, literary criticism, and literary history;</li>
-	    <li>traditions of performance;</li>
-	    <li>the history of art and architecture;</li>
-	    <li>philosophy and intellectual history;</li>
-	    <li>the history of religious ideas and movements;</li>
-	    <li>social and political thought.</li>
- 	  </ul>
+            <li>literature, literary criticism, and literary history;</li>
+            <li>traditions of performance;</li>
+            <li>the history of art and architecture;</li>
+            <li>philosophy and intellectual history;</li>
+            <li>the history of religious ideas and movements;</li>
+            <li>social and political thought.</li>
+          </ul>
 
           <p>
-	    Articles are published in both HTML and PDF form on a rolling basis. <em>NESAR</em> also publishes issues on particular themes.
+            Articles are published in both HTML and PDF form on a rolling basis. <em>NESAR</em> also publishes issues on particular themes.
           </p>
         </>
       ),
@@ -39,28 +39,28 @@ const InformationBoxTabs = () => {
       content: (
         <>
           <p>
-	    <em>NESAR</em> is open-access and will never charge fees to authors or readers for any reason. We welcome the following kinds of contributions:
+            <em>NESAR</em> is open-access and will never charge fees to authors or readers for any reason. We welcome the following kinds of contributions:
           </p>
 
-	  <ul>
-	    <li><b>research articles</b>;</li>
-	    <li><b>book reviews</b>;</li>
-	    <li><b>research briefs</b>, i.e., shorter articles;</li>
-	    <li><b>translations</b> of important research articles in Indian languages into English.</li>
-	  </ul>
+          <ul>
+            <li><b>research articles</b>;</li>
+            <li><b>book reviews</b>;</li>
+            <li><b>research briefs</b>, i.e., shorter articles;</li>
+            <li><b>translations</b> of important research articles in Indian languages into English.</li>
+          </ul>
 
-	  <p>
-	    Submissions to NESAR are <b>peer-reviewed</b> by experts in the field.
-	    Accepted articles will receive meticulous editorial attention 
-	    and will be prepared for online publication in PDF format (using LaTeX)
-	    and in HTML format. Published articles will reach a large
-	    international readership.
-	  </p>
+          <p>
+            Submissions to NESAR are <b>peer-reviewed</b> by experts in the field.
+            Accepted articles will receive meticulous editorial attention
+            and will be prepared for online publication in PDF format (using LaTeX)
+            and in HTML format. Published articles will reach a large
+            international readership.
+          </p>
 
-	  <p>
-	    Articles are published under <Link href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</Link> licenses
-	    and authors will retain the copyright to their work.
-	  </p>
+          <p>
+            Articles are published under <Link href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</Link> licenses
+            and authors will retain the copyright to their work.
+          </p>
 
           <Link href="/submit">
             <a className={classnames(styles.informationBoxLink, styles.addIcon)}>
@@ -68,7 +68,7 @@ const InformationBoxTabs = () => {
             </a>
           </Link>
 
-          <Link href="/submit">
+          <Link href="/translations">
             <a className={classnames(styles.informationBoxLink, styles.addIcon)}>
               Translation program
             </a>
@@ -82,14 +82,14 @@ const InformationBoxTabs = () => {
         <>
           <p>
             <i>NESAR</i> (ISSN: 2834-3875) is published on this website (<Link href="nesarjournal.org">nesarjournal.org</Link>).
-	    Every article receives its own <Link href="https://www.doi.org/">DOI</Link>.
-	  </p>
+            Every article receives its own <Link href="https://www.doi.org/">DOI</Link>.
+          </p>
         </>
       ),
     },
   ];
 
-  function renderTabTriggers () {
+  function renderTabTriggers() {
     const titles = tabsContent.map((entry) => entry.title);
 
     return (
@@ -126,7 +126,7 @@ const InformationBoxTabs = () => {
 const InformationBox: FunctionComponent = () => {
   return (
     <aside className={styles.informationBox}>
-      <p style={{fontSize: 125 + '%', lineHeight: 2 + 'rem'}}><b><em>New Explorations in South Asia Research</em></b> (<em>NESAR</em>) is a <b>free</b> and <b>open-access</b> journal publishing original research of the highest quality in <b>South Asian Studies</b>, with a focus on the intellectual and expressive traditions of South India.</p>
+      <p style={{ fontSize: 125 + '%', lineHeight: 2 + 'rem' }}><b><em>New Explorations in South Asia Research</em></b> (<em>NESAR</em>) is a <b>free</b> and <b>open-access</b> journal publishing original research of the highest quality in <b>South Asian Studies</b>, with a focus on the intellectual and expressive traditions of South India.</p>
 
       <InformationBoxTabs />
     </aside>

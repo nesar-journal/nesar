@@ -118,14 +118,16 @@ display: flex;
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.75em;
   line-height: 2;
+  font-weight: bold;
 }
 
 .abstract {
   color: #606264;
+  padding-top: 1em;
   font-style: italic;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .tags {

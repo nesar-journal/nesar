@@ -62,9 +62,7 @@ const ResourceCard = (props: ResourceCardProps) => {
           <div className={styles.publishedDate}>published: {publicationDate}</div>
         </div>
         <div>
-          <div className={classnames({
-            [styles.titleEnd]: showTitleEnd,
-          })}>
+          <div>
             <div>
               {authors && <div className={styles.authors}>
                 {authors.map((author) => {
