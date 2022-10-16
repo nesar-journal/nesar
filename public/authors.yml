@@ -2,22 +2,6 @@ ollett:
   displayName : Andrew Ollett
   firstName   : Andrew
   lastName    : Ollett
-  email       : email@email.com
+  email       : ollett@gmail.com
   institution : University of Chicago
-  viaf        : viaf_number
-
-piercetaylor:
-  displayName : Sarah Pierce Taylor
-  firstName   : Sarah
-  lastName    : Pierce Taylor
-  email       : email@email.com
-  institution : University of Chicago
-  viaf        : viaf_number
-
-otherperson:
-  displayName : Other Person
-  firstName   : Other
-  lastName    : Person
-  email       : other@email.com
-  institution : Harvard
-  viaf        : viaf_number_2
+  viaf        : 372149294434280521495
