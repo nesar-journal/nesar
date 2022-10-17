@@ -29,6 +29,30 @@ const SCRIPT_SCHEMA_MAPPING: { [key: string]: string } = {
 
 const LANGUAGES = Object.keys(LANGUAGE_SCRIPT_MAPPING);
 
+function preprocessText (script: string, content: string) {
+  if (script == 'Knda') {
+    content = content.replace(/m([pb])/g,"ṁ$1")
+      .replace(/n([td])/g,"ṁ$1")
+      .replace(/ṇ([ṭḍ])/g,"ṁ$1")
+      .replace(/ṅ([kg])/g,"ṁ$1")
+      .replace(/ñ([jc])/g,"ṁ$1")
+      .replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
+      .replace(/’ ([aāiīuūeēoō])/g,"$1")
+  }
+  else if (script == 'Deva') {
+    content = content.replace(/ ’/g,"'")
+      .replace(/aï/g,"a####i")
+      .replace(/aü/g,"a####u")
+      .replace(/([rnmdg]) ([gṅjñḍṇdnbmhyvrlaāiīuūeēoō])/g,"$1$2")
+      .replace(/(ñ) (ch)/g,"$1$2")
+      .replace(/([kcṭtpśsṣ]) ([kcṭtpśsṣ])/g,"$1$2")
+      .replace(/([vy]) ([aāiīuūēeōo])/g,"$1$2")
+      .replace(/ \|\|/g," ॥")
+      .replace(/ \|/g," ।");
+  }
+  return content
+}
+
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
   const languageInstances = document.querySelectorAll(`[data-lang="${language}"]`);
   languageInstances.forEach((languageInstance) => {
@@ -49,7 +73,8 @@ function transliterateTextElements (language: string, fromLatin: boolean = false
       const sourceSchema = SCRIPT_SCHEMA_MAPPING['Latn'];
       const targetScript = LANGUAGE_SCRIPT_MAPPING[language];
       const targetSchema = SCRIPT_SCHEMA_MAPPING[targetScript];
-      const replacementText = Sanscript.t(originalContent, sourceSchema, targetSchema);
+      const preprocessed = preprocessText(targetScript,originalContent);
+      const replacementText = Sanscript.t(preprocessed, sourceSchema, targetSchema);
 
       languageInstance.textContent = replacementText;
       languageInstance.setAttribute('data-script', targetScript);
