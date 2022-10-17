@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from './Footer.module.scss';
 
@@ -22,7 +23,7 @@ const Footer: FunctionComponent = () => {
           </div>
 	  <div className={styles.linkbox}>
 	    <p>ISSN: 2834-3875</p>
-	    <p><a href="">Privacy Policy</a></p>
+	    <p><Link href="/privacy">Privacy Policy</Link></p>
           </div>
         </div>
         <div className={styles.item}>
