@@ -234,7 +234,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           About
         </Heading>
 
-        <p><i>New Explorations in South Asia Research</i>, or <i>NESAR</i> (<span className="scriptWrapper" data-lang="kan" data-script="Latn" data-original="nesaṟ">nesaṟ</span> being a Kannada word for “sun”) is an <b>open-access</b> journal publishing original research in South Asian Studies, with a focus on the intellectual and expressive traditions of South India.</p>
+        <p><i>New Explorations in South Asia Research</i>, or <i>NESAR</i> (<span className="scriptWrapper" data-lang="kan" data-script="Latn" data-original="nēsaṟ">nēsaṟ</span> being a Kannada word for “sun”) is an <b>open-access</b> journal publishing original research in South Asian Studies, with a focus on the intellectual and expressive traditions of South India.</p>
 
         <p><i>NESAR</i> is an online-only publication. <i>NESAR</i> will <b>never</b> charge its authors open-access fees or publication fees.</p>
 
