@@ -37,7 +37,7 @@ function preprocessText (script: string, content: string) {
       .replace(/ṅ([kg])/g,"ṁ$1")
       .replace(/ñ([jc])/g,"ṁ$1")
       .replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
-      .replace(/’ ([aāiīuūeēoō])/g,"$1")
+      .replace(/’ ([aāiīuūeēoō])/g,"$1");
   }
   else if (script == 'Deva') {
     content = content.replace(/ ’/g,"'")
@@ -50,7 +50,7 @@ function preprocessText (script: string, content: string) {
       .replace(/ \|\|/g," ॥")
       .replace(/ \|/g," ।");
   }
-  return content
+  return content;
 }
 
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
