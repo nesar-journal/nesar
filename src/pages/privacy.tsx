@@ -22,7 +22,7 @@ const PrivacyPolicy: NextPage = () => {
 	        Privacy Policy
         </Heading>
 
-        <p>This privacy policy covers how NESAR collects, handles, and discloses personal data on this website, that is, all pages with the domain name <ExternalLink href="https://nesarjournal.org">nesarjournal.org</ExternalLink>. This policy does not cover third-party sites that are linked to from within this site.</p>
+        <p>This privacy policy covers how NESAR collects, handles, and discloses personal data on this website, that is, all pages with the domain name <Link href="/">nesarjournal.org</Link>. This policy does not cover third-party sites that are linked to from within this site.</p>
 
         <p>If you have any questions, please contact us at <ExternalLink href="mailto:nesar@nesarjournal.org">nesar@nesarjournal.org</ExternalLink>.</p>
 
