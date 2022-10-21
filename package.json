@@ -20,25 +20,25 @@
   },
   "dependencies": {
     "@indic-transliteration/sanscript": "^1.2.7",
-    "classnames": "^2.3.1",
+    "classnames": "^2.3.2",
     "fuzzysort": "^2.0.1",
     "htmlparser2": "^8.0.1",
-    "next": "12.2.5",
+    "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.31.0",
+    "sharp": "^0.31.1",
     "url-slug": "^3.0.4",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
-    "@types/node": "18.7.15",
-    "@types/react": "18.0.18",
+    "@types/node": "18.11.3",
+    "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
     "husky": "^8.0.1",
-    "sass": "^1.54.8",
+    "sass": "^1.55.0",
     "ts-node": "^10.9.1",
-    "typescript": "4.7.3"
+    "typescript": "4.8.4"
   }
 }
