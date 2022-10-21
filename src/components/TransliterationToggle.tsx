@@ -54,7 +54,7 @@ function preprocessText (script: string, content: string) {
 }
 
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
-  const languageInstances = document.querySelectorAll(`[data-lang="${language}"]`);
+  const languageInstances = document.querySelectorAll(`[data-lang="${language}"].scriptWrapper`);
   languageInstances.forEach((languageInstance) => {
     const originalContent = languageInstance.getAttribute('data-original') || '';
 
