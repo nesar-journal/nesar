@@ -63,7 +63,9 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
                 return (
                   <li key={issueId}>
-                    <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
+                    <>
+                      <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link> (Editor{issueData.editors.length > 1 ? 's' : ''}: {issueData.editors.map((editor) => editor.displayName).join(', ')})
+                    </>
                   </li>
                 );
               })
@@ -93,7 +95,9 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
                 return (
                   <li key={articleId}>
-                    <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
+                    <>
+                      <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link> (Author{articleData.authors.length > 1 ? 's' : ''}: {articleData.authors.map((author) => author.displayName).join(', ')})
+                    </>
                   </li>
                 );
               })
