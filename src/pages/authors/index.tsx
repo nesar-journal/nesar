@@ -4,6 +4,7 @@ import type {
 } from 'next';
 import Link from 'next/link';
 
+import ExternalLink from '../../components/ExternalLink';
 import Heading from '../../components/Heading';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -63,7 +64,7 @@ const AuthorsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
                         <a>{authorData.displayName}</a>
                       </Link>
                     </td>
-                    <td><a href={`mailto:${authorData.email}`}>{authorData.email}</a></td>
+                    <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
                     <td>{authorData.institution}</td>
                     <td>{authorData.viaf}</td>
                   </tr>

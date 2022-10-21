@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 
-import Link from 'next/link';
-
+import ExternalLink from '../components/ExternalLink';
 import Heading from '../components/Heading';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -37,7 +36,7 @@ const TranslationsPage: NextPage = () => {
 
         <p>NESAR is accepting proposals for translations of important scholarly articles  from <b>Kannada, Malayalam, Marathi, Tamil, or Telugu</b> into English.</p>
 
-        <p>If you are interested in doing a translation, please contact the editors (<Link href="mailto:nesar@nesarjournal.org">nesar@nesarjournal.org</Link>) with the following information:</p>
+        <p>If you are interested in doing a translation, please contact the editors (<ExternalLink href="mailto:nesar@nesarjournal.org">nesar@nesarjournal.org</ExternalLink>) with the following information:</p>
         <ul>
           <li>the <b>article</b> you intend to translate, preferably in PDF format (or at least with full bibliographic details so that we can find it);</li>
           <li>the approximate <b>extent</b> of the original article and of your translation (in words);</li>
@@ -54,7 +53,7 @@ const TranslationsPage: NextPage = () => {
           Credits
         </Heading>
 
-        <p>The NESAR translations program is made possible by a grant from the <Link href="https://southernasia.uchicago.edu/">Committee on Southern Asian Studies</Link> at the University of Chicago.</p>
+        <p>The NESAR translations program is made possible by a grant from the <ExternalLink href="https://southernasia.uchicago.edu/">Committee on Southern Asian Studies</ExternalLink> at the University of Chicago.</p>
 
       </Layout>
     </>

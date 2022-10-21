@@ -20,9 +20,7 @@ const HeroCard: FunctionComponent<HeroCardProps> = (props) => {
         backgroundImage: `url(${coverUrl})`,
       }}
     >
-      <Link href={url}>
-        <a className={styles.title}>{title}</a>
-      </Link>
+      <Link href={url}><a className={styles.title}>{title}</a></Link>
     </div>
   );
 };

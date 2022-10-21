@@ -71,19 +71,11 @@ const ResourceCard = (props: ResourceCardProps) => {
                       href={`/authors/${author.id}`}
                       key={author.id}
                       passHref
-                    >
-                      <a className={styles.authorLink}>
-                        {author.displayName}
-                      </a>
-                    </Link>
+                    ><a className={styles.authorLink}>{author.displayName}</a></Link>
                   );
                 })}
               </div>}
-              <Link href={url} passHref>
-                <a className={styles.title}>
-                  {title}
-                </a>
-              </Link>
+              <Link href={url} passHref><a className={styles.title}>{title}</a></Link>
             </div>
           </div>
           <div

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import classnames from 'classnames';
 
-import Heading from './Heading';
+import ExternalLink from './ExternalLink';
 
 import styles from './InformationBox.module.scss';
 
@@ -58,7 +58,7 @@ const InformationBoxTabs = () => {
           </p>
 
           <p>
-            Articles are published under <Link href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</Link> licenses
+            Articles are published under <ExternalLink href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</ExternalLink> licenses
             and authors will retain the copyright to their work.
           </p>
 
@@ -68,11 +68,7 @@ const InformationBoxTabs = () => {
             </a>
           </Link>
 
-          <Link href="/translations">
-            <a className={classnames(styles.informationBoxLink, styles.addIcon)}>
-              Translation program
-            </a>
-          </Link>
+          <Link href="/translations"><a className={classnames(styles.informationBoxLink, styles.addIcon)}>Translation program</a></Link>
         </>
       ),
     },
@@ -81,8 +77,8 @@ const InformationBoxTabs = () => {
       content: (
         <>
           <p>
-            <i>NESAR</i> (ISSN: 2834-3875) is published on this website (<Link href="nesarjournal.org">nesarjournal.org</Link>).
-            Every article receives its own <Link href="https://www.doi.org/">DOI</Link>.
+            <i>NESAR</i> (ISSN: 2834-3875) is published on this website (<Link href="/">nesarjournal.org</Link>).
+            Every article receives its own <ExternalLink href="https://www.doi.org/">DOI</ExternalLink>.
           </p>
         </>
       ),

@@ -1,6 +1,7 @@
 import type { InferGetStaticPropsType, NextPage } from 'next';
 import Link from 'next/link';
 
+import ExternalLink from '../components/ExternalLink';
 import Heading from '../components/Heading';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -55,7 +56,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                         <a>{authorData.displayName}</a>
                       </Link>
                     </td>
-                    <td><a href={`mailto:${authorData.email}`}>{authorData.email}</a></td>
+                    <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
                     <td>{authorData.institution}</td>
                     <td>{authorData.viaf}</td>
                   </tr>
@@ -127,16 +128,16 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           Credits
         </Heading>
 
-        <p>This site was designed by <a href="https://www.penguinchilli.co.uk/" target="_blank" rel="noreferrer">Alex Bellingham</a> and developed for the web by <a href="https://rramphal.com/" target="_blank" rel="noreferrer">Ravi S. Rāmphal</a>.</p>
+        <p>This site was designed by <ExternalLink href="https://www.penguinchilli.co.uk/">Alex Bellingham</ExternalLink> and developed for the web by <ExternalLink href="https://rramphal.com/">Ravi S. Rāmphal</ExternalLink>.</p>
 
-        <p>The image used in the header banner was taken by <a href="https://instagram.com/_spartan_photography"> Spartan Xozz</a>, downloaded from <a href="https://unsplash.com/photos/omx4dN1BfQ4"> Unsplash</a>, and used under the <a href="https://unsplash.com/license"> Unsplash License</a>.</p>
+        <p>The image used in the header banner was taken by <ExternalLink href="https://instagram.com/_spartan_photography"> Spartan Xozz</ExternalLink>, downloaded from <ExternalLink href="https://unsplash.com/photos/omx4dN1BfQ4"> Unsplash</ExternalLink>, and used under the <ExternalLink href="https://unsplash.com/license"> Unsplash License</ExternalLink>.</p>
 
         <p>This site uses the following fonts:</p>
 
         <ul>
-          <li><a href="https://adishila.com/fonts/">Adishila</a> (by Krishna Prasad G / Sri Suvidyendra Tirtha Swamiji under a custom license)</li>
-          <li><a href="https://bombay.indology.info/software/fonts/induni/index.html">IndUni-C / IndUni-P</a> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
-          <li><a href="https://fonts.google.com/noto/specimen/Noto+Serif+Kannada">Noto Serif Kannada</a> (by Google under the Open Font License)</li>
+          <li><ExternalLink href="https://adishila.com/fonts/">Adishila</ExternalLink> (by Krishna Prasad G / Sri Suvidyendra Tirtha Swamiji under a custom license)</li>
+          <li><ExternalLink href="https://bombay.indology.info/software/fonts/induni/index.html">IndUni-C / IndUni-P</ExternalLink> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
+          <li><ExternalLink href="https://fonts.google.com/noto/specimen/Noto+Serif+Kannada">Noto Serif Kannada</ExternalLink> (by Google under the Open Font License)</li>
         </ul>
       </>
     );
@@ -242,7 +243,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
         <p>The motivation for <i>NESAR</i> was the relative scarcity of high-quality open-access journal in the field of South Indian Studies and South Asian Studies more widely. We felt the need for a journal that (a) was open-access and free (for both contributors and readers); (b) was rigorously peer-reviewed and realized high standards of scholarship; (c) was intended <i>primarily</i> for South Asian Studies; (d) held itself to high standards of design and publication.</p>
 
-        <p>You can contact the journal at <a href="mailto:nesar@nesarjournal.org">nesar@nesarjournal.org</a>.</p>
+        <p>You can contact the journal at <ExternalLink href="mailto:nesar@nesarjournal.org">nesar@nesarjournal.org</ExternalLink>.</p>
 
         <hr />
 
