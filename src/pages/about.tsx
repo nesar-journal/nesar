@@ -58,7 +58,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                     </td>
                     <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
                     <td>{authorData.institution}</td>
-                    <td>{authorData.viaf}</td>
+                    <td><ExternalLink href={`https://viaf.org/viaf/${authorData.viaf}`}>{authorData.viaf}</ExternalLink></td>
                   </tr>
                 );
               })
