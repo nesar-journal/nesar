@@ -34,12 +34,25 @@ display: flex;
 
   @media (min-width: $mobile-breakpoint) {
     top: 8px;
-    left: 150px;
+    right: 32px;
   }
 
   @media (max-width: $mobile-breakpoint) {
-    bottom: 17px;
-    right: 115px;
+    bottom: 8px;
+    right: 100px;
+  }
+}
+.teiContainer {
+  position: absolute;
+
+  @media (min-width: $mobile-breakpoint) {
+    top: 54px;
+    right: 32px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    bottom: 55px;
+    right: 100px;
   }
 }
 

@@ -15,6 +15,7 @@ type ResourceCardProps = {
   coverUrl: string;
   doi?: string;
   pdfUrl?: string;
+  teiUrl?: string;
   publicationDate: string;
   tags: string[];
   title: string;
@@ -29,6 +30,7 @@ const ResourceCard = (props: ResourceCardProps) => {
     coverUrl,
     doi,
     pdfUrl,
+    teiUrl,
     publicationDate,
     showTitleEnd,
     tags,
@@ -56,6 +58,13 @@ const ResourceCard = (props: ResourceCardProps) => {
             <ButtonLink
               href={pdfUrl || '#'}
               text="PDF"
+              downloadLink
+            />
+          </div>
+          <div className={styles.teiContainer}>
+            <ButtonLink
+              href={teiUrl || '#'}
+              text="TEI"
               downloadLink
             />
           </div>

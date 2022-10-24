@@ -55,6 +55,7 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
                   authors={articleData.authors}
                   coverUrl={`/articles/${id}/${articleData.paths.cover}`}
                   pdfUrl={`/articles/${id}/${articleData.paths.pdf}`}
+                  teiUrl={`/articles/${id}/${articleData.paths.tei}`}
                   publicationDate={articleData.dates.publication}
                   tags={articleData.tags}
                   title={articleData.title}

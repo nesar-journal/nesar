@@ -118,6 +118,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           coverUrl={`/articles/${data.identifier}/${data.paths.cover}`}
           doi={data.doi}
           pdfUrl={`/articles/${data.identifier}/${data.paths.pdf}`}
+          teiUrl={`/articles/${data.identifier}/${data.paths.tei}`}
           publicationDate={data.dates.publication}
           tags={data.tags}
           title={data.title}

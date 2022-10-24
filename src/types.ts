@@ -36,6 +36,8 @@ type ResourceData = {
   paths: {
     cover: string;
     pdf: string;
+    content: string;
+    tei: string;
   }
 
   tags: string[];

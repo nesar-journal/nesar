@@ -18,6 +18,7 @@ paths:
   cover: ollett-introducing-nesar.jpg
   pdf: ollett-introducing-nesar.pdf
   content: ollett-introducing-nesar.html
+  tei: ollett-introducing-nesar.xml
 
 tags:
   - open access
