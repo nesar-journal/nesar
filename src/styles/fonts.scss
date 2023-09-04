@@ -116,6 +116,38 @@
 
 /* ================================================== */
 
+/* ================================================== */
+
+@font-face {
+  font-family : 'IndUni-H';
+  src         : url('/assets/fonts/induni-h-regular.woff2') format('woff2');
+  font-weight : 400; /* regular */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'IndUni-H';
+  src         : url('/assets/fonts/induni-h-oblique.woff2') format('woff2');
+  font-weight : 400; /* regular */
+  font-style  : italic;
+}
+
+@font-face {
+  font-family : 'IndUni-H';
+  src         : url('/assets/fonts/induni-h-bold.woff2') format('woff2');
+  font-weight : 700; /* bold */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'IndUni-H';
+  src         : url('/assets/fonts/induni-h-boldoblique.woff2') format('woff2');
+  font-weight : 700; /* bold */
+  font-style  : italic;
+}
+
+/* ================================================== */
+
 @font-face {
   font-family : 'Noto Serif Kannada';
   src         : url('/assets/fonts/noto-serif-kannada-thin.woff2') format('woff2');

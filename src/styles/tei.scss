@@ -9,55 +9,88 @@
 .articleBody {
   position: relative;
   line-height: 1.35;
-  .text-section {
-    @media (max-width: $mobile-breakpoint) {
-      padding:0;
-    }
-    padding-right:14rem;
+  .frontmatter {
+      padding:0 1.5rem;
+      font-style:italic;
+      .text-paragraph {
+	  &:before {
+	      content: "note:";
+	      font-size:1.2rem;
+	      font-variant: small-caps;
+	      font-style:normal;
+	      padding:0.73rem 0.35rem 0 0;
+	      margin:0rem;
+	      float:left;
+	  }
+      }
   }
   .nesar-notes {
-    margin-bottom:3rem;
+      clear:both;
+      padding-top:2rem;
+      margin-bottom:3rem;
   }
   sup {
-    font-style: normal!important;
+      font-style: normal!important;
   }
   .textandnotes {
     position: relative;
+    width:100%;
+    margin:auto;
+    display:block;
+    clear: both;
+    @media (min-width: $mobile-breakpoint) {
+	.text-blockquote, .text-paragraph, .text-list {
+	    width:650px;
+	    float:left;
+	    clear:both;
+	    .linenumber {
+		display:inline-block;
+		width:2.2rem;
+	    }
+	}
+	.text-blockquote {
+	    line-height:1.65rem;
+	}
+	.sidenote-column {
+	    margin-left:660px;
+            //position: absolute;
+            //overflow: visible;
+            //top: 0;
+            //width: 11rem;
+            //right: -12.5rem;
+            padding:0;
+	    ul.sidenotes {
+		padding:16px 0 0 0;
+		margin:0;
+		list-style-type: none;
+		li {
+		    font-size: 80%;
+		    margin-bottom: 0.45rem;
+		    p {
+			a:first-child {
+			    margin-right:0.2rem;
+			    font-weight:bold;
+			}
+			font-style: normal;
+			font-size: 0.78rem;
+			line-height: 1.05rem;
+			position: relative;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			margin: 0;
+		    }
+		}
+	    }
 
-    ul.sidenotes {
-      @media (min-width: $mobile-breakpoint) {
-        position: absolute;
-        overflow: visible;
-        top: 0;
-        margin: 0;
-        width: 11rem;
-        right: -12.5rem;
-        padding:0;
-        list-style-type: none;
-        li {
-          font-size: 80%;
-          margin-bottom: 0.45rem;
-          p {
-            a:first-child {
-              margin-right:0.2rem;
-              font-weight:bold;
-            }
-            font-style: normal;
-            font-size: 0.78rem;
-            line-height: 1.05rem;
-            position: relative;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            margin: 0;
-          }
-        }
-      }
+	}
 
-      @media (max-width: $mobile-breakpoint) {
-        display: none;
-      }
+    }
+    @media (max-width: $mobile-breakpoint) {
+	.sidenote-column {
+	    display: none;
+	}
     }
   }
   blockquote {
@@ -70,12 +103,6 @@
     p {
       margin:0;
       padding: 0.55rem 0;
-    }
-    ul.sidenotes {
-      right: -13.5rem!important;
-      p {
-        padding:0;
-      }
     }
   }
   .lg {
@@ -123,6 +150,14 @@
         }
       }
     }
+  }
+  .unclear {
+      &:before {
+	  content: "[";
+      }
+      &:after {
+	  content: "]";
+      }
   }
   .bibliography ul {
     list-style-type: none;

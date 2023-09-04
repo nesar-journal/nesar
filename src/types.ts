@@ -4,6 +4,7 @@ type IssueIdentifier   = ResourceIdentifier;
 type ArticleIdentifier = ResourceIdentifier;
 
 type AuthorIdentifier  = string;
+type TranslatorIdentifier  = string;
 type TagIdentifier     = string;
 
 type ResourceTitle = string;
@@ -26,6 +27,7 @@ type ResourceData = {
   doi: string;
 
   title: string;
+  subtitle: string;
 
   abstract: string;
 
@@ -48,10 +50,18 @@ type Author = {
   id: AuthorIdentifier;
 };
 
+type Translator = {
+  displayName: string;
+  id: TranslatorIdentifier;
+}
+
 export type Authors = Author[];
+
+export type Translators = Translator[];
 
 export type ArticleData = ResourceData & {
   authors: Authors;
+  translators?: Translators;
 
   paths: {
     content: string;
@@ -72,6 +82,15 @@ export type IssueData = ResourceData & {
 };
 
 export type AuthorData = {
+  displayName : string;
+  firstName   : string;
+  lastName    : string;
+  email       : string;
+  institution : string;
+  viaf        : string;
+};
+
+export type TranslatorData = {
   displayName : string;
   firstName   : string;
   lastName    : string;

@@ -108,6 +108,7 @@ display: flex;
 }
 
 .authors,
+.translators,
 .doi {
   font-size: 1em;
   line-height: 1.5;
@@ -118,7 +119,8 @@ display: flex;
   color: #494949;
 }
 
-.authorLink {
+.authorLink,
+.translatorLink {
   display: inline-block;
 
   &:not(:last-of-type) {
@@ -131,9 +133,16 @@ display: flex;
 }
 
 .title {
-  font-size: 1.75em;
-  line-height: 2;
-  font-weight: bold;
+    display:block;
+    font-size: 1.75em;
+    line-height: 1em;
+    font-weight: bold;
+    padding:1rem 0;
+}
+.subtitle {
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: bold;
 }
 
 .abstract {

@@ -29,26 +29,43 @@ const SCRIPT_SCHEMA_MAPPING: { [key: string]: string } = {
 
 const LANGUAGES = Object.keys(LANGUAGE_SCRIPT_MAPPING);
 
-function preprocessText (script: string, content: string) {
+// There are two preprocessing routines. The first
+//   is for ANY transliteration that will be run on a string,
+//   including for epigraphic texts ("close" transliteration).
+// There are also special provisions for upadhmaniya and 
+//   visarjaniya here, which are at the moment not handled
+//   well by the indic-transliteration module.
+function preprocessText  (script: string, content: string) {
+  content = content.replace(/aï/g,"a####i")
+		   .replace(/aü/g,"a####u")
+		   .replace(/°/g,'');
   if (script == 'Knda') {
-    content = content.replace(/m([pb])/g,"ṁ$1")
-      .replace(/n([td])/g,"ṁ$1")
-      .replace(/ṇ([ṭḍ])/g,"ṁ$1")
-      .replace(/ṅ([kg])/g,"ṁ$1")
-      .replace(/ñ([jc])/g,"ṁ$1")
-      .replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
-      .replace(/’ ([aāiīuūeēoō])/g,"$1");
+    content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
+		     .replace(/’ ([aāiīuūeēoō])/g,"$1");
   }
   else if (script == 'Deva') {
     content = content.replace(/ ’/g,"'")
-      .replace(/aï/g,"a####i")
-      .replace(/aü/g,"a####u")
-      .replace(/([rnmdg]) ([gṅjñḍṇdnbmhyvrlaāiīuūeēoō])/g,"$1$2")
-      .replace(/(ñ) (ch)/g,"$1$2")
-      .replace(/([kcṭtpśsṣ]) ([kcṭtpśsṣ])/g,"$1$2")
-      .replace(/([vy]) ([aāiīuūēeōo])/g,"$1$2")
-      .replace(/ \|\|/g," ॥")
-      .replace(/ \|/g," ।");
+		     .replace(/([rnmdg]) ([gṅjñḍṇdnbmhyvrlaāiīuūeēoō])/g,"$1$2")
+		     .replace(/(ñ) (ch)/g,"$1$2")
+		     .replace(/([kcṭtpśsṣ]) ([kcṭtpśsṣ])/g,"$1$2")
+		     .replace(/([vy]) ([aāiīuūēeōo])/g,"$1$2")
+		     .replace(/ \|\|/g," ॥")
+		     .replace(/ \|/g," ।")
+		     .replace(/f/g,"ᳶ ");
+  }
+  return content;
+}
+
+// The second preprocessing routine is for text in 
+//    "loose" transcription, i.e., where it doesn't matter
+//    what the original orthography is.
+function preprocessTextAgain (script: string, content: string) {
+  if (script == 'Knda') {
+    content = content.replace(/m([pb])/g,"ṁ$1")
+		     .replace(/n([td])/g,"ṁ$1")
+		     .replace(/ṇ([ṭḍ])/g,"ṁ$1")
+		     .replace(/ṅ([kg])/g,"ṁ$1")
+		     .replace(/ñ([jc])/g,"ṁ$1");
   }
   return content;
 }
@@ -57,7 +74,6 @@ function transliterateTextElements (language: string, fromLatin: boolean = false
   const languageInstances = document.querySelectorAll(`[data-lang="${language}"].scriptWrapper`);
   languageInstances.forEach((languageInstance) => {
     const originalContent = languageInstance.getAttribute('data-original') || '';
-
     // If you're going to Latin,
     if (!fromLatin) {
       // and you are not already in Latin,
@@ -74,8 +90,12 @@ function transliterateTextElements (language: string, fromLatin: boolean = false
       const targetScript = LANGUAGE_SCRIPT_MAPPING[language];
       const targetSchema = SCRIPT_SCHEMA_MAPPING[targetScript];
       const preprocessed = preprocessText(targetScript,originalContent);
-      const replacementText = Sanscript.t(preprocessed, sourceSchema, targetSchema);
-
+      const closeTranscriptionNode = languageInstance.closest('[data-transcription-type="close"]');
+      var preprocessedtwo = (closeTranscriptionNode != null) ? preprocessed : preprocessTextAgain(targetScript,preprocessed);
+      if (targetScript == "Deva") {
+        console.log(preprocessedtwo);
+      }
+      const replacementText = Sanscript.t(preprocessedtwo, sourceSchema, targetSchema);
       languageInstance.textContent = replacementText;
       languageInstance.setAttribute('data-script', targetScript);
     }
