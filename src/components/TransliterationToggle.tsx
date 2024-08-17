@@ -43,6 +43,11 @@ function preprocessText  (script: string, content: string) {
     content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
 		     .replace(/’ ([aāiīuūeēoō])/g,"$1");
   }
+  if (script == 'Taml') {
+    content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
+		     .replace(/’ ([aāiīuūeēoō])/g,"$1")
+		       .replace(/ṉ ṟ/g,"ṉṟ");
+  }
   else if (script == 'Deva') {
     content = content.replace(/ ’/g,"'")
 		     .replace(/([rnmdg]) ([gṅjñḍṇdnbmhyvrlaāiīuūeēoō])/g,"$1$2")

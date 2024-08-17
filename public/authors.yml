@@ -19,3 +19,38 @@ sharma:
   email       :
   institution :
   viaf        :
+fisher:
+  displayName : Elaine Fisher
+  firstName   : Elaine
+  lastName    : Fisher
+  email       :
+  institution : Stanford University
+  viaf        :
+steinschneider:
+  displayName : Eric Steinschneider
+  firstName   : Eric
+  lastName    : Steinschneider
+  email       : esteinschneider@ithaca.edu
+  institution : Ithaca College
+  viaf        :
+simmons:
+  displayName : Caleb Simmons
+  firstName   : Caleb
+  lastName    : Simmons
+  email       :
+  institution : Arizona State University
+  viaf        :
+benherut:
+  displayName : Gil Ben-Herut
+  firstName   : Gil
+  lastName    : Ben-Herut
+  email       :
+  institution : University of Southern Florida
+  viaf        :
+peterson:
+  displayName : Jonathan Peterson
+  firstName   : Jonathan
+  lastName    : Peterson
+  email       :
+  institution : Columbia University
+  viaf        :

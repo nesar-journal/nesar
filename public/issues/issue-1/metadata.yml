@@ -1,0 +1,29 @@
+type: issue
+
+identifier: issue-1
+issue: 1
+
+doi: <DOI>
+
+title: Debating Religion
+
+editors:
+  - fisher
+
+abstract: Abstract goes here
+
+dates:
+  publication: July 1, 2024
+
+paths:
+  cover: issue-0.jpg
+  pdf: contents1.pdf
+
+tags:
+  - śaivism
+  - liṅgāyatism
+  - polemic
+  - debate
+
+articles:
+  - steinschneider-meat-matters

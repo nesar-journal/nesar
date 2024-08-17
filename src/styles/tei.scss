@@ -32,6 +32,15 @@
   sup {
       font-style: normal!important;
   }
+  .text-section {
+      
+      display:block;
+      h2 {
+	  display: block;
+	  clear:both;
+	  margin: 2rem 0 0 0;
+      }
+  }
   .textandnotes {
     position: relative;
     width:100%;
@@ -39,7 +48,7 @@
     display:block;
     clear: both;
     @media (min-width: $mobile-breakpoint) {
-	.text-blockquote, .text-paragraph, .text-list {
+	.text-blockquote, .text-paragraph, .text-list, .table-wrapper, .figure-wrapper {
 	    width:650px;
 	    float:left;
 	    clear:both;
@@ -47,17 +56,25 @@
 		display:inline-block;
 		width:2.2rem;
 	    }
+	    figure {
+		img {
+		    width:100%;
+		}
+	    }
 	}
 	.text-blockquote {
-	    line-height:1.65rem;
+//	    line-height:1.65rem;
+	}
+	.figure-label, .table-label {
+	    h5 {
+		margin: 0 0 1rem 0;
+	    }
+	    margin-left:670px;
+	    padding-left:0.25rem;
+	    position:relative;
 	}
 	.sidenote-column {
 	    margin-left:660px;
-            //position: absolute;
-            //overflow: visible;
-            //top: 0;
-            //width: 11rem;
-            //right: -12.5rem;
             padding:0;
 	    ul.sidenotes {
 		padding:16px 0 0 0;
@@ -91,18 +108,28 @@
 	.sidenote-column {
 	    display: none;
 	}
+	figure {
+	    img {
+		width: 100%;
+	    }
+	}
     }
   }
   blockquote {
     margin:0 0 0 2rem;
     background:rgba(0,0,0,.035);
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 0.75rem;
+    overflow:auto;
     + blockquote {
       padding-top:0!important;
     }
     p {
       margin:0;
       padding: 0.55rem 0;
+    }
+    .bibl-string {
+	float:right;
+	margin:1rem 0 0 0;
     }
   }
   .lg {
@@ -196,7 +223,12 @@
   }
 }
 table {
+    clear:both;
     margin:0 auto;
+    caption {
+	font-size: 90%;
+    }
+	
 }
 .phonemic {
     &:before {
@@ -205,4 +237,7 @@ table {
     &:after {
 	content: "/";
     }
+}
+.foreign {
+    font-style:italic;
 }

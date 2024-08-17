@@ -150,67 +150,138 @@
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-thin.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-thin.woff2') format('woff2');
   font-weight : 100; /* thin */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-extralight.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-extralight.woff2') format('woff2');
   font-weight : 200; /* extralight */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-light.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-light.woff2') format('woff2');
   font-weight : 300; /* light */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-regular.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-regular.woff2') format('woff2');
   font-weight : 400; /* regular */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-medium.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-medium.woff2') format('woff2');
   font-weight : 500; /* medium */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-semibold.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-semibold.woff2') format('woff2');
   font-weight : 600; /* semibold */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-bold.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-bold.woff2') format('woff2');
   font-weight : 700; /* bold */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-extrabold.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-extrabold.woff2') format('woff2');
   font-weight : 800; /* extrabold */
   font-style  : normal;
 }
 
 @font-face {
   font-family : 'Noto Serif Kannada';
-  src         : url('/assets/fonts/noto-serif-kannada-black.woff2') format('woff2');
+  src         : url('/assets/fonts/noto-serif-kannada/noto-serif-kannada-black.woff2') format('woff2');
   font-weight : 900; /* black */
   font-style  : normal;
 }
 
+/* ================================================== */
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-thin.woff2') format('woff2');
+  font-weight : 100; /* thin */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-extralight.woff2') format('woff2');
+  font-weight : 200; /* extralight */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-light.woff2') format('woff2');
+  font-weight : 300; /* light */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-regular.woff2') format('woff2');
+  font-weight : 400; /* regular */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-medium.woff2') format('woff2');
+  font-weight : 500; /* medium */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-semibold.woff2') format('woff2');
+  font-weight : 600; /* semibold */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-bold.woff2') format('woff2');
+  font-weight : 700; /* bold */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-extrabold.woff2') format('woff2');
+  font-weight : 800; /* extrabold */
+  font-style  : normal;
+}
+
+@font-face {
+  font-family : 'Noto Serif Tamil';
+  src         : url('/assets/fonts/noto-serif-tamil/noto-serif-tamil-black.woff2') format('woff2');
+  font-weight : 900; /* black */
+  font-style  : normal;
+}
+
+/* ================================================== */
+@font-face {
+  font-family : 'Akshar Unicode';
+  src         : url('/assets/fonts/akshar.woff2') format('woff2');
+  font-weight : 400; /* normal */
+  font-style  : normal;
+}
 /* ================================================== */
 
 [data-script="Latn"] {
@@ -237,7 +308,6 @@
 
 span[data-script="Knda"],
 span[data-script="Mlym"],
-span[data-script="Taml"],
 span[data-script="Telu"] {
     font-size: 115%;
     font-style: normal;
