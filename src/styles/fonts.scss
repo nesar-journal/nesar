@@ -284,41 +284,41 @@
 }
 /* ================================================== */
 
-[data-script="Latn"] {
+[data-nesar-script="Latn"] {
   font-family: var(--font-main);
   font-style: italic;
 }
 
-[data-script="Deva"] {
+[data-nesar-script="Deva"] {
   font-family: var(--font-devanagari);
 }
 
-[data-script="Knda"] {
+[data-nesar-script="Knda"] {
   font-family: var(--font-kannada);
 }
-[data-script="Mlym"] {
+[data-nesar-script="Mlym"] {
   font-family: var(--font-malayalam);
 }
-[data-script="Taml"] {
+[data-nesar-script="Taml"] {
   font-family: var(--font-tamil);
 }
-[data-script="Telu"] {
+[data-nesar-script="Telu"] {
   font-family: var(--font-telugu);
 }
 
-span[data-script="Knda"],
-span[data-script="Mlym"],
-span[data-script="Telu"] {
+span[data-nesar-script="Knda"],
+span[data-nesar-script="Mlym"],
+span[data-nesar-script="Telu"] {
     font-size: 115%;
     font-style: normal;
 }
 
-span[data-script="Deva"] {
+span[data-nesar-script="Deva"] {
     font-size: 125%;
     font-style: normal;
 }
 
-div[data-script="Latn"],
-p[data-script="Latn"] {
+div[data-nesar-script="Latn"],
+p[data-nesar-script="Latn"] {
   font-size: 115%;
 }
