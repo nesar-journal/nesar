@@ -28,6 +28,11 @@
 	  <name>Andrew Ollett</name>
 	  <desc>Creation of TEI document from DOCX source.</desc>
 	</change>
+	<change>
+	  <date>2024-08-23</date>
+	  <name>Andrew Ollett</name>
+	  <desc>Changes to first proofs.</desc>
+	</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -114,7 +119,6 @@
       <p><title>Rejecting Killing </title>is a tour de force of concision, consisting of just twenty-two stanzas composed, with the exception of an initial benedictory verse (not counted toward the total), in <foreign xml:lang="tam-Latn">āciriya viruttam</foreign> meter. Tradition identifies its author, unmentioned in the text itself, as Cāntaliṅka Cuvāmikaḷ, a Vīraśaiva intellectual active in the latter half of the seventeenth century (<ref target="#Steinschneider2016">Steinschneider 2016</ref>: 301; <ref target="#UranAtikal2009">Ūraṉ Aṭikaḷ 2009</ref>: 55–64). Cāntaliṅka is credited with establishing a monastic institution at Pērūr, a temple town located on the western edge of present-day Coimbatore, and text-internal evidence supports the hypothesis that <title>Rejecting Killing</title> is a product of the early modern Tamil hinterlands.<note place="foot" xml:id="ftn17" n="17"><p>The allusion in v. 6 to Jesuit criticisms of the doctrine of rebirth and a Śaiva response to the same suggests that the text could not have been composed prior to the mid-seventeenth century. The <hi rend="italic">terminus ante quem</hi> is less certain. However, in the absence of contradicting evidence, it seems reasonable to accept the traditionally posited late-seventeenth-century date. Taken together, the text’s allusion to Christianity, preoccupation with Śākta blood sacrifice, and agrarian slant strongly suggest an early modern dry-zone context, and accord quite well with what is known of Koṅkunāṭu society at that time. For a detailed anthropological study of this region see <ref target="#Beck1972">Beck 1972</ref>. </p></note> The text received a single, lengthy commentary, also anonymous, which is traditionally attributed to Cāntaliṅka’s grand-disciple, Citampara Cuvāmikaḷ of Tiruppōrūr.</p>
       <p>The text’s title, given in a densely packed first verse along with virtually all the information traditionally provided at the beginning of a Tamil scholastic treatise, hints at the work’s hybrid form while still managing to appear entirely conventional. <title xml:lang="tam-Latn">Kolaimaṟuttal</title> is a kind of portmanteau of “Not killing” (<foreign xml:lang="tam-Latn">kollāmai</foreign>) and “Rejecting meat” (<foreign xml:lang="tam-Latn">pulāṉmaṟuttal</foreign>), recalling, of course, the aforementioned passages of the <title xml:lang="tam-Latn">Tirumantiram</title> and <title xml:lang="tam-Latn">Tirukkuṟaḷ</title>. However, the verb <foreign xml:lang="tam-Latn">maṟuttal</foreign>, according to the University of Madras <title>Tamil Lexicon</title> (s.v.), can also mean “to confute, refute the opinion or argument of another,” suggesting the text’s concern to counter other religious traditions’ justifications for animal slaughter. This innovative blending of dietary didacticism with formal religious polemics in the guise of a profound traditionalism is crucial to the text’s social agenda, to be examined in further detail below.<note place="foot" xml:id="ftn18" n="18"><p>It should be noted that, as an independent text dedicated to denouncing nonvegetarianism, <title>Rejecting Killing</title> has virtually no precedent in Tamil literary history. The commentary occasionally cites from another text entitled <title xml:lang="tam-Latn">Pulāṉmaṟuttal</title> (<title>Rejecting Meat</title>, not to be confused with the identically named chapter of the <title xml:lang="tam-Latn">Tirukkuṟaḷ</title>), about which I have unfortunately failed to uncover any relevant information.</p></note> </p>
       <p>Another important feature of the text is its narrative frame, introduced in the second verse, around which the discourse is carefully organized. Enhancing the coherence of this frame is the employment, also initiated in v. 2, of a form of versification called <foreign xml:lang="tam-Latn">antāti</foreign>, in which the last word of each stanza supplies the first word for the following one:</p>
-      <p>A man approached an eminent Śaiva who, like the moon shining in the midst of stars, appeared in the center of an assembly where gathered adherents of all the established religions as well as common folk.</p>
       <quote xml:lang="tam-Latn">
 	<lg>
 	  <l>eṭutt’ uḷav eccamayikaḷum ulakaruñ cār ōr avaiyiṉ iṭaiyiṟ ṟōṉṟum</l>
@@ -125,6 +129,7 @@
       </quote>
       <cit>
 	<quote>
+	  <p>A man approached an eminent Śaiva who, like the moon shining in the midst of stars, appeared in the center of an assembly where gathered adherents of all the established religions as well as common folk.</p>
 	  <p>Bowing, he said, “Please explain the relative status of the many forms living beings assume in this world.”</p>
 	  <p>Clarifying the matter for him, [the Śaiva] furnished replies to the adherents of the heteroprax religions who opposed him and established the certitude of his position.<note place="foot" xml:id="ftn19" n="19"><p>I have translated this verse in the past tense, though it uses the grammatical present.</p></note></p>
 	</quote>
