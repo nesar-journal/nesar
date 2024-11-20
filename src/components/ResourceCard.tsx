@@ -102,8 +102,8 @@ const ResourceCard = (props: ResourceCardProps) => {
                   );
                 })}
 	      </div>}
-              <Link href={url} passHref><a className={styles.title}>{title}</a></Link>
-	      {subtitle && <a className={styles.subtitle}>{subtitle}</a>}
+              <Link href={url} passHref><a className={styles.title} dangerouslySetInnerHTML={{ __html: title }} /></Link>
+	      {subtitle && <a className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />}
             </div>
           </div>
           <div
