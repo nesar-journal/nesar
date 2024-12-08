@@ -115,6 +115,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <ResourceCard
           abstract={data.abstract}
           authors={data.authors}
+          translators={data.translators}
           coverUrl={`/articles/${data.identifier}/${data.paths.cover}`}
           doi={data.doi}
           pdfUrl={`/articles/${data.identifier}/${data.paths.pdf}`}
@@ -122,6 +123,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           publicationDate={data.dates.publication}
           tags={data.tags}
           title={data.title}
+	  subtitle={data.subtitle}
           url={`/articles/${data.identifier}`}
           showTitleEnd
         />

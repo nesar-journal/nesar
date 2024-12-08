@@ -8,10 +8,12 @@ import styles from './ResourceCard.module.scss';
 import ButtonLink from './ButtonLink';
 
 import { Authors } from '../types';
+import { Translators } from '../types';
 
 type ResourceCardProps = {
   abstract: string;
   authors?: Authors;
+  translators?: Translators;
   coverUrl: string;
   doi?: string;
   pdfUrl?: string;
@@ -19,6 +21,7 @@ type ResourceCardProps = {
   publicationDate: string;
   tags: string[];
   title: string;
+  subtitle?: string;
   url: string;
   showTitleEnd?: boolean;
 };
@@ -27,6 +30,7 @@ const ResourceCard = (props: ResourceCardProps) => {
   const {
     abstract,
     authors,
+    translators,
     coverUrl,
     doi,
     pdfUrl,
@@ -35,6 +39,7 @@ const ResourceCard = (props: ResourceCardProps) => {
     showTitleEnd,
     tags,
     title,
+    subtitle,
     url,
   } = props;
 
@@ -84,7 +89,21 @@ const ResourceCard = (props: ResourceCardProps) => {
                   );
                 })}
               </div>}
-              <Link href={url} passHref><a className={styles.title}>{title}</a></Link>
+	      {translators && <div className={styles.translators}>
+                {translators.map((translator) => {
+		  return (
+		    <span className={styles.translatedBy}
+			  key={translator.id}>
+		      translated by&nbsp;
+		      <Link href={`/authors/${translator.id}`}
+                        passHref
+		      ><a className={styles.translatorLink}>{translator.displayName}</a></Link>
+		    </span>
+                  );
+                })}
+	      </div>}
+              <Link href={url} passHref><a className={styles.title} dangerouslySetInnerHTML={{ __html: title }} /></Link>
+	      {subtitle && <a className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />}
             </div>
           </div>
           <div

@@ -136,7 +136,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
         <ul>
           <li><ExternalLink href="https://adishila.com/fonts/">Adishila</ExternalLink> (by Krishna Prasad G / Sri Suvidyendra Tirtha Swamiji under a custom license)</li>
-          <li><ExternalLink href="https://bombay.indology.info/software/fonts/induni/index.html">IndUni-C / IndUni-P</ExternalLink> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
+          <li><ExternalLink href="https://bombay.indology.info/software/fonts/induni/index.html">IndUni-C / IndUni-P / IndUni-H</ExternalLink> (by John Smith / URW++ Design and Development Incorporated under the GNU General Public License)</li>
           <li><ExternalLink href="https://fonts.google.com/noto/specimen/Noto+Serif+Kannada">Noto Serif Kannada</ExternalLink> (by Google under the Open Font License)</li>
         </ul>
       </>

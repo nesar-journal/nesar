@@ -59,7 +59,7 @@ function getIndex (): Index {
   articleIds.forEach((id) => {
     const articleData = data.articles.data[id];
 
-    const { abstract, authors, content, identifier, title } = articleData;
+    const { abstract, authors, translators, content, identifier, title } = articleData;
 
     const abstractWords = getWordsFromHTML(abstract);
     const authorWords   = getWordsFromHTML(authors.map((author) => author.displayName).join(' '));

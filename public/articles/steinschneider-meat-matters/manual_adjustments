@@ -1,0 +1,12 @@
+Table values:
+
+\begin{table}[ht!]\label{tab1}\centering
+\caption{The chain of being according to \emph{Rejecting Killing}, v. 3}
+\begin{tabular}{l}\toprule
+
+
+\begin{table}[ht!]\label{tab2}\centering
+\caption{Interlocutors and \emph{prima facie} claims refuted in \emph{Rejecting Killing}, as specified by the commentary}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{>{\hangindent=2em\raggedright\arraybackslash}Xl>{\hangindent=2em\raggedright\arraybackslash}X}\toprule
+\textbf{Interlocutor} &\textbf{Passage} &\textbf{Synopsis}\\\midrule

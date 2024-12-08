@@ -82,6 +82,15 @@ function compileResourceData (folderName: string) {
             });
           }
 
+          if (entryData.translators) {
+            entryData.translators = entryData.translators.map((translatorId: string) => {
+              return ({
+                displayName: authorsData.data[translatorId].displayName,
+                id: translatorId,
+              });
+            });
+          }
+
           if (entryData.editors) {
             entryData.editors = entryData.editors.map((editorId: string) => {
               return ({

@@ -5,3 +5,52 @@ ollett:
   email       : ollett@uchicago.edu
   institution : University of Chicago
   viaf        : '372149294434280521495'
+gai:
+  displayName : G. S. Gai
+  firstName   : G. S. 
+  lastName    : Gai
+  email       :
+  institution :
+  viaf        :
+sharma:
+  displayName : Arjun Sharma
+  firstName   : Arjun
+  lastName    : Sharma
+  email       :
+  institution :
+  viaf        :
+fisher:
+  displayName : Elaine Fisher
+  firstName   : Elaine
+  lastName    : Fisher
+  email       :
+  institution : Stanford University
+  viaf        :
+steinschneider:
+  displayName : Eric Steinschneider
+  firstName   : Eric
+  lastName    : Steinschneider
+  email       : esteinschneider@ithaca.edu
+  institution : Ithaca College
+  viaf        :
+simmons:
+  displayName : Caleb Simmons
+  firstName   : Caleb
+  lastName    : Simmons
+  email       : calebsimmons@email.arizona.edu,
+  institution : Arizona State University
+  viaf        :
+benherut:
+  displayName : Gil Ben-Herut
+  firstName   : Gil
+  lastName    : Ben-Herut
+  email       : gilb@usf.edu
+  institution : University of Southern Florida
+  viaf        :
+peterson:
+  displayName : Jonathan Peterson
+  firstName   : Jonathan
+  lastName    : Peterson
+  email       : jp4536@columbia.edu
+  institution : Columbia University
+  viaf        :
