@@ -8,8 +8,8 @@
   "scripts": {
     "build": "pnpm run disable-telemetry && pnpm run compile && next build",
     "compile": "pnpm run compile-data && pnpm run compile-index",
-    "compile-data": "npx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
-    "compile-index": "npx ts-node --project ./tsconfig.node.json ./src/compile-index.ts",
+    "compile-data": "pnpx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
+    "compile-index": "pnpx ts-node --project ./tsconfig.node.json ./src/compile-index.ts",
     "dev": "pnpm run compile && next dev --turbopack",
     "disable-telemetry": "next telemetry disable",
     "lint-fix": "next lint --fix",

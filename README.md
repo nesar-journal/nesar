@@ -4,17 +4,17 @@
 
 ```shell
 # Disable telemetry (run once)
-npm run disable-telemetry
+pnpm run disable-telemetry
 
 # Install dependencies
-npm install
+pnpm install
 ```
 
 ## Development
 
 ```shell
 # Spins up the development server
-npm run dev
+pnpm run dev
 
 # Open development site
 open http://localhost:3000
