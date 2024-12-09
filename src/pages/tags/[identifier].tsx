@@ -48,31 +48,28 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   function renderIssues () {
     if (data.issues) {
-      return (
-        <>
-          <Heading
-            level={3}
-          >
-            Issues
-          </Heading>
+      return (<>
+        <Heading
+          level={3}
+        >
+          Issues
+        </Heading>
+        <ul>
+          {
+            data.issues.map((issueId) => {
+              const issueData = issuesData[issueId];
 
-          <ul>
-            {
-              data.issues.map((issueId) => {
-                const issueData = issuesData[issueId];
-
-                return (
-                  <li key={issueId}>
-                    <>
-                      <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link> (Editor{issueData.editors.length > 1 ? 's' : ''}: {issueData.editors.map((editor) => editor.displayName).join(', ')})
-                    </>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </>
-      );
+              return (
+                (<li key={issueId}>
+                  <>
+                    <Link href={`/issues/${issueId}`}>{issueData.title}</Link> (Editor{issueData.editors.length > 1 ? 's' : ''}: {issueData.editors.map((editor) => editor.displayName).join(', ')})
+                  </>
+                </li>)
+              );
+            })
+          }
+        </ul>
+      </>);
     }
 
     return null;
@@ -80,31 +77,28 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
   function renderArticles () {
     if (data.articles) {
-      return (
-        <>
-          <Heading
-            level={3}
-          >
-            Articles
-          </Heading>
+      return (<>
+        <Heading
+          level={3}
+        >
+          Articles
+        </Heading>
+        <ul>
+          {
+            data.articles.map((articleId) => {
+              const articleData = articlesData[articleId];
 
-          <ul>
-            {
-              data.articles.map((articleId) => {
-                const articleData = articlesData[articleId];
-
-                return (
-                  <li key={articleId}>
-                    <>
-                      <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link> (Author{articleData.authors.length > 1 ? 's' : ''}: {articleData.authors.map((author) => author.displayName).join(', ')})
-                    </>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </>
-      );
+              return (
+                (<li key={articleId}>
+                  <>
+                    <Link href={`/articles/${articleId}`}>{articleData.title}</Link> (Author{articleData.authors.length > 1 ? 's' : ''}: {articleData.authors.map((author) => author.displayName).join(', ')})
+                  </>
+                </li>)
+              );
+            })
+          }
+        </ul>
+      </>);
     }
 
     return null;

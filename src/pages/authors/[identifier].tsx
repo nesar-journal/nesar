@@ -58,31 +58,28 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   function renderIssues () {
     if (issuesIds && issuesData) {
-      return (
-        <>
-          <Heading
-            level={3}
-          >
-            Issues
-          </Heading>
+      return (<>
+        <Heading
+          level={3}
+        >
+          Issues
+        </Heading>
+        <ul>
+          {
+            issuesIds.map((issueId) => {
+              const issueData = issuesData[issueId];
 
-          <ul>
-            {
-              issuesIds.map((issueId) => {
-                const issueData = issuesData[issueId];
-
-                if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
-                  return (
-                    <li key={issueId}>
-                      <Link href={`/issues/${issueId}`}><a>{issueData.title}</a></Link>
-                    </li>
-                  );
-                }
-              })
-            }
-          </ul>
-        </>
-      );
+              if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
+                return (
+                  (<li key={issueId}>
+                    <Link href={`/issues/${issueId}`}>{issueData.title}</Link>
+                  </li>)
+                );
+              }
+            })
+          }
+        </ul>
+      </>);
     }
 
     return null;
@@ -90,31 +87,28 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
   function renderArticles () {
     if (articlesIds && articlesData) {
-      return (
-        <>
-          <Heading
-            level={3}
-          >
-            Articles
-          </Heading>
+      return (<>
+        <Heading
+          level={3}
+        >
+          Articles
+        </Heading>
+        <ul>
+          {
+            articlesIds.map((articleId) => {
+              const articleData = articlesData[articleId];
 
-          <ul>
-            {
-              articlesIds.map((articleId) => {
-                const articleData = articlesData[articleId];
-
-                if (articleData.authors.map((author) => author.id).includes(authorId)) {
-                  return (
-                    <li key={articleId}>
-                      <Link href={`/articles/${articleId}`}><a>{articleData.title}</a></Link>
-                    </li>
-                  );
-                }
-              })
-            }
-          </ul>
-        </>
-      );
+              if (articleData.authors.map((author) => author.id).includes(authorId)) {
+                return (
+                  (<li key={articleId}>
+                    <Link href={`/articles/${articleId}`}>{articleData.title}</Link>
+                  </li>)
+                );
+              }
+            })
+          }
+        </ul>
+      </>);
     }
   }
 

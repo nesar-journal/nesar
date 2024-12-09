@@ -26,49 +26,46 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
   articleIds,
   articles,
 }) => {
-  return (
-    <>
-      <Layout>
-        <SEO
-          title="Articles"
-        />
+  return (<>
+    <Layout>
+      <SEO
+        title="Articles"
+      />
 
-        <Heading
-          level={2}
-          titleEnd={2}
-        >
-          All Articles
-        </Heading>
+      <Heading
+        level={2}
+        titleEnd={2}
+      >
+        All Articles
+      </Heading>
 
-        {
-          articleIds.map((id) => {
-            const articleData = articles[id];
+      {
+        articleIds.map((id) => {
+          const articleData = articles[id];
 
-            return (
-              <div key={id}>
-                <Link href={`/articles/${id}`}>
-                  {articleData.title}
-                </Link>
-
-                <ResourceCard
-                  abstract={articleData.abstract}
-                  authors={articleData.authors}
-		  translators={articleData.translators}
-                  coverUrl={`/articles/${id}/${articleData.paths.cover}`}
-                  pdfUrl={`/articles/${id}/${articleData.paths.pdf}`}
-                  teiUrl={`/articles/${id}/${articleData.paths.tei}`}
-                  publicationDate={articleData.dates.publication}
-                  tags={articleData.tags}
-                  title={articleData.title}
-                  url={`/articles/${id}`}
-                />
-              </div>
-            );
-          })
-        }
-      </Layout>
-    </>
-  );
+          return (
+            (<div key={id}>
+              <Link href={`/articles/${id}`} legacyBehavior>
+                {articleData.title}
+              </Link>
+              <ResourceCard
+                abstract={articleData.abstract}
+                authors={articleData.authors}
+                translators={articleData.translators}
+                coverUrl={`/articles/${id}/${articleData.paths.cover}`}
+                pdfUrl={`/articles/${id}/${articleData.paths.pdf}`}
+                teiUrl={`/articles/${id}/${articleData.paths.tei}`}
+                publicationDate={articleData.dates.publication}
+                tags={articleData.tags}
+                title={articleData.title}
+                url={`/articles/${id}`}
+              />
+            </div>)
+          );
+        })
+      }
+    </Layout>
+  </>);
 };
 
 export default ArticlesIndex;

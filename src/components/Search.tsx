@@ -69,7 +69,7 @@ function Search () {
 
   function renderResults () {
     return (
-      <table className={styles.matches}>
+      (<table className={styles.matches}>
         <thead>
           <tr>
             <th className={styles.searchColumn}>Search Term</th>
@@ -80,7 +80,7 @@ function Search () {
           {
             apiData.matches.map(({ highlighted, id, searchTerm, results }) => {
               return (
-                <tr key={id}>
+                (<tr key={id}>
                   <td
                     className={styles.searchColumn}
                     dangerouslySetInnerHTML={{__html: highlighted}}
@@ -89,21 +89,21 @@ function Search () {
                     {
                       results.map((result: string) => {
                         return (
-                          <div key={result}>
+                          (<div key={result}>
                             <Link href={`/articles/${result}`}>
-                              <a>{apiData.articleTitles[result]}</a>
+                              {apiData.articleTitles[result]}
                             </Link>
-                          </div>
+                          </div>)
                         );
                       })
                     }
                   </td>
-                </tr>
+                </tr>)
               );
             })
           }
         </tbody>
-      </table>
+      </table>)
     );
   }
 

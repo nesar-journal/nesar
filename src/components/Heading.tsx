@@ -27,13 +27,11 @@ const Heading = (props: HeadingProps) => {
   function renderLink () {
     if (!(link && linkText)) return null;
 
-    return (
-      <>
-        <Link href={link}>
-          {linkText}
-        </Link>
-      </>
-    );
+    return (<>
+      <Link href={link} legacyBehavior>
+        {linkText}
+      </Link>
+    </>);
   }
 
   function getProps () {

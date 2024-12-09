@@ -14,14 +14,14 @@ const HeroCard: FunctionComponent<HeroCardProps> = (props) => {
   const { coverUrl, title, url } = props;
 
   return (
-    <div
+    (<div
       className={styles.heroCard}
       style={{
         backgroundImage: `url(${coverUrl})`,
       }}
     >
-      <Link href={url}><a className={styles.title}>{title}</a></Link>
-    </div>
+      <Link href={url} className={styles.title}>{title}</Link>
+    </div>)
   );
 };
 

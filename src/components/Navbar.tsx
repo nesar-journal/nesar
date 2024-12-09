@@ -28,11 +28,11 @@ const Navbar = (props: NavbarProps) => {
       const { link, text } = item;
 
       return (
-        <li key={`navbar-${text}`}>
-          <Link href={link}>
+        (<li key={`navbar-${text}`}>
+          <Link href={link} legacyBehavior>
             {text}
           </Link>
-        </li>
+        </li>)
       );
     });
   }

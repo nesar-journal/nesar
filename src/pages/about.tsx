@@ -24,49 +24,46 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   authors,
 }) => {
   function renderAuthorsInfo () {
-    return (
-      <>
-        <Heading
-          level={3}
-        >
-          Authors
-        </Heading>
+    return (<>
+      <Heading
+        level={3}
+      >
+        Authors
+      </Heading>
+      <table className="authors">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Institution</th>
+            <th>VIAF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            authorsIds.map((id) => {
+              const authorData = authors[id];
 
-        <table className="authors">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Institution</th>
-              <th>VIAF</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              authorsIds.map((id) => {
-                const authorData = authors[id];
-
-                return (
-                  <tr key={id}>
-                    <td>
-                      <Link
-                        href={`/authors/${id}`}
-                        passHref
-                      >
-                        <a>{authorData.displayName}</a>
-                      </Link>
-                    </td>
-                    <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
-                    <td>{authorData.institution}</td>
-                    <td><ExternalLink href={`https://viaf.org/viaf/${authorData.viaf}`}>{authorData.viaf}</ExternalLink></td>
-                  </tr>
-                );
-              })
-            }
-          </tbody>
-        </table>
-      </>
-    );
+              return (
+                (<tr key={id}>
+                  <td>
+                    <Link
+                      href={`/authors/${id}`}
+                      passHref
+                    >
+                      {authorData.displayName}
+                    </Link>
+                  </td>
+                  <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
+                  <td>{authorData.institution}</td>
+                  <td><ExternalLink href={`https://viaf.org/viaf/${authorData.viaf}`}>{authorData.viaf}</ExternalLink></td>
+                </tr>)
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </>);
   }
 
   function renderPeople () {

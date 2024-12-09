@@ -26,56 +26,54 @@ const AuthorsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   authorsIds,
   authors,
 }) => {
-  return (
-    <>
-      <Layout>
-        <SEO
-          title="Authors"
-        />
+  return (<>
+    <Layout>
+      <SEO
+        title="Authors"
+      />
 
-        <Heading
-          level={2}
-          titleEnd={2}
-        >
-          Authors
-        </Heading>
+      <Heading
+        level={2}
+        titleEnd={2}
+      >
+        Authors
+      </Heading>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Institution</th>
-              <th>VIAF</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              authorsIds.map((id) => {
-                const authorData = authors[id];
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Institution</th>
+            <th>VIAF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            authorsIds.map((id) => {
+              const authorData = authors[id];
 
-                return (
-                  <tr key={id}>
-                    <td>
-                      <Link
-                        href={`/authors/${id}`}
-                        passHref
-                      >
-                        <a>{authorData.displayName}</a>
-                      </Link>
-                    </td>
-                    <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
-                    <td>{authorData.institution}</td>
-                    <td>{authorData.viaf}</td>
-                  </tr>
-                );
-              })
-            }
-          </tbody>
-        </table>
-      </Layout>
-    </>
-  );
+              return (
+                (<tr key={id}>
+                  <td>
+                    <Link
+                      href={`/authors/${id}`}
+                      passHref
+                    >
+                      {authorData.displayName}
+                    </Link>
+                  </td>
+                  <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
+                  <td>{authorData.institution}</td>
+                  <td>{authorData.viaf}</td>
+                </tr>)
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </Layout>
+  </>);
 };
 
 export default AuthorsIndex;

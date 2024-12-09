@@ -25,37 +25,35 @@ const TagsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   tagIds,
   tagsData,
 }) => {
-  return (
-    <>
-      <Layout>
-        <SEO
-          title="Tags"
-        />
+  return (<>
+    <Layout>
+      <SEO
+        title="Tags"
+      />
 
-        <Heading
-          level={2}
-          titleEnd={2}
-        >
-          Tags
-        </Heading>
+      <Heading
+        level={2}
+        titleEnd={2}
+      >
+        Tags
+      </Heading>
 
-        <ul>
-          {tagIds.map((tagId) => {
-            return (
-              <li key={tagId}>
-                <Link
-                  href={`/tags/${tagId}`}
-                  passHref
-                >
-                  <a>{tagsData[tagId].displayName}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </Layout>
-    </>
-  );
+      <ul>
+        {tagIds.map((tagId) => {
+          return (
+            (<li key={tagId}>
+              <Link
+                href={`/tags/${tagId}`}
+                passHref
+              >
+                {tagsData[tagId].displayName}
+              </Link>
+            </li>)
+          );
+        })}
+      </ul>
+    </Layout>
+  </>);
 };
 
 export default TagsIndex;

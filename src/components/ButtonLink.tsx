@@ -14,12 +14,12 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = (props) => {
   const { downloadLink, href, text } = props;
 
   return (
-    <div className={styles.buttonLink}>
+    (<div className={styles.buttonLink}>
       {downloadLink ? <span className={styles.downloadIcon}></span> : null}
       <Link passHref href={href}>
-        <a>{text}</a>
+        {text}
       </Link>
-    </div>
+    </div>)
   );
 };
 

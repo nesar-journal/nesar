@@ -62,13 +62,17 @@ const InformationBoxTabs = () => {
             and authors will retain the copyright to their work.
           </p>
 
-          <Link href="/submit">
-            <a className={classnames(styles.informationBoxLink, styles.addIcon)}>
+          <Link
+            href="/submit"
+            className={classnames(styles.informationBoxLink, styles.addIcon)}>
+            
               Submission guidelines
-            </a>
+            
           </Link>
 
-          <Link href="/translations"><a className={classnames(styles.informationBoxLink, styles.addIcon)}>Translation program</a></Link>
+          <Link
+            href="/translations"
+            className={classnames(styles.informationBoxLink, styles.addIcon)}>Translation program</Link>
         </>
       ),
     },
