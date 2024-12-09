@@ -114,7 +114,7 @@ export function queryIndexForMatches (query: string) {
       const matchTerm = match.target;
       matches.push({
         searchTerm: matchTerm,
-        highlighted: fuzzysort.highlight(match, '<span class="highlighted">', '</span>') || '',
+        highlighted: match.highlight('<span class="highlighted">', '</span>') || '',
         results: Array.from(new Set([ // make unique
           ...(INDEX.generalWords[matchTerm] || []),
           ...(INDEX.languageWords[matchTerm] || []),
