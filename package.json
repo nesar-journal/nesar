@@ -6,11 +6,11 @@
     "node": "22"
   },
   "scripts": {
-    "build": "npm run disable-telemetry && npm run compile && next build",
-    "compile": "npm run compile-data && npm run compile-index",
+    "build": "pnpm run disable-telemetry && pnpm run compile && next build",
+    "compile": "pnpm run compile-data && pnpm run compile-index",
     "compile-data": "npx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
     "compile-index": "npx ts-node --project ./tsconfig.node.json ./src/compile-index.ts",
-    "dev": "npm run compile && next dev",
+    "dev": "pnpm run compile && next dev --turbopack",
     "disable-telemetry": "next telemetry disable",
     "lint-fix": "next lint --fix",
     "lint": "next lint",
@@ -24,22 +24,22 @@
     "fuzzysort": "^3.1.0",
     "htmlparser2": "^9.1.0",
     "next": "15.0.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "sharp": "^0.33.5",
     "url-slug": "^4.0.1",
     "yaml": "^2.6.1",
     "yaml-loader": "^0.8.1"
   },
   "devDependencies": {
-    "@types/node": "22.10.1",
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.1",
-    "eslint": "9.16.0",
+    "@types/node": "^20",
+    "@types/react-dom": "^19",
+    "@types/react": "^19",
     "eslint-config-next": "15.0.4",
+    "eslint": "^8",
     "husky": "^9.1.7",
     "sass": "^1.82.0",
     "ts-node": "^10.9.2",
-    "typescript": "5.7.2"
+    "typescript": "^5",
   }
 }
