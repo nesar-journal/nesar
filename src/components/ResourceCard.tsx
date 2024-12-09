@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 
 import classnames from 'classnames';
@@ -50,13 +50,13 @@ const ResourceCard = (props: ResourceCardProps) => {
           <Image
             alt="Cover"
             src={coverUrl}
-            layout="fixed"
             width={264}
             height={368}
             quality={90}
-            objectFit="cover"
-            objectPosition="center"
-          />
+            style={{
+              objectFit: "cover",
+              objectPosition: "center"
+            }} />
         </div>
         <div className={styles.pdfContainer}>
           <ButtonLink
