@@ -22,9 +22,9 @@ const Footer: FunctionComponent = () => {
               height: "auto"
             }} />
         </div>
-    <div className={styles.linkbox}>
-      <p>ISSN: 2834-3875</p>
-      <p><Link href="/privacy">Privacy Policy</Link></p>
+        <div className={styles.linkbox}>
+          <p>ISSN: 2834-3875</p>
+          <p><Link href="/privacy">Privacy Policy</Link></p>
         </div>
       </div>
       <div className={styles.item}>
