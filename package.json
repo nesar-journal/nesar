@@ -10,7 +10,7 @@
     "compile": "pnpm run compile-data && pnpm run compile-index",
     "compile-data": "pnpx ts-node --project ./tsconfig.node.json ./src/compile-data.ts",
     "compile-index": "pnpx ts-node --project ./tsconfig.node.json ./src/compile-index.ts",
-    "dev": "pnpm run compile && next dev --turbopack",
+    "dev": "pnpm run compile && next dev",
     "disable-telemetry": "next telemetry disable",
     "lint-fix": "next lint --fix",
     "lint": "next lint",

@@ -82,6 +82,17 @@ const nextConfig = {
 
     return config;
   },
+
+  // experimental: {
+  //   turbo: {
+  //     rules: {
+  //       '*.yml': {
+  //         loaders: ['yaml-loader'],
+  //         as: '*.json',
+  //       }
+  //     }
+  //   }
+  // },
 };
 
 module.exports = nextConfig;
