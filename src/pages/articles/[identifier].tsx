@@ -100,6 +100,37 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           });
         }
       });
+
+      document.querySelectorAll('.articleBody figure img').forEach((image) => {
+        image.addEventListener('click', () => {
+          let lightbox = document.createElement('div');
+
+          lightbox.style.width = '98vw';
+          lightbox.style.height = '98vh';
+          lightbox.style.zIndex = '10000';
+          lightbox.style.backgroundColor = 'rgba(222, 222, 222, 0.7)';
+          lightbox.style.padding = '1vh 1vw';
+          lightbox.style.margin = '1vh 1vw';
+          lightbox.style.overflow = 'hidden';
+          lightbox.style.position = 'fixed';
+          lightbox.style.top = '0';
+          lightbox.style.left = '0';
+
+          lightbox.addEventListener('click', () => {
+            document.body.removeChild(lightbox);
+          });
+
+          let imageElement = document.createElement('img');
+          imageElement.src = (image as HTMLImageElement).src;
+          imageElement.style.width = '100%';
+          imageElement.style.height = '100%';
+          imageElement.style.objectFit = 'contain';
+
+          lightbox.appendChild(imageElement);
+
+          document.body.appendChild(lightbox);
+        });
+      });
     }
   }, []);
 
