@@ -4,16 +4,18 @@ import { Index } from './types';
 import { INDEX_PATH, getData, writeFile } from './utils';
 
 function sanitize (input: string) {
-  return input
-    .toLowerCase()                                                           // make lowercase
-    .normalize('NFD')                                                        // decompose accents/diacritics
-    .replace(/\p{Diacritic}/gu, '')                                          // strip out accents/diacritics
-    .replaceAll('-', ' ')                                                    // convert hyphens to spaces
-    .replace(/[\n\r]+/g, ' ')                                                // flatten newlines
-    .replace(/[~`!@#$%^&*(){}\[\];:"'<,.>?|_+=0123456789–—↑…’‘“”\/\\]/g, '') // replace symbols
-    .replaceAll('  ', ' ')                                                   // multiple spaces
-    .trim()                                                                  // remove leading and trailing spaces
-  ;
+  return (
+    // remove leading and trailing spaces
+    input
+      .toLowerCase()                                                           // make lowercase
+      .normalize('NFD')                                                        // decompose accents/diacritics
+      .replace(/\p{Diacritic}/gu, '')                                          // strip out accents/diacritics
+      .replaceAll('-', ' ')                                                    // convert hyphens to spaces
+      .replace(/[\n\r]+/g, ' ')                                                // flatten newlines
+      .replace(/[~`!@#$%^&*(){}\[\];:"'<,.>?|_+=0123456789–—↑…’‘“”\/\\]/g, '') // replace symbols
+      .replaceAll('  ', ' ')                                                   // multiple spaces
+      .trim()
+  );
 }
 
 function getWordsFromHTML (html: string) {
