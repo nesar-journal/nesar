@@ -3,6 +3,9 @@
 ## Setup
 
 ```shell
+# Install pnpm if not yet installed
+# https://pnpm.io/installation
+
 # Disable telemetry (run once)
 pnpm run disable-telemetry
 
