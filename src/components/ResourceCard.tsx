@@ -58,20 +58,20 @@ const ResourceCard = (props: ResourceCardProps) => {
               objectPosition: "center"
             }} />
         </div>
-        <div className={styles.pdfContainer}>
+        {pdfUrl && <div className={styles.pdfContainer}>
           <ButtonLink
             href={pdfUrl}
             text="PDF"
             downloadLink
           />
-        </div>
-        <div className={styles.teiContainer}>
+        </div>}
+        {teiUrl && <div className={styles.teiContainer}>
           <ButtonLink
             href={teiUrl}
             text="TEI"
             downloadLink
           />
-        </div>
+        </div>}
         <div className={styles.publishedDate}>published: {publicationDate}</div>
       </div>
       <div>
