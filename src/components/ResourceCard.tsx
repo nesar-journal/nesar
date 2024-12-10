@@ -105,8 +105,14 @@ const ResourceCard = (props: ResourceCardProps) => {
               href={url}
               passHref
               className={styles.title}
-              dangerouslySetInnerHTML={{ __html: title }}></Link>
-            {subtitle && <a className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+            {subtitle && <Link
+              href={url}
+              passHref
+              className={styles.subtitle}
+              dangerouslySetInnerHTML={{ __html: subtitle }}
+            />}
           </div>
         </div>
         <div
