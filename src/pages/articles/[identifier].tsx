@@ -117,6 +117,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           lightbox.style.left = '0';
 
           lightbox.addEventListener('click', () => {
+            document.body.style.overflow = '';
             document.body.removeChild(lightbox);
           });
 
@@ -129,6 +130,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           lightbox.appendChild(imageElement);
 
           document.body.appendChild(lightbox);
+          document.body.style.overflow = 'hidden';
         });
       });
     }
