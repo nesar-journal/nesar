@@ -81,6 +81,7 @@ const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 publicationDate={articleData.dates.publication}
                 tags={articleData.tags}
                 title={articleData.title}
+                subtitle={articleData.subtitle}
                 url={`/articles/${articleId}`}
               />
             );
