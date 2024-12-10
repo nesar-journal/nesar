@@ -49,7 +49,7 @@ const ResourceCard = (props: ResourceCardProps) => {
         <div className={styles.coverImageContainer}>
           <Image
             alt="Cover"
-            src={coverUrl}
+            src={coverUrl || "/assets/images/missing-image.jpg"}
             width={264}
             height={368}
             quality={90}
