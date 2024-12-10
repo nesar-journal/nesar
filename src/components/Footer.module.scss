@@ -1,15 +1,5 @@
 @import '../styles/breakpoints';
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-
-  @media (max-width: $mobile-breakpoint) {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .divider {
   background-image: url('/assets/images/decorative-bar-black.png');
   background-repeat: repeat-x;
@@ -21,21 +11,26 @@
     background-size: 75%;
   }
 }
-.logobox {
-  display: flex;
-  flex-direction: row;
-  .linkbox {
-    display: flex;
-    flex-direction: column;
-    flex-flow: space-between;
-    p {
-      font-size: 0.9rem;
-      padding:0;
-      margin:0 0 0.5rem 0;
-    }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr;
   }
 }
 
-.item {
-  padding: 0 20px 10px 20px;
+.text {
+  text-align: center;
+
+  @media (max-width: $mobile-breakpoint) {
+    order: 1;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  padding: 0 20px;
 }
