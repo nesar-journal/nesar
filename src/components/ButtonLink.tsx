@@ -13,22 +13,16 @@ type ButtonLinkProps = {
 const ButtonLink: FunctionComponent<ButtonLinkProps> = (props) => {
   const { downloadLink, href, text } = props;
 
-  if (href) {
-    return (
-      <Link passHref href={href}>
-        <div className={styles.buttonLink}>
-          {downloadLink ? <span className={styles.downloadIcon}></span> : null}
-          {text}
-        </div>
-      </Link>
-    );
-  } else {
-    return (
+  if (!href) return null;
+
+  return (
+    <Link passHref href={href}>
       <div className={styles.buttonLink}>
+        {downloadLink ? <span className={styles.downloadIcon}></span> : null}
         {text}
       </div>
-    );
-  }
+    </Link>
+  );
 };
 
 export default ButtonLink;
