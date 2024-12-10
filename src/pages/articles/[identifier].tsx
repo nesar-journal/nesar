@@ -149,16 +149,16 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           abstract={data.abstract}
           authors={data.authors}
           translators={data.translators}
-          coverUrl={data.paths.cover ? `/articles/${data.identifier}/${data.paths.cover}` : undefined}
           doi={data.doi}
-          pdfUrl={data.paths.pdf ? `/articles/${data.identifier}/${data.paths.pdf}` : undefined}
-          teiUrl={data.paths.tei ? `/articles/${data.identifier}/${data.paths.tei}` : undefined}
           publicationDate={data.dates.publication}
           tags={data.tags}
           title={data.title}
           subtitle={data.subtitle}
           url={`/articles/${data.identifier}`}
-          showTitleEnd
+
+          coverUrl={data.paths.cover ? `/articles/${data.identifier}/${data.paths.cover}` : undefined}
+          pdfUrl={data.paths.pdf ? `/articles/${data.identifier}/${data.paths.pdf}` : undefined}
+          teiUrl={data.paths.tei ? `/articles/${data.identifier}/${data.paths.tei}` : undefined}
         />
 
         <div

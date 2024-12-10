@@ -51,12 +51,15 @@ const IssuesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 <ResourceCard
                   abstract={issueData.abstract}
                   authors={issueData.editors}
-                  coverUrl={issueData.paths.cover ? `/issues/${id}/${issueData.paths.cover}` : undefined}
-                  pdfUrl={issueData.paths.pdf ? `/issues/${id}/${issueData.paths.pdf}` : undefined}
+                  doi={issueData.doi}
                   publicationDate={issueData.dates.publication}
                   tags={issueData.tags}
                   title={issueData.title}
                   url={`/issues/${id}`}
+
+                  coverUrl={issueData.paths.cover ? `/issues/${id}/${issueData.paths.cover}` : undefined}
+                  pdfUrl={issueData.paths.pdf ? `/issues/${id}/${issueData.paths.pdf}` : undefined}
+                  teiUrl={issueData.paths.tei ? `/issues/${id}/${issueData.paths.tei}` : undefined}
                 />
               </div>
             );

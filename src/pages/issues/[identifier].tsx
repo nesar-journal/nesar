@@ -55,13 +55,16 @@ const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <ResourceCard
           abstract={data.abstract}
           authors={data.editors}
-          coverUrl={data.paths.cover ? `/issues/${data.identifier}/${data.paths.cover}` : undefined}
           doi={data.doi}
-          pdfUrl={data.paths.pdf ? `/issues/${data.identifier}/${data.paths.pdf}` : undefined}
           publicationDate={data.dates.publication}
           tags={data.tags}
           title={data.title}
           url={`/issues/${data.identifier}`}
+
+          coverUrl={data.paths.cover ? `/issues/${data.identifier}/${data.paths.cover}` : undefined}
+          pdfUrl={data.paths.pdf ? `/issues/${data.identifier}/${data.paths.pdf}` : undefined}
+          teiUrl={data.paths.tei ? `/issues/${data.identifier}/${data.paths.tei}` : undefined}
+
         />
 
         <h2>Articles</h2>
@@ -72,17 +75,19 @@ const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
             return (
               <ResourceCard
+                key={articleId}
                 abstract={articleData.abstract}
                 authors={articleData.authors}
-                coverUrl={articleData.paths.cover ? `/articles/${articleId}/${articleData.paths.cover}` : undefined}
                 doi={articleData.doi}
-                key={articleId}
-                pdfUrl={articleData.paths.pdf ? `/articles/${articleId}/${articleData.paths.pdf}` : undefined}
                 publicationDate={articleData.dates.publication}
                 tags={articleData.tags}
                 title={articleData.title}
                 subtitle={articleData.subtitle}
                 url={`/articles/${articleId}`}
+
+                coverUrl={articleData.paths.cover ? `/articles/${articleId}/${articleData.paths.cover}` : undefined}
+                pdfUrl={articleData.paths.pdf ? `/articles/${articleId}/${articleData.paths.pdf}` : undefined}
+                teiUrl={articleData.paths.tei ? `/issues/${articleId}/${articleData.paths.tei}` : undefined}
               />
             );
           })

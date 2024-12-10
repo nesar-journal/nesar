@@ -23,7 +23,6 @@ type ResourceCardProps = {
   title: string;
   subtitle?: string;
   url: string;
-  showTitleEnd?: boolean;
 };
 
 const ResourceCard = (props: ResourceCardProps) => {
@@ -36,7 +35,6 @@ const ResourceCard = (props: ResourceCardProps) => {
     pdfUrl,
     teiUrl,
     publicationDate,
-    showTitleEnd,
     tags,
     title,
     subtitle,
@@ -45,34 +43,34 @@ const ResourceCard = (props: ResourceCardProps) => {
 
   return (<>
     <div className={styles.resourceCard}>
-      <div className={styles.coverContainer}>
-        <div className={styles.coverImageContainer}>
-          <Image
-            alt="Cover"
-            src={coverUrl || "/assets/images/missing-image.jpg"}
-            width={264}
-            height={368}
-            quality={90}
-            style={{
-              objectFit: "cover",
-              objectPosition: "center"
-            }} />
+      <div className={styles.cover}>
+        <img
+          className={styles.coverImage}
+          alt="Cover"
+          src={coverUrl || "/assets/images/missing-image.jpg"}
+        />
+
+        <div className={styles.publishedDate}>
+          published: {publicationDate}
         </div>
-        {pdfUrl && <div className={styles.pdfContainer}>
-          <ButtonLink
-            href={pdfUrl}
-            text="PDF"
-            downloadLink
-          />
-        </div>}
-        {teiUrl && <div className={styles.teiContainer}>
-          <ButtonLink
-            href={teiUrl}
-            text="TEI"
-            downloadLink
-          />
-        </div>}
-        <div className={styles.publishedDate}>published: {publicationDate}</div>
+
+        <div className={styles.downloadContainer}>
+          {pdfUrl && <div className={styles.pdfContainer}>
+            <ButtonLink
+              href={pdfUrl}
+              text="PDF"
+              downloadLink
+            />
+          </div>}
+
+          {teiUrl && <div className={styles.teiContainer}>
+            <ButtonLink
+              href={teiUrl}
+              text="TEI"
+              downloadLink
+            />
+          </div>}
+        </div>
       </div>
       <div>
         <div>

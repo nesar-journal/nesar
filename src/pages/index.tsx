@@ -10,7 +10,7 @@ import Heading from '../components/Heading';
 import HeroCard from '../components/HeroCard';
 import InformationBox from '../components/InformationBox';
 import Layout from '../components/Layout';
-import ResourceCard from '../components/ResourceCard';
+// import ResourceCard from '../components/ResourceCard';
 import SEO from '../components/SEO';
 
 import { getData } from '../utils';

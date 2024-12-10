@@ -52,13 +52,16 @@ const ArticlesIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = 
                 abstract={articleData.abstract}
                 authors={articleData.authors}
                 translators={articleData.translators}
-                coverUrl={articleData.paths.cover ? `/articles/${id}/${articleData.paths.cover}` : undefined}
-                pdfUrl={articleData.paths.pdf ? `/articles/${id}/${articleData.paths.pdf}` : undefined}
-                teiUrl={articleData.paths.tei ? `/articles/${id}/${articleData.paths.tei}` : undefined}
+                doi={articleData.doi}
                 publicationDate={articleData.dates.publication}
                 tags={articleData.tags}
                 title={articleData.title}
+                subtitle={articleData.subtitle}
                 url={`/articles/${id}`}
+
+                coverUrl={articleData.paths.cover ? `/articles/${id}/${articleData.paths.cover}` : undefined}
+                pdfUrl={articleData.paths.pdf ? `/articles/${id}/${articleData.paths.pdf}` : undefined}
+                teiUrl={articleData.paths.tei ? `/articles/${id}/${articleData.paths.tei}` : undefined}
               />
             </div>)
           );
