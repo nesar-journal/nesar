@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from './HeroCard.module.scss';
 
 type HeroCardProps = {
-  coverUrl: string;
+  coverUrl?: string;
   title: string;
   url: string;
 };
@@ -17,7 +17,7 @@ const HeroCard: FunctionComponent<HeroCardProps> = (props) => {
     (<div
       className={styles.heroCard}
       style={{
-        backgroundImage: `url(${coverUrl})`,
+        backgroundImage: `url(${coverUrl || "/assets/images/missing-image.jpg"})`,
       }}
     >
       <Link href={url} className={styles.title}>{title}</Link>

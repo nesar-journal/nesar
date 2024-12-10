@@ -14,7 +14,7 @@ type ResourceCardProps = {
   abstract: string;
   authors?: Authors;
   translators?: Translators;
-  coverUrl: string;
+  coverUrl?: string;
   doi?: string;
   pdfUrl?: string;
   teiUrl?: string;
