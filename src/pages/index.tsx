@@ -51,7 +51,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ar
 
 
         <HeroCard
-          coverUrl={`/articles/${heroArticleIdentifier}/${heroArticleData.paths.cover}`}
+          coverUrl={heroArticleData.paths.cover ? `/articles/${heroArticleIdentifier}/${heroArticleData.paths.cover}` : undefined}
           title={heroArticleData.title}
           url={`/articles/${heroArticleIdentifier}`}
         />
@@ -70,10 +70,10 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ar
                     <ResourceCard
                     abstract={featuredArticleData.abstract}
                     authors={featuredArticleData.authors}
-                    coverUrl={`/articles/${featuredArticleIdentifier}/${featuredArticleData.paths.cover}`}
+                    coverUrl={featuredArticleData.paths.cover ? `/articles/${featuredArticleIdentifier}/${featuredArticleData.paths.cover}` : undefined}
                     doi={featuredArticleData.doi}
                     key={featuredArticleIdentifier}
-                    pdfUrl={`/articles/${featuredArticleIdentifier}/${featuredArticleData.paths.pdf}`}
+                    pdfUrl={featuredArticleData.paths.pdf ? `/articles/${featuredArticleIdentifier}/${featuredArticleData.paths.pdf}` : undefined}
                     publicationDate={featuredArticleData.dates.publication}
                     tags={featuredArticleData.tags}
                     title={featuredArticleData.title}
@@ -89,10 +89,10 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ar
                     <ResourceCard
                     abstract={latestArticleData.abstract}
                     authors={latestArticleData.authors}
-                    coverUrl={`/articles/${latestArticleIdentifier}/${latestArticleData.paths.cover}`}
+                    coverUrl={latestArticleData.paths.cover ? `/articles/${latestArticleIdentifier}/${latestArticleData.paths.cover}` : undefined}
                     doi={latestArticleData.doi}
                     key={latestArticleIdentifier}
-                    pdfUrl={`/articles/${latestArticleIdentifier}/${latestArticleData.paths.pdf}`}
+                    pdfUrl={latestArticleData.paths.pdf ? `/articles/${latestArticleIdentifier}/${latestArticleData.paths.pdf}` : undefined}
                     publicationDate={latestArticleData.dates.publication}
                     tags={latestArticleData.tags}
                     title={latestArticleData.title}
