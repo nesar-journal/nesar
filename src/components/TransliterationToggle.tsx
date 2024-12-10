@@ -111,7 +111,6 @@ function punctuateTextElement (instance: Element, script: string) {
   if (instance.nextSibling?.nodeName == "SUP") {
     void(0);
   } else {
-    console.log("test");
     if (parent && parent.classList.contains('l')) {
       if (!replacementText.endsWith("…")) {
         const grandparent = parent?.parentElement;
