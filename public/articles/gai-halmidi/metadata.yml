@@ -13,7 +13,6 @@ authors:
 translators:
   - sharma
 
-
 abstract: This is a translation of a 1990 article by the renowned epigraphist G. S. Gai (1917–1995) on the oldest inscription in Kannada discovered to date. The Halmiḍi inscription, discovered at a village by that name, is inscribed on a stone pillar and records the donation of the village to someone name Vija Arasa. It is the earliest datum in the linguistic history of Kannada and an important record of the Kadamba dynasty.
 
 dates:
@@ -23,6 +22,7 @@ paths:
   cover: gai-halmidi.png
   content: gai-halmidi.html
   tei: gai-halmidi.xml
+  # pdf: gai-halmidi.pdf
 
 tags:
   - kannada

@@ -16,9 +16,9 @@ dates:
 
 paths:
   cover: ollett-introducing-nesar.jpg
-  pdf: ollett-introducing-nesar.pdf
   content: ollett-introducing-nesar.html
   tei: ollett-introducing-nesar.xml
+  pdf: ollett-introducing-nesar.pdf
 
 tags:
   - open access

@@ -18,9 +18,9 @@ dates:
 
 paths:
   cover: steinschneider-meat-matters.jpg
-  pdf: steinschneider-meat-matters.pdf
   content: steinschneider-meat-matters.html
   tei: steinschneider-meat-matters.xml
+  pdf: steinschneider-meat-matters.pdf
 
 tags:
   - vegetarianism
