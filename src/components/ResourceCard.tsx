@@ -60,14 +60,14 @@ const ResourceCard = (props: ResourceCardProps) => {
         </div>
         <div className={styles.pdfContainer}>
           <ButtonLink
-            href={pdfUrl || '#'}
+            href={pdfUrl}
             text="PDF"
             downloadLink
           />
         </div>
         <div className={styles.teiContainer}>
           <ButtonLink
-            href={teiUrl || '#'}
+            href={teiUrl}
             text="TEI"
             downloadLink
           />
@@ -92,7 +92,7 @@ const ResourceCard = (props: ResourceCardProps) => {
               {translators.map((translator) => {
                 return (
                   (<span className={styles.translatedBy}
-                    key={translator.id}>translated by 
+                    key={translator.id}>translated by
                     <Link
                       href={`/authors/${translator.id}`}
                       passHref
