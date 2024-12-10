@@ -16,7 +16,8 @@ dates:
   publication: December 8, 2024
 
 paths:
-  cover: issue-0.jpg
+  cover: issue-1.jpg
+  # pdf: issue-1.pdf
 
 tags:
   - śaivism

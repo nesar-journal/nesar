@@ -17,7 +17,7 @@ dates:
 
 paths:
   cover: issue-0.jpg
-  pdf: contents1.pdf
+  # pdf: issue-0.pdf
 
 tags:
   - open access
