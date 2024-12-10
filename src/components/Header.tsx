@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 import Navbar from './Navbar';
 import Navmenu from './Navmenu';
@@ -16,35 +17,45 @@ const Header = (props: HeaderProps) => {
 
   function renderLargeCover () {
     return (
-      <Image
-        alt="Cover"
-        src="/assets/images/cover-large.png"
-        width={1000}
-        height={487}
-        quality={90}
-        priority
-        sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto"
-        }} />
+      <Link
+        href="/"
+      >
+        <Image
+          alt="Cover"
+          src="/assets/images/cover-large.png"
+          width={1000}
+          height={487}
+          quality={90}
+          priority
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }}
+        />
+      </Link>
     );
   }
 
   function renderSmallCover () {
     return (
-      <Image
-        alt="Cover"
-        src="/assets/images/cover-small.png"
-        width={1000}
-        height={178}
-        quality={90}
-        priority
-        sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto"
-        }} />
+      <Link
+        href="/"
+      >
+        <Image
+          alt="Cover"
+          src="/assets/images/cover-small.png"
+          width={1000}
+          height={178}
+          quality={90}
+          priority
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }}
+        />
+      </Link>
     );
   }
 
