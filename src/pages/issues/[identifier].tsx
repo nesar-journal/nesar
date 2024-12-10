@@ -87,7 +87,7 @@ const IssuePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
                 coverUrl={articleData.paths.cover ? `/articles/${articleId}/${articleData.paths.cover}` : undefined}
                 pdfUrl={articleData.paths.pdf ? `/articles/${articleId}/${articleData.paths.pdf}` : undefined}
-                teiUrl={articleData.paths.tei ? `/issues/${articleId}/${articleData.paths.tei}` : undefined}
+                teiUrl={articleData.paths.tei ? `/articles/${articleId}/${articleData.paths.tei}` : undefined}
               />
             );
           })
