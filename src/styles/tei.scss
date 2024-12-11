@@ -92,10 +92,26 @@
 		li {
 		    font-size: 80%;
 		    margin-bottom: 0.45rem;
+
+        // https://css-tricks.com/line-clampin/
+        // To truncate lines in article sidenotes,
+        // but it has issues on Safari,
 		    display: -webkit-box;
 		    -webkit-line-clamp: 4;
 		    -webkit-box-orient: vertical;
-		    overflow: hidden;
+        // so this is a fallback to try to target Safari only.
+        @supports (-webkit-min-device-pixel-ratio: 0) {
+          max-height: 67px;
+          overflow: hidden;
+
+          &::before {
+            position: absolute;
+            content: "...";
+            inset-block-end: 0; /* "bottom" */
+            inset-inline-end: 0; /* "right" */
+          }
+        }
+
 		    p {
 			a:first-child {
 			    margin-right:0.2rem;
