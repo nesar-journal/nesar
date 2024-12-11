@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import classnames from 'classnames';
 import { ParsedUrlQuery } from 'querystring';
 
 import type {
@@ -162,7 +163,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         />
 
         <div
-          className="articleBody"
+          className={classnames("articleBody", styles.articleBody)}
           dangerouslySetInnerHTML={{ __html: contentWithoutToc }}
         />
       </Layout>
