@@ -101,15 +101,9 @@
 		    -webkit-box-orient: vertical;
         // so this is a fallback to try to target Safari only.
         @supports (-webkit-min-device-pixel-ratio: 0) {
+          display: block;
           max-height: 67px;
           overflow: hidden;
-
-          &::before {
-            position: absolute;
-            content: "...";
-            inset-block-end: 0; /* "bottom" */
-            inset-inline-end: 0; /* "right" */
-          }
         }
 
 		    p {
