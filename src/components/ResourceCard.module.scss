@@ -7,7 +7,7 @@
 
   margin-bottom: 30px;
 
-  @media (max-width: $maxWidth) {
+  @media (max-width: $mobile-breakpoint) {
     grid-template-columns: 1fr;
   }
 }
