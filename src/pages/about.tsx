@@ -8,6 +8,8 @@ import SEO from '../components/SEO';
 
 import { getData } from '../utils';
 
+import styles from './about.module.scss';
+
 const DATA = getData();
 
 export const getStaticProps = async () => {
@@ -30,39 +32,44 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       >
         Authors
       </Heading>
-      <table className="authors">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Institution</th>
-            <th>VIAF</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            authorsIds.map((id) => {
-              const authorData = authors[id];
 
-              return (
-                (<tr key={id}>
-                  <td>
+      <ul>
+        {
+          authorsIds.map((id) => {
+            const authorData = authors[id];
+
+            return (
+              <li key={id} className={styles.authorsListItem}>
+                <dl>
+                  <dt>Name</dt>
+                  <dd>
                     <Link
                       href={`/authors/${id}`}
                       passHref
                     >
                       {authorData.displayName}
                     </Link>
-                  </td>
-                  <td><ExternalLink href={`mailto:${authorData.email}`}>{authorData.email}</ExternalLink></td>
-                  <td>{authorData.institution}</td>
-                  <td><ExternalLink href={`https://viaf.org/viaf/${authorData.viaf}`}>{authorData.viaf}</ExternalLink></td>
-                </tr>)
-              );
-            })
-          }
-        </tbody>
-      </table>
+                  </dd>
+                  <dt>Email</dt>
+                  <dd>
+                    <ExternalLink href={`mailto:${authorData.email}`}>
+                      {authorData.email}
+                    </ExternalLink>
+                  </dd>
+                  <dt>Institution</dt>
+                  <dd>{authorData.institution}</dd>
+                  <dt>VIAF</dt>
+                  <dd>
+                    <ExternalLink href={`https://viaf.org/viaf/${authorData.viaf}`}>
+                      {authorData.viaf}
+                    </ExternalLink>
+                  </dd>
+                </dl>
+              </li>
+            );
+          })
+        }
+      </ul>
     </>);
   }
 
