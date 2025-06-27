@@ -37,7 +37,11 @@ simmons:
   displayName : Caleb Simmons
   firstName   : Caleb
   lastName    : Simmons
+<<<<<<< HEAD
   email       : calebsimmons@email.arizona.edu
+=======
+  email       : calebsimmons@email.arizona.edu,
+>>>>>>> master
   institution : University of Arizona
   viaf        :
 benherut:
