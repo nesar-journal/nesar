@@ -10,3 +10,6 @@ Table values:
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\textwidth}{>{\hangindent=2em\raggedright\arraybackslash}Xl>{\hangindent=2em\raggedright\arraybackslash}X}\toprule
 \textbf{Interlocutor} &\textbf{Passage} &\textbf{Synopsis}\\\midrule
+
+DOI for Monius 2004:
+10.1023/\allowbreak{}B:INDI\allowbreak{}.0000020898.04782.7a
