@@ -99,6 +99,7 @@
 		    display: -webkit-box;
 		    -webkit-line-clamp: 4;
 		    -webkit-box-orient: vertical;
+        overflow: hidden;
         // so this is a fallback to try to target Safari only.
         @supports (-webkit-min-device-pixel-ratio: 0) {
           display: block;
