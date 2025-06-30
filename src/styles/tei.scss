@@ -1,4 +1,4 @@
-@import './breakpoints';
+@import "./breakpoints";
 
 // -- Article styles
 // ----- Not contained in [identifier].module.css
@@ -10,231 +10,237 @@
   position: relative;
   line-height: 1.35;
   .frontmatter {
-      padding:0 1.5rem;
-      font-style:italic;
-      .text-paragraph {
-	  &:before {
-	      content: "note:";
-	      font-size:1.2rem;
-	      font-variant: small-caps;
-	      font-style:normal;
-	      padding:0.73rem 0.35rem 0 0;
-	      margin:0rem;
-	      float:left;
-	  }
+    padding: 0 1.5rem;
+    font-style: italic;
+    .text-paragraph {
+      &:before {
+        content: "note:";
+        font-size: 1.2rem;
+        font-variant: small-caps;
+        font-style: normal;
+        padding: 0.73rem 0.35rem 0 0;
+        margin: 0rem;
+        float: left;
       }
+    }
   }
   .nesar-notes {
-      clear:both;
-      padding-top:2rem;
-      margin-bottom:3rem;
-      li {
-	  margin:0 0 0.8rem 0;
-	  p {
-	      margin:0;
-	  }
-	  .quote-in-note {
-	      margin: 0.25rem 0 0.25rem 1rem;
-	  }
+    clear: both;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    li {
+      margin: 0 0 0.8rem 0;
+      p {
+        margin: 0;
       }
+      .quote-in-note {
+        margin: 0.25rem 0 0.25rem 1rem;
+      }
+    }
   }
   sup {
-      font-style: normal!important;
+    font-style: normal !important;
   }
   .text-section {
-      
-      display:block;
-      h2 {
-	  display: block;
-	  clear:both;
-	  margin: 2rem 0 0 0;
-      }
+    display: block;
+    h2 {
+      display: block;
+      clear: both;
+      margin: 2rem 0 0 0;
+    }
   }
   .textandnotes {
     position: relative;
-    width:100%;
-    margin:auto;
-    display:block;
+    width: 100%;
+    margin: auto;
+    display: block;
     clear: both;
     @media (min-width: $mobile-breakpoint) {
-	.text-blockquote, .text-paragraph, .text-list, .table-wrapper, .figure-wrapper {
-	    width:650px;
-	    float:left;
-	    clear:both;
-	    .linenumber {
-		display:inline-block;
-		width:2.2rem;
-	    }
-	    figure {
-		img {
-		    width:100%;
-		}
-	    }
-	}
-	.text-blockquote {
-//	    line-height:1.65rem;
-	}
-	.figure-label, .table-label {
-	    h5 {
-		margin: 0 0 1rem 0;
-	    }
-	    margin-left:670px;
-	    padding-left:0.25rem;
-	    position:relative;
-	}
-	.sidenote-column {
-	    margin-left:660px;
-            padding:0;
-	    ul.sidenotes {
-		padding:16px 0 0 0;
-		margin:0;
-		list-style-type: none;
-		li {
-		    font-size: 80%;
-		    margin-bottom: 0.45rem;
+      .text-blockquote,
+      .text-paragraph,
+      .text-list,
+      .table-wrapper,
+      .figure-wrapper {
+        width: 650px;
+        float: left;
+        clear: both;
+        .linenumber {
+          display: inline-block;
+          width: 2.2rem;
+        }
+        figure {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .text-blockquote {
+        // line-height:1.65rem;
+      }
+      .figure-label,
+      .table-label {
+        h5 {
+          margin: 0 0 1rem 0;
+        }
+        margin-left: 670px;
+        padding-left: 0.25rem;
+        position: relative;
+      }
+      .sidenote-column {
+        margin-left: 660px;
+        padding: 0;
+        ul.sidenotes {
+          padding: 16px 0 0 0;
+          margin: 0;
+          list-style-type: none;
+          li {
+            font-size: 80%;
+            margin-bottom: 0.45rem;
 
-        // https://css-tricks.com/line-clampin/
-        // To truncate lines in article sidenotes,
-        // but it has issues on Safari,
-		    display: -webkit-box;
-		    -webkit-line-clamp: 4;
-		    -webkit-box-orient: vertical;
-        overflow: hidden;
-		    p {
-			a:first-child {
-			    margin-right:0.2rem;
-			    font-weight:bold;
-			}
-			margin:0 0 0 0;
-			font-style: normal;
-			font-size: 0.78rem;
-			line-height: 1.05rem;
-			position: relative;
-		    }
-		    .quote-in-note {
-			margin: 0 0 0 0.35rem;
-			.lg {
-			    line-height:1rem;
-			}
-		    }
-		}
-	    }
-	}
-	.figure-label {
-	    figcaption {
-		padding-top:16px;
-		font-size: 80%;
-		h5 {
-		    margin-bottom:0.35rem;
-		}
-	    }
-	}
+            // https://css-tricks.com/line-clampin/
+            // To truncate lines in article sidenotes,
+            // but it has issues on Safari,
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            p {
+              a:first-child {
+                margin-right: 0.2rem;
+                font-weight: bold;
+              }
+              margin: 0 0 0 0;
+              font-style: normal;
+              font-size: 0.78rem;
+              line-height: 1.05rem;
+              position: relative;
+            }
+            .quote-in-note {
+              margin: 0 0 0 0.35rem;
+              .lg {
+                line-height: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .figure-label {
+        figcaption {
+          padding-top: 16px;
+          font-size: 80%;
+          h5 {
+            margin-bottom: 0.35rem;
+          }
+        }
+      }
     }
     @media (max-width: $mobile-breakpoint) {
-	.sidenote-column {
-	    display: none;
-	}
-	figure {
-	    img {
-		width: 100%;
-	    }
-	}
+      .sidenote-column {
+        display: none;
+      }
+      figure {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
   blockquote {
-    margin:0 0 0 2rem;
+    margin: 0 0 0 2rem;
     border-left: 3px solid #8a4b0b;
-    background:#fff0e0;
+    background: #fff0e0;
     padding: 0.75rem;
-    overflow:auto;
+    overflow: auto;
     + blockquote {
-      padding-top:0!important;
+      padding-top: 0 !important;
     }
     p {
-      margin:0;
+      margin: 0;
       padding: 0.55rem 0;
     }
     .bibl-string {
-	float:right;
-	margin:1rem 2rem 0 0;
+      float: right;
+      margin: 1rem 2rem 0 0;
     }
   }
   .lg {
-    line-height:1.5rem;
+    line-height: 1.5rem;
     + p {
-      margin-top:0.5rem;
+      margin-top: 0.5rem;
     }
     .l {
-      display:block;
+      display: block;
     }
   }
   .apparatus {
     list-style-type: none;
-    padding-left:1rem;
+    padding-left: 1rem;
     margin: 0.45rem 0 0 0;
     li {
-      font-size:90%;
-      margin:0;
-      line-height:125%;
+      font-size: 90%;
+      margin: 0;
+      line-height: 125%;
     }
     li > span {
       &:not(:last-child):after {
-        content:"; ";
+        content: "; ";
       }
       &:last-of-type:after {
-        content:".";
+        content: ".";
       }
       .app-label {
-        display:inline-flex;
-        .source,.wit,.resp {
-          display:inline;
-          font-style:normal;
-          font-weight:normal;
-          margin-block:0 0;
-          margin-inline:0 0;
-          margin:0!important;
-          padding:0!important;
-          font-size:1em;
+        display: inline-flex;
+        .source,
+        .wit,
+        .resp {
+          display: inline;
+          font-style: normal;
+          font-weight: normal;
+          margin-block: 0 0;
+          margin-inline: 0 0;
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 1em;
           &:last-of-type:after {
-            content:"\00a0";
+            content: "\00a0";
           }
           &.wit {
-            font-weight:bold;
+            font-weight: bold;
           }
         }
       }
     }
   }
   .unclear {
-      &:before {
-	  content: "[";
-      }
-      &:after {
-	  content: "]";
-      }
+    &:before {
+      content: "[";
+    }
+    &:after {
+      content: "]";
+    }
   }
   .bibliography ul {
     list-style-type: none;
-    padding-left:0;
+    padding-left: 0;
     li {
-	margin-bottom: 0.5rem;
-	padding-left: 2rem;
-	text-indent:-2rem;
-	&.text-group {
-	    padding-left: 1rem;
-	    text-indent: -1rem;
-            margin-bottom: 0;
-	    margin-top:0.5rem;
-            h4 {
-		margin: 0 0 0.25rem 0;
-            }
-	    li {
-		margin-left:1rem;
-		padding-left: 2rem;
-		text-indent:-2rem;
-		margin-bottom:0.15rem;
-	    }
-	}
+      margin-bottom: 0.5rem;
+      padding-left: 2rem;
+      text-indent: -2rem;
+      &.text-group {
+        padding-left: 1rem;
+        text-indent: -1rem;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+        h4 {
+          margin: 0 0 0.25rem 0;
+        }
+        li {
+          margin-left: 1rem;
+          padding-left: 2rem;
+          text-indent: -2rem;
+          margin-bottom: 0.15rem;
+        }
+      }
     }
   }
   .nesar-header {
@@ -242,16 +248,16 @@
     border-top: 1px black solid;
     .nesar-publication-stmt {
       div {
-        display:flex;
-	div {
-          display:block;
-	  &.nesar-license {
-            display:flex;
-	    img {
-              padding-left:5px;
+        display: flex;
+        div {
+          display: block;
+          &.nesar-license {
+            display: flex;
+            img {
+              padding-left: 5px;
             }
             p {
-              margin:0 0 5px 15px;
+              margin: 0 0 5px 15px;
             }
           }
         }
@@ -260,28 +266,27 @@
   }
 }
 table {
-    clear:both;
-    margin:0 auto;
-    caption {
-	font-size: 90%;
-    }
-	
+  clear: both;
+  margin: 0 auto;
+  caption {
+    font-size: 90%;
+  }
 }
 .phonemic {
-    &:before {
-	content: "/";
-    }
-    &:after {
-	content: "/";
-    }
+  &:before {
+    content: "/";
+  }
+  &:after {
+    content: "/";
+  }
 }
 .foreign {
-    font-style:italic;
+  font-style: italic;
 }
 .acknowledgements {
-    font-size:90%;
+  font-size: 90%;
 }
 .jump-up {
-    position:relative;
-    top:-2px;
+  position: relative;
+  top: -2px;
 }
