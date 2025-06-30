@@ -99,10 +99,13 @@
 
             // https://css-tricks.com/line-clampin/
             // To truncate lines in article sidenotes
+            line-clamp: 4;
+            overflow: hidden;
+            // legacy support
             display: -webkit-box;
             -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
-            overflow: hidden;
+
             p {
               a:first-child {
                 margin-right: 0.2rem;
