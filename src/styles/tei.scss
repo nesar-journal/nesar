@@ -100,13 +100,6 @@
 		    -webkit-line-clamp: 4;
 		    -webkit-box-orient: vertical;
         overflow: hidden;
-        // so this is a fallback to try to target Safari only.
-        @supports (-webkit-min-device-pixel-ratio: 0) {
-          display: block;
-          max-height: 67px;
-          overflow: hidden;
-        }
-
 		    p {
 			a:first-child {
 			    margin-right:0.2rem;
