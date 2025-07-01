@@ -2,6 +2,7 @@
   "root": true,
   "extends": "next/core-web-vitals",
   "rules": {
+    "@next/next/no-img-element": "off",
     "arrow-parens": ["error", "always"],
     "indent": ["error", 2],
     "semi": ["error", "always"],
