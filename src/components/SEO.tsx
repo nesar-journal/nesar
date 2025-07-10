@@ -10,6 +10,10 @@ type SEOProps = {
   title?: string;
 }
 
+function removeHtmlTags(htmlString: string): string {
+  return htmlString.replace(/(<([^>]+)>)/ig, '');
+}
+
 const SEO = (props: SEOProps) => {
   const {
     cover,
@@ -32,7 +36,7 @@ const SEO = (props: SEOProps) => {
   const tagDescription = description || siteDescription;
   const tagImageAltText = coverAltText || siteLogoDescription;
   const tagImageUrl = cover || siteLogo;
-  const tagTitle = title ? `${title} | ${siteName}` : siteName;
+  const tagTitle = title ? removeHtmlTags(title) + ` | ${siteName}` : siteName;
   const tagUrl = canonicalUrl || siteUrl;
 
   return (
