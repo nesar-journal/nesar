@@ -10,7 +10,7 @@ type SEOProps = {
   title?: string;
 }
 
-function removeHtmlTags(htmlString: string): string {
+function removeHtmlTags (htmlString: string): string {
   return htmlString.replace(/(<([^>]+)>)/ig, '');
 }
 
