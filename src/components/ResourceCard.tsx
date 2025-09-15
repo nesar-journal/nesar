@@ -89,13 +89,13 @@ const ResourceCard = (props: ResourceCardProps) => {
             {translators && <div className={styles.translators}>
               {translators.map((translator) => {
                 return (
-                  (<span className={styles.translatedBy}
+                  <span className={styles.translatedBy}
                     key={translator.id}>translated by
                     <Link
                       href={`/authors/${translator.id}`}
                       passHref
                       className={styles.translatorLink}>{translator.displayName}</Link>
-                  </span>)
+                  </span>
                 );
               })}
             </div>}

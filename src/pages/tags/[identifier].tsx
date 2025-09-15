@@ -54,6 +54,7 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         >
           Issues
         </Heading>
+
         <ul>
           {
             data.issues.map((issueId) => {
@@ -88,6 +89,7 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         >
           Articles
         </Heading>
+
         <ul>
           {
             data.articles.map((articleId) => {
