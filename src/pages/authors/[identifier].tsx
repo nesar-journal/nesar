@@ -67,13 +67,16 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <ul>
           {
             issuesIds.map((issueId) => {
-              const issueData = issuesData[issueId];
+              const { editors, title } = issuesData[issueId];
 
-              if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
+              if (editors.map((editor) => editor.id).includes(authorId)) {
                 return (
-                  (<li key={issueId}>
-                    <Link href={`/issues/${issueId}`}>{issueData.title}</Link>
-                  </li>)
+                  <li key={issueId}>
+                    <Link
+                      href={`/issues/${issueId}`}
+                      dangerouslySetInnerHTML={{ __html: title }}
+                    />
+                  </li>
                 );
               }
             })
@@ -96,13 +99,16 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <ul>
           {
             articlesIds.map((articleId) => {
-              const articleData = articlesData[articleId];
+              const { authors, title } = articlesData[articleId];
 
-              if (articleData.authors.map((author) => author.id).includes(authorId)) {
+              if (authors.map((author) => author.id).includes(authorId)) {
                 return (
-                  (<li key={articleId}>
-                    <Link href={`/articles/${articleId}`}>{articleData.title}</Link>
-                  </li>)
+                  <li key={articleId}>
+                    <Link
+                      href={`/articles/${articleId}`}
+                      dangerouslySetInnerHTML={{ __html: title }}
+                    />
+                  </li>
                 );
               }
             })
