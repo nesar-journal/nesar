@@ -3,8 +3,6 @@ type: issue
 identifier: issue-1
 issue: 1
 
-doi: (DOI coming soon)
-
 title: Debating Religion
 
 editors:
@@ -17,7 +15,7 @@ dates:
 
 paths:
   cover: issue-1.jpg
-  # pdf: issue-1.pdf
+  pdf: NESAR_issue_01-202412.pdf
 
 tags:
   - śaivism
@@ -31,5 +29,5 @@ articles:
   - steinschneider-meat-matters
   - peterson-desecrating-the-divine
   - ben-herut-early-traces
-  - simmons-positioning-lingayatism
   - fisher-murder-of-a-buddhist-monk
+  - simmons-positioning-lingayatism

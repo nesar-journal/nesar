@@ -31,6 +31,11 @@
 	  <name>Andrew Ollett</name>
 	  <desc>Changes to first proofs.</desc>
 	</change>
+	<change>
+	  <date>2025-11-16</date>
+	  <name>Andrew Ollett</name>
+	  <desc>Changes to last proofs.</desc>
+	</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -66,10 +71,10 @@
 	<quote xml:lang="kan-Latn">
 	  <lg>
 	    <l>sukhadiṁ purātanara gītadoḷu bāḷutuṁ</l>
-	    <l>mukhav’ alaru bhhaktirasa sindhuvinoḷ āḷutaṁ</l>
+	    <l>mukhav’ alardu bhaktirasa sindhuvinoḷ āḷutaṁ</l>
 	    <l>gītakke mecci meccugaḷan olid’ īvutaṁ</l>
 	    <l>ōtu nūtanavastrakanakadiṁ taṇiputaṁ</l>
-	    <l>śaraṇara padaṅgaḷaṁ bigiy’ appi taṇivutaṁ</l>
+	    <l>śaraṇara padaṅgaḷaṁ bigiy appi taṇivutaṁ</l>
 	  </lg>
 	</quote>
 	<cit>
@@ -97,9 +102,9 @@
 	    <l>niccal eṇṭuṁ padyamaṁ sōmanāthaṅge</l>
 	    <l>accari migalke pēḷvaṁ śivānāthaṅge</l>
 	    <l>pañcākṣarānubandhaṁ chandav’ anuv’ āge</l>
-	    <l>pañcamukhanāmad’ abhidhāna buddhiy’ ad’ āge</l>
-	    <l>śivavākya śabdauddhi vyākaraṇam āge</l>
-	    <l>śivabhakti vr̥ttakk’ alaṅkārad’ ant’ āge</l>
+	    <l>pañcamukhanāmad’ abhidhāna buddhiy ad’ āge</l>
+	    <l>śivavākya śabdaśuddhi vyākaraṇam āge</l>
+	    <l>śivabhakti vr̥ttakk’ alaṅkāradant’ āge</l>
 	    <l>padyaṅgaḷaṁ śivaṅg’ anudinaṁ pēḷutaṁ</l>
 	    <l>cōdyav ene śaṅkarastōtradoḷe bāḷutaṁ</l>
 	  </lg>
@@ -107,10 +112,10 @@
 	<cit>
 	  <quote>
             <p>
-	      Every day he blissfully composed eight verses to Śiva Sōmanātha,<lb/>
+	      Every day he astonishingly composed eight verses to Śiva Sōmanātha,<lb/>
 	      the moon-bearer and Pārvati’s husband:<lb/>
-              his meters were all made up of five syllables;<lb/>
-              his lexicon came from the names of the five-faced god;<lb/>
+              his meters were all made up of the five-syllable <foreign xml:lang="kan-Latn">mantra</foreign>;<lb/>
+              his inspiration came from the name of the five-faced god;<lb/>
               his grammar was the purity of speech in the Śiva mantra;<lb/>
               devotion to Śiva served as the ornaments of his verses.
 	    </p>
@@ -135,7 +140,7 @@
 	</quote>
 	<cit>
 	  <quote>
-            <p>Thus did Kēśirāja grow and develop when <anchor xml:id="Hlk161328355"/>one day, a Śaiva gathering was in full swing: he felt he was melting in the songs of elder devotees being sung. He bent low at the feet of the Jaṅgamas who gathered there. He broke out into reciting verses for Śiva, with great jubilation.</p>
+            <p>Thus did Kēśirāja grow and develop when <anchor xml:id="Hlk161328355"/>one day, a Śaiva gathering was in full swing: he felt he was melting in the songs of elder devotees being sung. He immediately bent low at the feet of the Jaṅgamas who gathered there. He broke out into reciting verses for Śiva, with great jubilation.</p>
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Kēśirājadaṇṇāyakara Ragaḷe</title> 1.81–85 (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 186)</bibl>
 	</cit>
@@ -196,7 +201,7 @@
 	    <l>munidu saṅgaṅge posagītamaṁ pāḍutaṁ</l>
 	    <l>mūdalisi pāḍutaṁ muddisute pāḍutaṁ</l>
 	    <l>ādarisi pāḍutaṁ mēregeḍe pāḍutaṁ</l>
-	    <l>gītaṅgaḷoḷag’ ēkaniṣṭhe hoḷe hoḷevut’ ire</l>
+	    <l>gītaṅgaḷoḷag’ ēkaniṣṭhe hoḷehuḷevut’ ire</l>
 	    <l>gītaṅgaḷoḷag’ abhavabhakti beḷebeḷevut’ ire</l>
 	    <l>gītadoḷu saṅgan’ ādhikyav opputtam ire</l>
 	    <l>gītadoḷu śaraṇara samagravē jigilut’ ire</l>
@@ -205,7 +210,7 @@
 	    <l>gītaṁ śivaṅge karṇābharaṇav’ āgut’ ire</l>
 	    <l>gītav’ īśana dayākaruṣaṇav’ ad’ āgut’ ire</l>
 	    <l>hāḍutaṁ śaraṇaroḷu basavaṇṇan oppidaṁ</l>
-	    <l>āḍutaṁ bhaktanidhibasavaṇṇan oppidaṁ</l>
+	    <l>āḍutaṁ bhaktinidhi basavaṇṇan oppidaṁ</l>
 	    <l>amama daṇḍādhipakirīṭapadan oppidaṁ</l>
 	    <l>amama chalināyakara dēvan int’ oppidaṁ</l>
 	  </lg>
@@ -243,7 +248,7 @@
 	<quote xml:lang="kan-Latn">
 	  <lg>
 	    <l>basavana gītav’ ambudhiparītadharātaḷadalli sandav’ end’</l>
-	    <l>usirvud’ idid’ āvud’ ond’ aridu pannagalōkada dāravaṭṭadoḷ</l>
+	    <l>usirvud’ id’ āvud’ ond’ aridu pannagalōkada dāravaṭṭadoḷ</l>
 	    <l>desegaḷa bhittiyoḷ digibhad’ aṅgadoḷ indrana jihveyoḷ śivā-</l>
 	    <l>vasathada bāgilalli bared’ ippud’ enalk’ idum oppad’ ippudē</l>
 	  </lg>
@@ -327,7 +332,7 @@
 	</cit>
         <p>Another quotation of a <foreign xml:lang="kan-Latn">vacana</foreign> soon follows. As the greedy devotee arrives at Basava’s place to test him, Śiva appears in disguise before Basava and worriedly admonishes him about the morass his song has generated. Basava, however, smiles, tells the god not to be afraid, and then declares unperturbedly:</p>
 	<quote xml:lang="kan-Latn">
-	  <p>añjadir dēva parīkṣege teṟah’ illaṁ kaṭṭiden oṟeya biṭṭe jannigey ēṟan ōḍad’ ir’ ōḍad’ iru śaraṇara maneya biridin’ aṅkaṅkakke himmeṭṭad’ ir’ el’ ele dēva ele tande el’ ele hande kūḍalasaṅga.</p>
+	  <p>añjadir dēva parīkṣege teṟah’ illaṁ kaṭṭiden oṟeya biṭṭe jannigey ēṟan ōḍad’ ir’ ōḍad’ iru śaraṇara maneya biridin’ aṅkakke himmeṭṭad’ ir’ el’ ele dēva ele tande el’ ele hande kūḍalasaṅga.</p>
 	</quote>
 	<cit>
           <quote>
@@ -341,7 +346,7 @@
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Basavēśvara Dēvara Ragaḷe</title> 12, prose (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 88)</bibl>
 	</cit>
-        <p>Basava’s address to his god is striking in its boldness. We can note the saint’s proud refusal to wear the sacred thread, which is a Brahmanical sign of Vedic initiation and social privilege. We can also note Basava’s challenging of the god by calling him a coward. (At the end, Basava’s sharp words prod Śiva to arrange for the delivery of gold and precious stones to untangle the financial mess prompted by Basava’s earlier <foreign xml:lang="kan-Latn">vacana</foreign>). As in the case of the previous quotation, Basava’s speech here is almost identical to what is today recognized as <foreign xml:lang="kan-Latn">vacana</foreign> no. 701, with a slight variation in spelling and word choice.<note place="foot" xml:id="ftn58" n="47"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 701 in <ref target="#Kalaburgi2001a">Kalaburgi</ref> (<ref target="#Kalaburgi2001a">2001a [1993]</ref>: 175):</p><quote xml:lang="kan-Latn"><lg><l>kaṭṭiden oreya biṭṭe jannigey ara</l><l>muṭṭi band’ ir’ idaḍe ōsarisuvan alla</l><l>ōḍad’ iru ōḍad’ iru</l><l>nimma śaraṇara maneya biridina aṅkakāra</l><l>ōḍad’ iru ōḍad’ iru ele ele dēvā</l><l>ele ele svāmi</l><l>ele ele hande</l><l>kūḍalasaṅgamadēvā</l></lg></quote></note></p>
+        <p>Basava’s address to his god is striking in its boldness. We can note the saint’s proud refusal to wear the sacred thread, which is a Brahmanical sign of Vedic initiation and social privilege. We can also note Basava’s challenging of the god by calling him a coward. (At the end, Basava’s sharp words prod Śiva to arrange for the delivery of gold and precious stones to untangle the financial mess prompted by Basava’s earlier <foreign xml:lang="kan-Latn">vacana</foreign>). As in the case of the previous quotation, Basava’s speech here is almost identical to what is today recognized as <foreign xml:lang="kan-Latn">vacana</foreign> no. 701, with a slight variation in spelling and word choice.<note place="foot" xml:id="ftn58" n="47"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 701 in <ref target="#Kalaburgi2001a">Kalaburgi</ref> (<ref target="#Kalaburgi2001a">2001a [1993]</ref>: 175):</p><quote xml:lang="kan-Latn"><lg><l>kaṭṭiden oreya biṭṭe jannigey ara</l><l>muṭṭi band’ iridaḍe ōsarisuvan alla</l><l>ōḍad’ iru ōḍad’ iru</l><l>nimma śaraṇara maneya biridina aṅkakāra</l><l>ōḍad’ iru ōḍad’ iru ele ele dēvā</l><l>ele ele svāmi</l><l>ele ele hande</l><l>kūḍalasaṅgamadēvā</l></lg></quote></note></p>
         <p>The core message in the two <foreign xml:lang="kan-Latn">vacana</foreign>s discussed here is Basava’s unbounded commitment to provide for the material needs of any Śaiva devotee, and it corresponds well with Harihara’s understanding of Basava’s life goal as the author presents it in the framing story at the beginning of this <foreign xml:lang="kan-Latn">Ragaḷe</foreign>. The <foreign xml:lang="kan-Latn">Ragaḷe</foreign> about Basava opens with his prenatal life in Kailāsa, Śiva’s heavenly abode, where the divine attendant Basava, while passing out food graced by Śiva to all those present in the hall, mistakenly skips Śiva’s son Skanda. Śiva’s punishment for Basava’s failure to distribute the grace of the god to one and all is to spend a lifetime as a human on earth, where he will provide for all the devotees of Śiva, without exception. In Śiva’s own words: </p>
 	<quote xml:lang="kan-Latn">
 	  <lg>
@@ -349,14 +354,14 @@
 	    <l>eseva nijabhaktibhūṣaṇan enipa vīraṅge</l>
 	    <l>emage koḍad’ irdaḍaṁ sairisuvev’ āv ’ayya</l>
 	    <l>vimalaśiśuviṅge husi nuḍiye sairisev’ ayya</l>
-	    <l>idaṟindav’ ondu jananaṁ ninage dorakitu</l>
+	    <l>idaṟindav’ ondu jananaṁ ninage dorakittu</l>
 	    <l>mudadinde hōg’ ayya jananava nī hottu</l>
 	    <l>dharaṇiyoḷu vr̥ṣabhamukha huṭṭu</l>
 	  </lg>
 	</quote>
 	<cit>
 	  <quote>
-	    <p>How could you deprive my own son — a hero and ornament of true devotion — of the offering, thus slighting this congregation and my presence? Dear man, I would have turned a blind eye had it been me that you skipped, but how can I when it was an innocent child? Because of this, you shall undertake a human birth. Go now, and take this rebirth upon yourself with a smile. Be born on earth, Vr̥ṣabhamukha!</p>
+	    <p>How could you deprive my own son — a hero and ornament of true devotion — of the offering, thus slighting this congregation and my presence? Dear man, I would have turned a blind eye had it been me that you skipped, but how can I when it was an innocent child? Because of this, you shall undertake a human birth. Go now, and endure this rebirth with a smile. Be born on earth, Vr̥ṣabhamukha!</p>
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Basavēśvara Dēvara Ragaḷe</title> 1.59–65 (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 25)</bibl>
 	</cit>
@@ -370,7 +375,7 @@
 	</quote>
 	<cit>
 	  <quote>
-	    <p>“The faithful Lord Allama has introduced himself!”</p>
+	    <p>“Lord Allama himself has made known the way!”</p>
 	    <p>Wholeheartedly he sang this song.</p>
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Basavēśvara Dēvara Ragaḷe</title> 13.7–8 (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 92)</bibl>
@@ -388,11 +393,11 @@
 	    <l>gītadoḷage nūtna<note place="foot" xml:lang="eng" n="52"><p>Sic.</p></note> bhakti jātav’ āgal ōtu pāḍi</l>
 	    <l>gītadoḷage śarvan’ aṟivu teṟah’ uguḍade tīvi pāḍi</l>
 	    <l>bhaktirasada nadiya naḍuve gītaratnav uṇmi pāḍi</l>
-	    <l>bhaktiyoḷu virakti nelasi mukti mundud’ ōṟi pāḍi</l>
+	    <l>bhaktiyoḷu virakti nelasi mukti mundudōṟi pāḍi</l>
 	    <l>olidu pāḍi ulidu pāḍi maledu pāḍi balidu pāḍi</l>
-	    <l>salugeyinde gelidu pāḍi puḷakavaḍare nōḍi pāḍi</l>
+	    <l>salugeyinde gelidu pāḍi puḷakav’ aḍare nōḍi pāḍi</l>
 	    <l>dēva śivane bhaviya saṅgav’ endu māṇbud’ enna tande</l>
-	    <l>dēva berakey’ illad’ accabhaktisukhav’ ad’ endu tande</l>
+	    <l>dēva berakey’ illad’ acca bhaktisukhav’ ad’ endu tande</l>
 	    <l>pūjeyoḷage macci beccamanavan entu tegeven ayya</l>
 	    <l>pūjeyoḷage naṭṭa diṭṭigaḷan ad’ entu kīḷven ayya</l>
 	  </lg>
@@ -431,17 +436,17 @@
 	  <quote>
 	    <ab>
 	      Alas, O Śiva! Is there any love left out there to receive me?<lb/>
-	      And is there any room for devotion in marital life and away from you?<lb/>
+	      And is there any room for devotion that leads to you in marital life?<lb/>
 	      O Śiva, what shall my fate be?<lb/>
 	      What more can I say beyond these humiliating words?
 	    </ab>
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Mahādēviyakkana Ragaḷe</title> 6, prose (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 135)</bibl>
 	</cit>
-        <p>In contrast to the previous quotation, this one is almost identical to and clearly identifiable as <foreign xml:lang="kan-Latn">vacana</foreign> no. 88 in the published version.<note place="foot" xml:id="ftn68" n="53"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 88 in <ref target="#Rajura2001">Rājūra</ref> (<ref target="#Rajura2001">2001 [1993]</ref>: 31):</p><quote xml:lang="kan-Latn"><lg><l>uḷuhuva karava nēhav’ uṇṭe nimmalli</l><l>saṁsārakk’ eḍey’ ā bhaktiyoḷave</l><l>enna dēva cennamallikārjun’ ayyā</l><l>ēna hēḷuven ayya lajjeya mātanu</l></lg></quote></note> A few minor changes in that version stand out: (1) the pronouns appear in a different order, (2) the language register is slightly updated (e.g., from <foreign xml:lang="kan-Latn">pēḷven</foreign> to <foreign xml:lang="kan-Latn">hēḷuven</foreign>), and (3) the name of the deity whom Mahādēvi addresses has changed from “Śiva” to “Mallikārjuna.” This latter change is telling in the sense that it might point to an editorial need in modern times to fix the signature phrase of a <foreign xml:lang="kan-Latn">vacana</foreign> composer in more hermetic ways than in Harihara’s time (although in other parts of the text Harihara does identify Mahādēvi with the specific manifestation of Śiva as Mallikārjuna). </p>
+        <p>In contrast to the previous quotation, this one is almost identical to and clearly identifiable as <foreign xml:lang="kan-Latn">vacana</foreign> no. 88 in the published version.<note place="foot" xml:id="ftn68" n="53"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 88 in <ref target="#Rajura2001">Rājūra</ref> (<ref target="#Rajura2001">2001 [1993]</ref>: 31):</p><quote xml:lang="kan-Latn"><lg><l>uḷuhuva karava nēhav’ uṇṭe nimmalli</l><l>saṁsārakk’ eḍeyā[ḍada] ā bhaktiyoḷave</l><l>enna dēva cennamallikārjun’ ayyā</l><l>ēna hēḷuven ayya lajjeya mātanu</l></lg></quote></note> A few minor changes in that version stand out: (1) the pronouns appear in a different order, (2) the language register is slightly updated (e.g., from <foreign xml:lang="kan-Latn">pēḷven</foreign> to <foreign xml:lang="kan-Latn">hēḷuven</foreign>), and (3) the name of the deity whom Mahādēvi addresses has changed from “Śiva” to “Mallikārjuna.” This latter change is telling in the sense that it might point to an editorial need in modern times to fix the signature phrase of a <foreign xml:lang="kan-Latn">vacana</foreign> composer in more hermetic ways than in Harihara’s time (although in other parts of the text Harihara does identify Mahādēvi with the specific manifestation of Śiva as Mallikārjuna). </p>
         <p>A bit further along in the same chapter Harihara again quotes Mahādēvi’s words:</p>
         <quote xml:lang="kan-Latn">
-	  <p>śivalāñchanavan ēṟisikoṇḍu manege bandavaraṁ kaḍegaṇisi eṇtu nōḍut’ ippeṁ avarge satkāravaṁ māḍal illad’ irdaḍ’ ennan ī dhareya mēl’ irisuva kāraṇav’ ēn’ abhavā ninn’ avaḷ’ end’ enna muddu tanavaṁ salisuvaḍ’ irisuvud’ allā kailāsakke koṇḍoyvud’ endu cannamallikārjunaṅge gītamaṁ pāḍut’…</p>
+	  <p>śivalāñchanavan ēṟisikoṇḍu manege bandavaraṁ kaḍegaṇisi entu nōḍut’ ippeṁ avarge satkāravaṁ māḍal illad’ irdaḍ’ ennan ī dhareya mēl’ irisuva kāraṇav’ ēn’ abhavā ninn’ avaḷ’ end’ enna muddutanavaṁ salisuvaḍ’ irisuvud’ allā kailāsakke koṇḍoyvud’ endu cannamallikārjunaṅge gītamaṁ pāḍut’…</p>
 	</quote>
 	<cit>
 	  <quote>
@@ -451,18 +456,17 @@
 	      If I cannot show these people hospitality,<lb/>
 	      what reason is there for me to remain on this earth?<lb/>
 	      O you who are beyond existence,<lb/>
-	      if you consider me yours,<lb/>
-	      and if you love me,<lb/>
-	      do not keep me in this body!<lb/>
-	      Take me to Kailāsa!
+	      keep me alive if you intend to indulge me,<lb/>
+	      considering me as your own,<lb/>
+	      or otherwise take to me Kailāsa!
 	    </ab>
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Mahādēviyakkana Ragaḷe</title> 6, prose  (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 137)</bibl>
 	</cit>
-        <p><foreign xml:lang="kan-Latn">Vacana</foreign> no. 350 in the printed corpus is shorter than what we find here, and there are certain differences between the two renditions, but the two texts generally correspond in letter and in spirit.<note place="foot" xml:id="ftn70" n="55"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 350 in <ref target="#Rajura2001">Rājūra</ref> (<ref target="#Rajura2001">2001 [1993]</ref>: 104):</p><quote xml:lang="kan-Latn"><lg><l>lāñchana sahita manege bandaḍe</l><l>tatkālavan aridu prēmava māḍad’ irdadaḍe</l><l>nīn irisida maneya tottalla</l><l>tatkāla prēmava māḍuv’ ante enna mudda salis’ ayyā</l><l>alladoḍe oyy’ ayya siriśaila cennamallikārjunā</l></lg></quote></note> One major difference is that in the version transmitted as a <foreign xml:lang="kan-Latn">vacana</foreign>, Mahādēvi asks the god to lead her to Srisailam, the famous Śaiva temple complex in Andhra Pradesh, while in the <foreign xml:lang="kan-Latn">Ragaḷe</foreign> version she asks to be taken to Kailāsa. As noted earlier, such a variation could be explained by a need in the later tradition to align more strongly Mahādēvi’s <foreign xml:lang="kan-Latn">vacana</foreign>s with her life story, in which she travels to Srisailam to unite with her god.</p>
+        <p><foreign xml:lang="kan-Latn">Vacana</foreign> no. 350 in the printed corpus is shorter than what we find here, and there are certain differences between the two renditions, but the two texts generally correspond in letter and in spirit.<note place="foot" xml:id="ftn70" n="55"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 350 in <ref target="#Rajura2001">Rājūra</ref> (<ref target="#Rajura2001">2001 [1993]</ref>: 104):</p><quote xml:lang="kan-Latn"><lg><l>lāñchana sahita manege bandaḍe</l><l>tatkālavan aridu prēmava māḍad’ irdadaḍe</l><l>nīn irisida maneya tott’ alla</l><l>tatkāla prēmava māḍuvante enna mudda salis’ ayyā</l><l>alladoḍe oyy’ ayya siriśaila cennamallikārjunā</l></lg></quote></note> One major difference is that in the version transmitted as a <foreign xml:lang="kan-Latn">vacana</foreign>, Mahādēvi asks the god to lead her to Srisailam, the famous Śaiva temple complex in Andhra Pradesh, while in the <foreign xml:lang="kan-Latn">Ragaḷe</foreign> version she asks to be taken to Kailāsa. As noted earlier, such a variation could be explained by a need in the later tradition to align more strongly Mahādēvi’s <foreign xml:lang="kan-Latn">vacana</foreign>s with her life story, in which she travels to Srisailam to unite with her god.</p>
         <p>Another relevant passage appears toward the end of the same chapter, at the climactic moment of Mahādēvi’s desertion of the palace and her married life. Forced to remain disrobed in front of her husband, parents, guru, and fellow devotees, Mahādēvi formally announces the termination of her marriage agreement. She places her personal <foreign xml:lang="kan-Latn">liṅga</foreign> in the palm of her hand, bids farewell to her parents and guru, hands over her jewelry to the Śaiva devotees who stand there, and walks away naked. At this point, Harihara quotes Mahādēvi saying:</p>
 	<quote xml:lang="kan-Latn">
-	  <p>āśanad’ āseyaṁ tr̥ṣeya tr̥ṣṇeyaṁ besada bēgeyaṁ viṣayada vihvaḷateyaṁ tāpatrayada kalpanegaḷaṁ geliden inn’ ēn inn’ icchey’ ādudu cannamallikārjunā ninag’ añjen añjen</p>
+	  <p>aśanad’ āseyaṁ tr̥ṣeya tr̥ṣṇeyaṁ besanada bēgeyaṁ viṣayada vihvaḷateyaṁ tāpatrayada kalpanegaḷaṁ geliden inn’ ēn inn’ icchey ādudu cannamallikārjunā ninag’ añjen añjen</p>
 	</quote>
 	<cit>
 	  <quote>
@@ -470,7 +474,7 @@
 	      I have overcome hunger and thirst,<lb/>
 	      the fire of craving and the delusion of sexual desire,<lb/>
               as well as the three defiling and unreal torments.<lb/>
-	      What other desires are left for me to relinquish?<lb/>
+	      What is there left for me to desire?<lb/>
               O beautiful Mallikārjuna,<lb/>
 	      because of you I have no fear,<lb/>
 	      no fear at all.
@@ -482,9 +486,9 @@
         <p>In chapter 7, Mahādēvi is confronted by Kauśika, her non-Śaiva husband, who pretends to have had a change of heart and become a Śaiva devotee. Harihara quotes Mahādēvi’s response in the form of a reflecting song:</p>
 	<quote xml:lang="kan-Latn">
 	  <lg>
-	    <l>biṭṭappen endaḍaṁ biḍ’ adu ninnaya māye</l>
-	    <l>oṭṭayisi bandaḍ’ oḍavand’ appud’ ī māye</l>
-	    <l>jōgigaṁ jōgiṇiy’ ad’ āytu ninnaya māye</l>
+	    <l>biṭṭappen endaḍaṁ biḍadu ninnaya māye</l>
+	    <l>oṭṭayisi bandaḍ’ oḍuvand’ appud’ ī māye</l>
+	    <l>jōgigaṁ jōgiṇiy ad’ āytu ninnaya māye</l>
 	    <l>rāgadiṁ savaṇaṅge kantiy āyitu māye</l>
 	    <l>…</l>
 	    <l>karuṇākarā ninna māyeg’ añjuven ayya</l>
@@ -505,7 +509,7 @@
 	  </quote>
 	  <bibl><title xml:lang="kan-Latn">Mahādēviyakkana Ragaḷe</title> 7.89–92, 99–100 (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 143)</bibl>
 	</cit>
-	<p>Here, Mahādēvi expresses her deep frustration and the difficulty she experiences in facing the lingering shadow of her previous married life. Her words conform to the <foreign xml:lang="kan-Latn">vacana</foreign> traits we mentioned earlier, and indeed <foreign xml:lang="kan-Latn">vacana</foreign> no. 303 in the popular edition is similar to what is quoted above.<note place="foot" xml:id="ftn73" n="56"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 303 in <ref target="#Rajura2001">Rājūra</ref> (<ref target="#Rajura2001">2001 [1993]</ref>: 90):</p><quote xml:lang="kan-Latn"><lg><l>biṭṭen endadē biḍad’ ī māye</l><l>biḍad’ iddaḍe bembatt’ ittu māye</l><l>yōg’ ige yōg’ iṇiy’ āyittu māye</l><l>savaṇaṅge savaṇiy’ āyittu māye</l><l>yatige parākiy āyittu māye</l><l>ninna māyege nān añjuvaḷ’ alla</l><l>cennamallikārjunadēvā nimm’ aṇe</l></lg></quote></note> There are also marked differences: after the first four lines, the two versions diverge, until they converge again with the concluding two lines (right after “Pray, O ocean of mercy!”). However, in Harihara’s version, Mahādēvi asserts “I fear your illusion!” (<foreign xml:lang="kan-Latn">añjuven</foreign>) while in the published version she states the opposite: “I am not afraid of your illusion!” (<foreign xml:lang="kan-Latn">nān añjuvaḷ’ alla</foreign>). Also, in the last line of the <foreign xml:lang="kan-Latn">vacana</foreign> in Harihara’s version, Mahādēvi beseeches the god for mercy (<foreign xml:lang="kan-Latn">karuṇipud’</foreign>), but in the published version she exclaims that this is the command of the god (in second person, <foreign xml:lang="kan-Latn">nimm’ āṇe</foreign>). Although the degree of variation between Harihara’s text and the published version is considerable, the two versions share enough of the <foreign xml:lang="kan-Latn">vacana</foreign> content and form to recognize them as the same <foreign xml:lang="kan-Latn">vacana</foreign>.</p>
+	<p>Here, Mahādēvi expresses her deep frustration and the difficulty she experiences in facing the lingering shadow of her previous married life. Her words conform to the <foreign xml:lang="kan-Latn">vacana</foreign> traits we mentioned earlier, and indeed <foreign xml:lang="kan-Latn">vacana</foreign> no. 303 in the popular edition is similar to what is quoted above.<note place="foot" xml:id="ftn73" n="56"><p>See <foreign xml:lang="kan-Latn">vacana</foreign> no. 303 in <ref target="#Rajura2001">Rājūra</ref> (<ref target="#Rajura2001">2001 [1993]</ref>: 90):</p><quote xml:lang="kan-Latn"><lg><l>biṭṭen endadē biḍad’ ī māye</l><l>biḍad’ iddaḍe bembattittu māye</l><l>yōgige yōgiṇiy āyittu māye</l><l>savaṇaṅge savaṇiy’ āyittu māye</l><l>yatige parākiy āyittu māye</l><l>ninna māyege nān añjuvaḷ’ alla</l><l>cennamallikārjunadēvā nimm’ aṇe</l></lg></quote></note> There are also marked differences: after the first four lines, the two versions diverge, until they converge again with the concluding two lines (right after “Pray, O ocean of mercy!”). However, in Harihara’s version, Mahādēvi asserts “I fear your illusion!” (<foreign xml:lang="kan-Latn">añjuven</foreign>) while in the published version she states the opposite: “I am not afraid of your illusion!” (<foreign xml:lang="kan-Latn">nān añjuvaḷ’ alla</foreign>). Also, in the last line of the <foreign xml:lang="kan-Latn">vacana</foreign> in Harihara’s version, Mahādēvi beseeches the god for mercy (<foreign xml:lang="kan-Latn">karuṇipud’</foreign>), but in the published version she exclaims that this is the command of the god (in second person, <foreign xml:lang="kan-Latn">nimm’ āṇe</foreign>). Although the degree of variation between Harihara’s text and the published version is considerable, the two versions share enough of the <foreign xml:lang="kan-Latn">vacana</foreign> content and form to recognize them as the same <foreign xml:lang="kan-Latn">vacana</foreign>.</p>
         <p>Finally, very close to the end of the chapter and of the <foreign xml:lang="kan-Latn">Ragaḷe</foreign> as a whole, Harihara mentions in two verses a meeting between Mahādēvi and another famous devotee named Kinnara Bommatande. Mahādēvi sings a song for the occasion, but the author does not provide any further details.<note place="foot" xml:id="ftn74" n="57"><p><title xml:lang="kan-Latn">Mahādēviyakkana Ragaḷe</title> 7.193–96 (<ref target="#Sunkapura1976">Suṅkāpura 1976</ref>: 147).</p></note></p>
         <p>Unlike the <foreign xml:lang="kan-Latn">Ragaḷe</foreign>s about Kēśirāja and Allama, but with some similarity to that about Basava, the <foreign xml:lang="kan-Latn">Ragaḷe</foreign> about Mahādēvi conveys Harihara’s genuine appreciation of her original songs and their inherent role in her life story. And yet, these <foreign xml:lang="kan-Latn">vacana</foreign>s appear in only a few, very specific moments. This limited appearance is nothing like the voluminous body of <foreign xml:lang="kan-Latn">vacana</foreign>s attributed to Mahādēvi in later texts. Considered together, Harihara’s sparse treatment of the <foreign xml:lang="kan-Latn">vacana</foreign>s in the lives of Allama, Basava, and Mahādēvi, as compared to what we might expect given their later reputation as “authors of <foreign xml:lang="kan-Latn">vacana</foreign>s,” compels us to reconsider our understanding of <foreign xml:lang="kan-Latn">vacana</foreign>s in their early history.</p>
       </div>
