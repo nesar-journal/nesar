@@ -52,7 +52,7 @@ function preprocessText  (script: string, content: string) {
   if (script == 'Taml') {
     content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
 		     .replace(/’ ([aāiīuūeēoō])/g,"$1")
-		       .replace(/ṉ ṟ/g,"ṉṟ");
+		     .replace(/ṉ ṟ/g,"ṉṟ");
   }
   else if (script == 'Deva') {
     content = content.replace(/ ’/g,"'")
