@@ -46,8 +46,8 @@ function preprocessText  (script: string, content: string) {
   if (script == 'Telu') {
     content = content.replace(/n̆/g,"m̐")
 		     .replace(/’ ([aāiīuūeēoō])/g,"$1")
-                     .replace(/[’:?]/g,"")
-                     .replace(/([nmḷy]) ([aāiīuūeēoō])/g,"$1$2");
+      .replace(/[’:?]/g,"")
+      .replace(/([nmḷy]) ([aāiīuūeēoō])/g,"$1$2");
   }
   if (script == 'Taml') {
     content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
