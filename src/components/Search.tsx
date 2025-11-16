@@ -89,11 +89,11 @@ function Search () {
                     {
                       results.map((result: string) => {
                         return (
-                          (<div key={result}>
+                          <div key={result}>
                             <Link href={`/articles/${result}`}>
                               {apiData.articleTitles[result]}
                             </Link>
-                          </div>)
+                          </div>
                         );
                       })
                     }

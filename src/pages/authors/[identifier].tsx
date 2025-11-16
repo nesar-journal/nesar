@@ -58,28 +58,31 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   function renderIssues () {
     if (issuesIds && issuesData) {
-      return (<>
-        <Heading
-          level={3}
-        >
-          Issues
-        </Heading>
-        <ul>
-          {
-            issuesIds.map((issueId) => {
-              const issueData = issuesData[issueId];
+      const filteredIssues = issuesIds.filter((issueId) => {
+        const { editors } = issuesData[issueId];
+        return editors.map((editor) => editor.id).includes(authorId);
+      });
 
-              if (issueData.editors.map((editor) => editor.id).includes(authorId)) {
-                return (
-                  (<li key={issueId}>
-                    <Link href={`/issues/${issueId}`}>{issueData.title}</Link>
-                  </li>)
-                );
-              }
-            })
-          }
-        </ul>
-      </>);
+      return (
+        <>
+          {filteredIssues.length > 0 ? <Heading level={3}>Issues</Heading> : null}
+
+          <ul>
+            {filteredIssues.map((issueId) => {
+              const { title } = issuesData[issueId];
+
+              return (
+                <li key={issueId}>
+                  <Link
+                    href={`/issues/${issueId}`}
+                    dangerouslySetInnerHTML={{ __html: title }}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      );
     }
 
     return null;
@@ -87,28 +90,31 @@ const AuthorPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
   function renderArticles () {
     if (articlesIds && articlesData) {
-      return (<>
-        <Heading
-          level={3}
-        >
-          Articles
-        </Heading>
-        <ul>
-          {
-            articlesIds.map((articleId) => {
-              const articleData = articlesData[articleId];
+      const filteredArticles = articlesIds.filter((articleId) => {
+        const { authors } = articlesData[articleId];
+        return authors.some((author) => author.id === authorId);
+      });
 
-              if (articleData.authors.map((author) => author.id).includes(authorId)) {
-                return (
-                  (<li key={articleId}>
-                    <Link href={`/articles/${articleId}`}>{articleData.title}</Link>
-                  </li>)
-                );
-              }
-            })
-          }
-        </ul>
-      </>);
+      return (
+        <>
+          {filteredArticles.length > 0 ? <Heading level={3}>Articles</Heading> : null}
+
+          <ul>
+            {filteredArticles.map((articleId) => {
+              const { title } = articlesData[articleId];
+
+              return (
+                <li key={articleId}>
+                  <Link
+                    href={`/articles/${articleId}`}
+                    dangerouslySetInnerHTML={{ __html: title }}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      );
     }
   }
 

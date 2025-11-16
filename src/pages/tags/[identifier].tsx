@@ -54,15 +54,21 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         >
           Issues
         </Heading>
+
         <ul>
           {
             data.issues.map((issueId) => {
-              const issueData = issuesData[issueId];
+              const { title, editors } = issuesData[issueId];
 
               return (
                 (<li key={issueId}>
                   <>
-                    <Link href={`/issues/${issueId}`}>{issueData.title}</Link> (Editor{issueData.editors.length > 1 ? 's' : ''}: {issueData.editors.map((editor) => editor.displayName).join(', ')})
+                    <Link
+                      href={`/issues/${issueId}`}
+                      dangerouslySetInnerHTML={{ __html: title }}
+                    /> (Editor{editors.length > 1 ? 's' : ''}: {
+                      editors.map((editor) => editor.displayName).join(', ')
+                    })
                   </>
                 </li>)
               );
@@ -83,17 +89,23 @@ const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         >
           Articles
         </Heading>
+
         <ul>
           {
             data.articles.map((articleId) => {
-              const articleData = articlesData[articleId];
+              const { title, authors } = articlesData[articleId];
 
               return (
-                (<li key={articleId}>
+                <li key={articleId}>
                   <>
-                    <Link href={`/articles/${articleId}`}>{articleData.title}</Link> (Author{articleData.authors.length > 1 ? 's' : ''}: {articleData.authors.map((author) => author.displayName).join(', ')})
+                    <Link
+                      href={`/articles/${articleId}`}
+                      dangerouslySetInnerHTML={{ __html: title }}
+                    /> (Author{authors.length > 1 ? 's' : ''}: {
+                      authors.map((author) => author.displayName).join(', ')
+                    })
                   </>
-                </li>)
+                </li>
               );
             })
           }

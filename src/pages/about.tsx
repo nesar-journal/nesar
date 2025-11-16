@@ -132,7 +132,7 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           Credits
         </Heading>
 
-        <p>This site was designed by <ExternalLink href="https://www.penguinchilli.co.uk/">Alex Bellingham</ExternalLink> and developed for the web by <ExternalLink href="https://rramphal.com/">Ravi S. Rāmphal</ExternalLink>.</p>
+        <p>This site was designed by <ExternalLink href="https://www.notallpixels.com/">Alex Bellingham</ExternalLink> and developed for the web by <ExternalLink href="https://rramphal.com/">Ravi S. Rāmphal</ExternalLink>.</p>
 
         <p>The image used in the header banner was taken by <ExternalLink href="https://instagram.com/_spartan_photography"> Spartan Xozz</ExternalLink>, downloaded from <ExternalLink href="https://unsplash.com/photos/omx4dN1BfQ4"> Unsplash</ExternalLink>, and used under the <ExternalLink href="https://unsplash.com/license"> Unsplash License</ExternalLink>.</p>
 
