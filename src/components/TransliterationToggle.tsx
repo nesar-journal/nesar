@@ -40,8 +40,14 @@ function preprocessText  (script: string, content: string) {
 		   .replace(/aü/g,"a####u")
 		   .replace(/°/g,'');
   if (script == 'Knda') {
-    content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
+    content = content.replace(/([nmḷyl]) ([aāiīuūeēoō])/g,"$1$2")
 		     .replace(/’ ([aāiīuūeēoō])/g,"$1");
+  }
+  if (script == 'Telu') {
+    content = content.replace(/n̆/g,"m̐")
+		     .replace(/’ ([aāiīuūeēoō])/g,"$1")
+                     .replace(/[’:?]/g,"")
+                     .replace(/([nmḷy]) ([aāiīuūeēoō])/g,"$1$2");
   }
   if (script == 'Taml') {
     content = content.replace(/([nmḷ]) ([aāiīuūeēoō])/g,"$1$2")
