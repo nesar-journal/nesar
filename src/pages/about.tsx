@@ -116,8 +116,6 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <dt>Eva Wilden</dt>
           <dd>University of Hamburg</dd>
         </dl>
-
-        {renderAuthorsInfo()}
       </>
     );
   }
