@@ -1,0 +1,24 @@
+type: issue
+
+identifier: issue-2
+issue: 2
+
+title: 
+
+editors:
+  - ollett
+
+abstract:  
+
+dates:
+  publication: PUBLICATION DATE
+
+paths:
+  cover: issue-2.jpg
+
+tags:
+  - translation
+
+
+articles:
+  - venkatesan-fluid-texts-open-boundaries
