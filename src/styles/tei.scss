@@ -36,6 +36,10 @@
       .quote-in-note {
         margin: 0.25rem 0 0.25rem 1rem;
       }
+      .bibl-string-in-note {
+        display:block;
+        margin: 0 0 0 2rem;
+      }
     }
   }
   sup {
@@ -221,26 +225,32 @@
       content: "]";
     }
   }
-  .bibliography ul {
-    list-style-type: none;
-    padding-left: 0;
-    li {
-      margin-bottom: 0.5rem;
-      padding-left: 2rem;
-      text-indent: -2rem;
-      &.text-group {
-        padding-left: 1rem;
-        text-indent: -1rem;
-        margin-bottom: 0;
-        margin-top: 0.5rem;
-        h4 {
-          margin: 0 0 0.25rem 0;
-        }
-        li {
-          margin-left: 1rem;
-          padding-left: 2rem;
-          text-indent: -2rem;
-          margin-bottom: 0.15rem;
+  .bibliography {
+    clear: both;
+    h3 {
+      padding-top: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        margin-bottom: 0.5rem;
+        padding-left: 2rem;
+        text-indent: -2rem;
+        &.text-group {
+          padding-left: 1rem;
+          text-indent: -1rem;
+          margin-bottom: 0;
+          margin-top: 0.5rem;
+          h4 {
+            margin: 0 0 0.25rem 0;
+          }
+          li {
+            margin-left: 1rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            margin-bottom: 0.15rem;
+          }
         }
       }
     }

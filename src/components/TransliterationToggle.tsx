@@ -142,14 +142,17 @@ function punctuateTextElement (instance: Element, script: string) {
     }
     if (parent?.nodeName == "P") {
       if (!replacementText.endsWith("…")) {
-        if (replacementText.endsWith(".")) {
-	  replacementText = replacementText.substring(0,replacementText?.length - 1);
-        }
-        if (script == "Deva") {
-	  replacementText = replacementText + "।";
-        } else if (script == "Knda") {
-	  replacementText = replacementText + ".";
-        }
+	if (script == "Deva") {
+	  replacementText = replacementText.replaceAll(".","।");
+	}
+        /* if (replacementText.endsWith(".")) {
+	   replacementText = replacementText.substring(0,replacementText?.length - 1);
+	 * }
+	 * if (script == "Deva") {
+	   replacementText = replacementText + "।";
+	 * } else if (script == "Knda") {
+	   replacementText = replacementText + ".";
+	 * } */
       }
     }
   }
