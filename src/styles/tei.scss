@@ -122,9 +122,20 @@
               position: relative;
             }
             .quote-in-note {
+	      display:inline;
               margin: 0 0 0 0.35rem;
               .lg {
+                display: inline;
                 line-height: 1rem;
+	        &:after {
+                  content: " ";
+		}
+                .l {
+		  display:inline;
+		  &:before {
+                    content: " ";
+		  }
+                }
               }
             }
           }
