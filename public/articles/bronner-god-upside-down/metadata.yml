@@ -1,17 +1,33 @@
 type: article
+
 identifier: bronner-god-upside-down
+
 doi: DOI
+
 title: God Upside Down
+
 subtitle: Reading Udbhaṭa’s <i>Kumārasambhava</i>
+
 authors:
   - bronner
-abstract: ABSTRACT
+
+abstract: "If Udbhaṭa (c. 800) is one of the unsung heroes of South Asia's intellectual history, this is epitomized by his <em>Kumārasambhava</em>. Not a single study of this work exists, and it is doubtful whether any modern scholar has even read his illustration verses as a continuous poem, let alone examined them as such. The purpose of the current essay is therefore simple: to begin the process of thinking about Udbhaṭa’s forgotten poem. Thus, the paper offers a first complete English translation of the 94 verses that we have of it, independently of the figurative phenomena they illustrate (references to and explanations of the relevant <em>alaṅkāra</em>s are relegated to the footnotes). The final sections of the paper are dedicated to an initial analysis of some aspects of the poem, primarily its subversive presentation of its protagonist, Śiva, and to speculations about the reasons for its cold reception."
+
 dates:
   publication: PUBLICATION DATE
+
 paths:
   content: bronner-god-upside-down.html
   tei: bronner-god-upside-down.xml
   cover: bronner-god-upside-down.jpg
   pdf: bronner-god-upside-down.pdf
+
 tags:
-  - LIST OF TAGS
+  - Udbhaṭa
+  - Kālidāsa
+  - Kumārasambhava
+  - Śiva
+  - Umā
+  - Kāma
+  - Cārvāka
+  - Alaṅkāraśāstra
