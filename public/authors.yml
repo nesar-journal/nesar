@@ -3,6 +3,9 @@ ollett:
   firstName   : Andrew
   lastName    : Ollett
   email       : ollett@uchicago.edu
+  emails:
+   - andrew.ollett@gmail.com
+   - ollett@uchicago.edu
   institution : University of Chicago
   viaf        : '372149294434280521495'
 gai:

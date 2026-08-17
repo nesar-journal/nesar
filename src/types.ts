@@ -86,6 +86,7 @@ export type AuthorData = {
   firstName   : string;
   lastName    : string;
   email       : string;
+  emails      : string[];
   institution : string;
   viaf        : string;
 };
