@@ -1,0 +1,58 @@
+@import '../styles/breakpoints';
+
+.toc {
+  display: inline-block; // shrink the border box to the width of its content, rather than the full column
+  width: fit-content;
+  max-width: 100%; // still wrap/shrink on narrow viewports instead of overflowing
+
+  font-size: 110%; // slightly larger than the surrounding body text
+
+  border: 2px solid #D8D6D6;
+  margin-bottom: 32px;
+
+  @media (min-width: $mobile-breakpoint) {
+    padding: 16px 32px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 8px 16px;
+    border-radius: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Nested (h2) items get their own indent and a smaller size,
+  // mirroring the visual hierarchy of the Headings they link to.
+  li > ul {
+    margin: 4px 0 8px 20px;
+    font-size: 90%;
+  }
+
+  // Doubly-nested (h3) items step down again.
+  li > ul li > ul {
+    margin: 2px 0 4px 16px;
+    font-size: 90%;
+
+    a {
+      color: #8a8c8e;
+    }
+  }
+
+  li {
+    margin: 4px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #606264;
+
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+  }
+}
