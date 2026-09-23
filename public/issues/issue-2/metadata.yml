@@ -3,7 +3,7 @@ type: issue
 identifier: issue-2
 issue: 2
 
-title: 
+title: NESAR Issue 2
 
 editors:
   - ollett
@@ -23,3 +23,4 @@ tags:
 articles:
   - venkatesan-fluid-texts-open-boundaries
   - bronner-god-upside-down
+  - gai-halmidi
