@@ -3,6 +3,9 @@ ollett:
   firstName   : Andrew
   lastName    : Ollett
   email       : ollett@uchicago.edu
+  emails:
+   - andrew.ollett@gmail.com
+   - ollett@uchicago.edu
   institution : University of Chicago
   viaf        : '372149294434280521495'
 gai:
@@ -60,4 +63,11 @@ venkatesan:
   lastName    : Venkatesan
   email       : avenkatesan@ucdavis.edu
   institution : University of California, Davis
+  viaf        :
+bronner:
+  displayName : Yigal Bronner
+  firstName   : Yigal
+  lastName    : Bronner
+  email       : bronner@ualberta.ca
+  institution : University of Alberta
   viaf        :
