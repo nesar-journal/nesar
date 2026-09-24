@@ -11,7 +11,6 @@
   line-height: 1.35;
   .frontmatter {
     padding: 0 1.5rem;
-    font-style: italic;
     .text-paragraph {
       &:before {
         content: "note:";
@@ -314,6 +313,15 @@ table {
 }
 .foreign {
   font-style: italic;
+}
+.ab-epigraphic .foreign,
+.ab-epigraphic [data-nesar-script="Latn"] {
+  font-style: normal;
+}
+.linenum-marker {
+  display: inline-block;
+  width: 1.5rem;
+  text-align: left;
 }
 .acknowledgements {
   font-size: 90%;
