@@ -126,7 +126,7 @@ function punctuateTextElement (instance: Element, script: string) {
 	    if (script == "Deva") {
 	      replacementText = replacementText + "॥";
 	    }
-	    else if (script == "Latn") {
+	    else if (script == "Latn" && instance.getAttribute('data-nesar-lang') !== 'tam') {
 	      replacementText = replacementText + " ~~";
 	    }
 	    else if (script == "Knda") {
@@ -137,7 +137,7 @@ function punctuateTextElement (instance: Element, script: string) {
 	    if (script == "Deva") {
 	      replacementText = replacementText + "।";
 	    }
-	    else if (script == "Latn") {
+	    else if (script == "Latn" && instance.getAttribute('data-nesar-lang') !== 'tam') {
 	      replacementText = replacementText + " ~";
 	    }
 	    else if (script == "Knda") {
