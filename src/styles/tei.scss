@@ -11,7 +11,6 @@
   line-height: var(--line-height);
   .frontmatter {
     padding: 0 1.5rem;
-    font-style: italic;
     .text-paragraph {
       &:before {
         content: "note:";
@@ -36,6 +35,10 @@
       .quote-in-note {
         margin: 0.25rem 0 0.25rem 1rem;
       }
+      .bibl-string-in-note {
+        display:block;
+        margin: 0 0 0 2rem;
+      }
     }
   }
   sup {
@@ -46,7 +49,8 @@
     h2 {
       display: block;
       clear: both;
-      margin: 2rem 0 0 0;
+      padding: 2rem 0 0 0;
+      margin: 0;
     }
   }
   .textandnotes {
@@ -118,9 +122,20 @@
               position: relative;
             }
             .quote-in-note {
+	      display:inline;
               margin: 0 0 0 0.35rem;
               .lg {
+                display: inline;
                 line-height: 1rem;
+	        &:after {
+                  content: " ";
+		}
+                .l {
+		  display:inline;
+		  &:before {
+                    content: " ";
+		  }
+                }
               }
             }
           }
@@ -221,30 +236,44 @@
       content: "]";
     }
   }
-  .bibliography ul {
-    list-style-type: none;
-    padding-left: 0;
-    li {
-      margin-bottom: 0.5rem;
-      padding-left: 2rem;
-      text-indent: -2rem;
-      &.text-group {
-        padding-left: 1rem;
-        text-indent: -1rem;
-        margin-bottom: 0;
-        margin-top: 0.5rem;
-        h4 {
-          margin: 0 0 0.25rem 0;
-        }
-        li {
-          margin-left: 1rem;
-          padding-left: 2rem;
-          text-indent: -2rem;
-          margin-bottom: 0.15rem;
+  .bibliography {
+    clear: both;
+    h3 {
+      padding-top: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        margin-bottom: 0.5rem;
+        padding-left: 2rem;
+        text-indent: -2rem;
+        &.text-group {
+          padding-left: 1rem;
+          text-indent: -1rem;
+          margin-bottom: 0;
+          margin-top: 0.5rem;
+          h4 {
+            margin: 0 0 0.25rem 0;
+          }
+          li {
+            margin-left: 1rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            margin-bottom: 0.15rem;
+          }
         }
       }
     }
   }
+  .doi-logo {
+    height: 0.9em;
+    vertical-align: middle;
+    margin-right: 0.2em;
+    position: relative;
+    top: -0.05em;
+  }
+
   .nesar-header {
     margin-top: 1rem;
     border-top: 1px black solid;
@@ -284,6 +313,15 @@ table {
 }
 .foreign {
   font-style: italic;
+}
+.ab-epigraphic .foreign,
+.ab-epigraphic [data-nesar-script="Latn"] {
+  font-style: normal;
+}
+.linenum-marker {
+  display: inline-block;
+  width: 1.5rem;
+  text-align: left;
 }
 .acknowledgements {
   font-size: 90%;

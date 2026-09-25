@@ -82,11 +82,13 @@ function preprocessTextAgain (script: string, content: string) {
 }
 
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
-  const languageInstances = document.querySelectorAll(`[data-nesar-lang="${language}"].scriptWrapper`);
+  const allInstances = document.querySelectorAll(`[data-nesar-lang="${language}"].scriptWrapper`);
+  const languageInstances = Array.from(allInstances).filter((el) => !el.closest('.foreign, .title'));
   languageInstances.forEach((languageInstance) => {
     const originalContent = languageInstance.getAttribute('data-nesar-original') || '';
     // If you're going to Latin,
     if (!fromLatin) {
+      languageInstance.textContent = punctuateTextElement(languageInstance,"Latn");
       // and you are not already in Latin,
       if (languageInstance.getAttribute('data-nesar-script') !== 'Latn') {
         // restore original content, which is always written in Latin script.
@@ -125,6 +127,9 @@ function punctuateTextElement (instance: Element, script: string) {
 	    if (script == "Deva") {
 	      replacementText = replacementText + "॥";
 	    }
+	    else if (script == "Latn" && instance.getAttribute('data-nesar-lang') !== 'tam') {
+	      replacementText = replacementText + " ~~";
+	    }
 	    else if (script == "Knda") {
 	      replacementText = replacementText + " ॥";
 	    }
@@ -132,6 +137,9 @@ function punctuateTextElement (instance: Element, script: string) {
 	  else {
 	    if (script == "Deva") {
 	      replacementText = replacementText + "।";
+	    }
+	    else if (script == "Latn" && instance.getAttribute('data-nesar-lang') !== 'tam') {
+	      replacementText = replacementText + " ~";
 	    }
 	    else if (script == "Knda") {
 	      replacementText = replacementText + " ।";
@@ -142,14 +150,17 @@ function punctuateTextElement (instance: Element, script: string) {
     }
     if (parent?.nodeName == "P") {
       if (!replacementText.endsWith("…")) {
-        if (replacementText.endsWith(".")) {
-	  replacementText = replacementText.substring(0,replacementText?.length - 1);
-        }
         if (script == "Deva") {
-	  replacementText = replacementText + "।";
-        } else if (script == "Knda") {
-	  replacementText = replacementText + ".";
+	  replacementText = replacementText.replaceAll(".","।");
         }
+        /* if (replacementText.endsWith(".")) {
+	   replacementText = replacementText.substring(0,replacementText?.length - 1);
+	 * }
+	 * if (script == "Deva") {
+	   replacementText = replacementText + "।";
+	 * } else if (script == "Knda") {
+	   replacementText = replacementText + ".";
+	 * } */
       }
     }
   }

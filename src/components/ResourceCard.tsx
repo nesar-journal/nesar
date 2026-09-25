@@ -90,7 +90,7 @@ const ResourceCard = (props: ResourceCardProps) => {
               {translators.map((translator) => {
                 return (
                   <span className={styles.translatedBy}
-                    key={translator.id}>translated by
+                    key={translator.id}>translated by{" "}
                     <Link
                       href={`/authors/${translator.id}`}
                       passHref
