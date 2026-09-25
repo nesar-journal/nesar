@@ -22,7 +22,7 @@ paths:
   cover: gai-halmidi.png
   content: gai-halmidi.html
   tei: gai-halmidi.xml
-  # pdf: gai-halmidi.pdf
+  pdf: gai-halmidi.pdf
 
 tags:
   - kannada
