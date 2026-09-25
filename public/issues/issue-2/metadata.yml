@@ -3,15 +3,15 @@ type: issue
 identifier: issue-2
 issue: 2
 
-title: NESAR Issue 2
+title: NESAR 2 (2026)
 
 editors:
   - ollett
 
-abstract: "This is the second issue of NESAR, and the first that is not a special issue. This issue has three articles: Archana Venkatesan’s thoughtful experiments with translating the religious poetry recited in festivals in Tamil Nadu and interpreted by a long tradition of scholars, and Yigal Bronner’s recovery of a Sanskrit poem, a direct response to Kālidāsa’s masterpiece, by the renegade poetician Udbhaṭa. The third article is the first in NESAR’s series of translations. G. S. Gai undertook an important study of the earliest surviving inscription in Kannada, the so-called Halmidi inscription, that he published in Kannada in 1990. That article has been translated by Arjun Sharma for this issue of NESAR."
+abstract: "This is the second issue of NESAR, and the first that is not a special issue. This issue has two articles: Archana Venkatesan’s thoughtful experiments with translating the religious poetry recited in festivals in Tamil Nadu and interpreted by a long tradition of scholars, and Yigal Bronner’s recovery of a Sanskrit poem, a direct response to Kālidāsa’s masterpiece, by the renegade poetician Udbhaṭa."
 
 dates:
-  publication: PUBLICATION DATE
+  publication: September 25, 2026
 
 paths:
   cover: issue-2.png
@@ -20,8 +20,6 @@ tags:
   - translation
   - poetics
   - interpretation
-  - inscriptions
-  - kannada
   - tamil
   - sanskrit
 
@@ -29,4 +27,3 @@ tags:
 articles:
   - venkatesan-fluid-texts-open-boundaries
   - bronner-god-upside-down
-  - gai-halmidi
