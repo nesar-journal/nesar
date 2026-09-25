@@ -83,7 +83,7 @@ function preprocessTextAgain (script: string, content: string) {
 
 function transliterateTextElements (language: string, fromLatin: boolean = false) {
   const allInstances = document.querySelectorAll(`[data-nesar-lang="${language}"].scriptWrapper`);
-  const languageInstances = Array.from(allInstances).filter(el => !el.closest('.foreign, .title'));
+  const languageInstances = Array.from(allInstances).filter((el) => !el.closest('.foreign, .title'));
   languageInstances.forEach((languageInstance) => {
     const originalContent = languageInstance.getAttribute('data-nesar-original') || '';
     // If you're going to Latin,
